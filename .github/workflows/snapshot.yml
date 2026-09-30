@@ -1,0 +1,53 @@
+name: snapshot
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Ignore caches and re-fetch every EIP file"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: snapshot
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      - name: Sync from ethereum/EIPs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: pnpm sync --strict ${{ inputs.force && '--force' || '' }}
+
+      - name: Tests against the new snapshot
+        run: pnpm test
+
+      - name: Commit snapshot and change log if they changed
+        run: |
+          if git diff --quiet -- data/; then
+            echo "No changes."
+            exit 0
+          fi
+          sha=$(node -p "require('./data/snapshot.json').source.commitSha.slice(0,7)")
+          events=$(git diff --numstat -- data/changes.jsonl | awk '{print $1}')
+          git config user.name "eip-radar-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "data: sync ethereum/EIPs@${sha} (${events:-0} change events)"
+          git push

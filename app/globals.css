@@ -1,0 +1,210 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------------------------
+   Tokens. Light on :root; dark via prefers-color-scheme (unless the user forced light) and via
+   [data-theme="dark"]. Charts read the same custom properties, so both themes are designed once.
+   --------------------------------------------------------------------------------------------- */
+:root {
+  color-scheme: light;
+  --bg: #f4f6f8;
+  --surface: #ffffff;
+  --surface-2: #eceff3;
+  --line: #d6dbe2;
+  --line-strong: #b4bcc7;
+  --fg: #13171d;
+  --muted: #555e6b;
+  --faint: #8b939e;
+  --focus: #13171d;
+  --warn-fg: #8a5a00;
+  --warn-bg: #fff4d6;
+  --bad-fg: #a3261b;
+  --bad-bg: #fde6e3;
+
+  --track-merge: #2a78d6;
+  --track-surge: #eb6834;
+  --track-scourge: #1baf7a;
+  --track-verge: #eda100;
+  --track-purge: #e87ba4;
+  --track-splurge: #008300;
+  --track-legacy: #a3a39c;
+
+  --status-final: #184f95;
+  --status-last-call: #256abf;
+  --status-review: #5598e7;
+  --status-draft: #9ec5f4;
+  --status-stagnant: #c9c9c3;
+  --status-withdrawn: #e4e3de;
+  --hatch: rgba(19, 23, 29, 0.35);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #0d1014;
+    --surface: #14181e;
+    --surface-2: #1b2028;
+    --line: #2a313b;
+    --line-strong: #3d4652;
+    --fg: #e6e9ee;
+    --muted: #a0a9b5;
+    --faint: #69727e;
+    --focus: #e6e9ee;
+    --warn-fg: #f2c46b;
+    --warn-bg: #3a2c0c;
+    --bad-fg: #ff9d92;
+    --bad-bg: #3d1714;
+
+    --track-merge: #3987e5;
+    --track-surge: #d95926;
+    --track-scourge: #199e70;
+    --track-verge: #c98500;
+    --track-purge: #d55181;
+    --track-splurge: #1f9a1f;
+    --track-legacy: #6e6e68;
+
+    --status-final: #b7d3f6;
+    --status-last-call: #6da7ec;
+    --status-review: #3987e5;
+    --status-draft: #1c5cab;
+    --status-stagnant: #4a4b47;
+    --status-withdrawn: #34352f;
+    --hatch: rgba(230, 233, 238, 0.35);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0d1014;
+  --surface: #14181e;
+  --surface-2: #1b2028;
+  --line: #2a313b;
+  --line-strong: #3d4652;
+  --fg: #e6e9ee;
+  --muted: #a0a9b5;
+  --faint: #69727e;
+  --focus: #e6e9ee;
+  --warn-fg: #f2c46b;
+  --warn-bg: #3a2c0c;
+  --bad-fg: #ff9d92;
+  --bad-bg: #3d1714;
+
+  --track-merge: #3987e5;
+  --track-surge: #d95926;
+  --track-scourge: #199e70;
+  --track-verge: #c98500;
+  --track-purge: #d55181;
+  --track-splurge: #1f9a1f;
+  --track-legacy: #6e6e68;
+
+  --status-final: #b7d3f6;
+  --status-last-call: #6da7ec;
+  --status-review: #3987e5;
+  --status-draft: #1c5cab;
+  --status-stagnant: #4a4b47;
+  --status-withdrawn: #34352f;
+  --hatch: rgba(230, 233, 238, 0.35);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --font-display: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-plex), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+html {
+  background: var(--bg);
+  color: var(--fg);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+.font-mono,
+.num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "zero" 1;
+}
+
+.display {
+  font-family: var(--font-display);
+  font-stretch: 112%;
+  letter-spacing: -0.01em;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+a {
+  color: inherit;
+  text-decoration-color: var(--line-strong);
+  text-underline-offset: 3px;
+}
+a:hover {
+  text-decoration-color: currentColor;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* SVG focus rings on chart marks */
+svg a:focus-visible,
+svg [tabindex]:focus-visible {
+  outline: none;
+}
+svg a:focus-visible > .mark,
+svg [tabindex]:focus-visible > .mark {
+  stroke: var(--focus);
+  stroke-width: 2px;
+}
+
+.hatch {
+  background-image: repeating-linear-gradient(45deg, var(--hatch) 0 1px, transparent 1px 5px);
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+.skip-link:focus {
+  left: 16px;
+  top: 8px;
+  z-index: 50;
+  background: var(--surface);
+  padding: 6px 10px;
+  border: 1px solid var(--line-strong);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+dialog::backdrop {
+  background: rgb(0 0 0 / 0.4);
+}

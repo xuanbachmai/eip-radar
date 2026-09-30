@@ -1,0 +1,61 @@
+{
+  "name": "eip-radar",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.34.4",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "sync": "tsx scripts/sync.ts",
+    "triage": "tsx scripts/triage.ts",
+    "test": "vitest run",
+    "e2e": "playwright test",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "backfill": "tsx scripts/backfill.ts"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@next/eslint-plugin-next": "^15.5.26",
+    "@playwright/test": "^1.63.0",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/d3-array": "^3.2.2",
+    "@types/d3-force": "^3.0.10",
+    "@types/d3-scale": "^4.0.9",
+    "@types/d3-shape": "^3.2.0",
+    "@types/d3-time-format": "^4.0.3",
+    "@types/node": "^26.6.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^10.11.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.71.0",
+    "vitest": "^5.0.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp",
+      "@tailwindcss/oxide"
+    ]
+  },
+  "dependencies": {
+    "d3-array": "^3.2.4",
+    "d3-force": "^3.0.0",
+    "d3-scale": "^4.0.2",
+    "d3-shape": "^3.2.0",
+    "d3-time-format": "^4.1.0",
+    "next": "^15.5.26",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "server-only": "^0.0.1"
+  }
+}
