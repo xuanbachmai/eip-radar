@@ -65,10 +65,7 @@ known upgrade is missing.
   on top of the committed snapshot. If GitHub is unreachable, it serves the committed snapshot and
   the freshness line says so.
 - **Check now**: `POST /api/refresh?force=1`, throttled to one real check every 2 minutes.
-- **Vercel Cron**: `GET /api/refresh` with `Authorization: Bearer $CRON_SECRET`. `vercel.json`
-  schedules it every 6 h. The Hobby plan allows daily crons only; change the schedule to `0 0 * * *`
-  there. The GitHub Action still provides the 6 h cadence, because each data commit triggers a
-  redeploy.
+- **Vercel Cron**: `vercel.json` calls `/api/refresh?force=1` once a day (the Hobby plan only allows daily crons). The 6 h cadence comes from the GitHub Action, because each data commit triggers a redeploy. If you set `CRON_SECRET`, cron calls are accepted without the throttle.
 - **Feeds**: `/feed.xml` (RSS) and `/api/changes` (JSON, filterable by `eip`, `type`, `limit`).
 
 ## Caveats
