@@ -73,3 +73,29 @@ test("feeds are served", async ({ request }) => {
   const json = await (await request.get("/api/changes?limit=5")).json();
   expect(json.events.length).toBeLessThanOrEqual(5);
 });
+
+test("command palette jumps to an EIP", async ({ page }) => {
+  await page.goto("/");
+  await page.keyboard.press("Control+k");
+  await page.getByTestId("palette-input").fill("7732");
+  await expect(page.getByRole("option").first()).toContainText("EIP-7732");
+  await page.keyboard.press("Enter");
+  await expect(page).toHaveURL(/\/eips\/7732$/);
+});
+
+test("watchlist: star an EIP, see it on the dashboard and filter the explorer", async ({ page }) => {
+  await page.goto("/eips/7732");
+  await page.getByRole("button", { name: "Watch EIP-7732" }).click();
+  await page.goto("/");
+  await expect(page.getByTestId("watchlist")).toContainText("EIP-7732");
+  await page.goto("/eips?watched=1");
+  await expect(page.getByTestId("explorer-count")).toHaveText(/^1 of /);
+});
+
+test("inclusion board shows all four stages", async ({ page }) => {
+  await page.goto("/");
+  const board = page.getByTestId("inclusion-board");
+  for (const stage of ["Scheduled", "Considered", "Proposed", "Declined"]) {
+    await expect(board.getByRole("heading", { name: stage })).toBeVisible();
+  }
+});

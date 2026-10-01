@@ -5,7 +5,9 @@ import { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } f
 import { EipSummary } from "@/components/ui/eip-summary";
 import { StagePill, StatusPill, TrackPill } from "@/components/ui/pills";
 import { TRACK_LABEL } from "@/lib/colors";
+import { useWatchlist } from "@/lib/client-store";
 import { toCsv } from "@/lib/format";
+import { WatchButton } from "@/components/ui/watch-button";
 import type { EipRow } from "@/lib/rows";
 import { TRACKS, type Track } from "@/lib/types";
 
@@ -34,6 +36,7 @@ interface Filters {
   stage: string;
   year: string;
   author: string;
+  watched: boolean;
   sort: SortKey;
   dir: "asc" | "desc";
 }
@@ -49,12 +52,13 @@ function readFilters(sp: URLSearchParams): Filters {
     stage: sp.get("stage") ?? "",
     year: sp.get("year") ?? "",
     author: sp.get("author") ?? "",
+    watched: sp.get("watched") === "1",
     sort: sort && COLUMNS.some((c) => c.key === sort) ? sort : "eip",
     dir: sp.get("dir") === "asc" ? "asc" : sp.get("dir") === "desc" ? "desc" : sort ? "asc" : "desc",
   };
 }
 
-export function applyFilters(rows: EipRow[], f: Filters): EipRow[] {
+export function applyFilters(rows: EipRow[], f: Filters, watchlist: readonly number[] = []): EipRow[] {
   const terms = f.q.toLowerCase().split(/\s+/).filter(Boolean);
   const out = rows.filter((r) => {
     if (f.status.length && !f.status.includes(r.status)) return false;
@@ -62,6 +66,7 @@ export function applyFilters(rows: EipRow[], f: Filters): EipRow[] {
     if (f.upgrade && !r.memberships.some((m) => m.upgrade === f.upgrade && (!f.stage || m.stage === f.stage))) return false;
     if (!f.upgrade && f.stage && !r.memberships.some((m) => m.stage === f.stage)) return false;
     if (f.year && String(r.year) !== f.year) return false;
+    if (f.watched && !watchlist.includes(r.eip)) return false;
     if (f.author && !r.authors.some((a) => a.toLowerCase().includes(f.author.toLowerCase()))) return false;
     if (terms.length) {
       const hay = `${r.eip} eip-${r.eip} ${r.title} ${r.description ?? ""} ${r.abstract ?? ""} ${r.authors.join(" ")}`.toLowerCase();
@@ -122,7 +127,18 @@ export function Explorer({ rows, upgrades }: { rows: EipRow[]; upgrades: { slug:
   }, [deferredQ, filters.q, update]);
 
   const active = { ...filters, q: deferredQ };
-  const visible = useMemo(() => applyFilters(rows, active), [rows, active.q, filters]); // eslint-disable-line react-hooks/exhaustive-deps
+  const { list: watchlist } = useWatchlist();
+  const visible = useMemo(() => applyFilters(rows, active, watchlist), [rows, active.q, filters, watchlist]); // eslint-disable-line react-hooks/exhaustive-deps
+  const [copied, setCopied] = useState(false);
+  const copyLink = () => {
+    navigator.clipboard
+      ?.writeText(window.location.href)
+      .then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 1500);
+      })
+      .catch(() => {});
+  };
 
   const years = useMemo(() => [...new Set(rows.map((r) => r.year))].sort((a, b) => b - a), [rows]);
   const authors = useMemo(() => [...new Set(rows.flatMap((r) => r.authors))].sort((a, b) => a.localeCompare(b)), [rows]);
@@ -163,7 +179,7 @@ export function Explorer({ rows, upgrades }: { rows: EipRow[]; upgrades: { slug:
     URL.revokeObjectURL(url);
   };
 
-  const anyFilter = filters.status.length || filters.track.length || filters.upgrade || filters.stage || filters.year || filters.author || filters.q;
+  const anyFilter = filters.status.length || filters.track.length || filters.upgrade || filters.stage || filters.year || filters.author || filters.q || filters.watched;
 
   return (
     <div>
@@ -183,6 +199,17 @@ export function Explorer({ rows, upgrades }: { rows: EipRow[]; upgrades: { slug:
           <span className="num text-sm text-muted" aria-live="polite" data-testid="explorer-count">
             {visible.length} of {rows.length}
           </span>
+          <button type="button" onClick={copyLink} className="rounded border border-line px-2 py-1 text-sm hover:border-line-strong" aria-live="polite">
+            {copied ? "Link copied" : "Copy link"}
+          </button>
+          <button
+            type="button"
+            aria-pressed={filters.watched}
+            onClick={() => update({ watched: filters.watched ? null : "1" })}
+            className={`rounded border px-2 py-1 text-sm ${filters.watched ? "border-fg bg-surface-2" : "border-line hover:border-line-strong"}`}
+          >
+            ★ Watched{watchlist.length ? ` (${watchlist.length})` : ""}
+          </button>
           <button type="button" onClick={exportCsv} className="rounded border border-line px-2 py-1 text-sm hover:border-line-strong">
             Export CSV
           </button>
@@ -307,6 +334,9 @@ function VirtualTable({ rows, filters, onSort, onOpen }: { rows: EipRow[]; filte
               </div>
             );
           })}
+          <div role="columnheader" className="w-7 shrink-0">
+            <span className="sr-only">Watch</span>
+          </div>
         </div>
       </div>
       <div ref={ref} role="rowgroup" onScroll={(e) => setScroll(e.currentTarget.scrollTop)} className="relative h-[70vh] min-h-[360px] overflow-y-auto">
@@ -355,6 +385,9 @@ function VirtualTable({ rows, filters, onSort, onOpen }: { rows: EipRow[]; filte
                 </div>
                 <div role="cell" className={`${COLUMNS[5]!.className} num text-muted`}>
                   {r.created}
+                </div>
+                <div role="cell" className="w-7 shrink-0">
+                  <WatchButton eip={r.eip} compact />
                 </div>
               </div>
             );

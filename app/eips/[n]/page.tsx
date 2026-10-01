@@ -50,7 +50,7 @@ export default async function EipPage({ params }: Params) {
 
   const byNum = new Map(rows.map((r) => [r.eip, r]));
   return (
-    <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
+    <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
       <EipSummary row={row} headingLevel={1} />
       <aside>
         <Section id="graph" title="Requires / required by">

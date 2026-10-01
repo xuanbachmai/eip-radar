@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Archivo, IBM_Plex_Sans, JetBrains_Mono } from "next/font/google";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { CommandPalette } from "@/components/ui/command-palette";
 import { Freshness } from "@/components/ui/freshness";
 import { NavLinks } from "@/components/ui/nav-links";
 import { THEME_SCRIPT, ThemeToggle } from "@/components/ui/theme-toggle";
@@ -14,6 +15,8 @@ const plex = IBM_Plex_Sans({ subsets: ["latin"], weight: ["400", "500", "600"], 
 const mono = JetBrains_Mono({ subsets: ["latin"], weight: ["400", "600"], variable: "--font-jetbrains", display: "swap" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.SITE_URL ?? "https://eip-radar.vercel.app"),
+  twitter: { card: "summary_large_image" },
   title: { default: "EIP Radar — the Ethereum Core roadmap, tracked", template: "%s · EIP Radar" },
   description:
     "Every Core Ethereum Improvement Proposal, synced from ethereum/EIPs every 6 hours: what ships next, what is moving, and what died.",
@@ -45,11 +48,12 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
               EIP Radar
             </Link>
             <NavLinks />
-            <div className="ml-auto">
+            <div className="ml-auto flex items-center gap-2">
+              <CommandPalette />
               <ThemeToggle />
             </div>
           </div>
-          <div className="mx-auto max-w-[1200px] px-2 pb-2 sm:px-2">
+          <div className="mx-auto max-w-[1200px] px-4 pb-2.5">
             <Freshness initial={{ commitSha: snapshot.source.commitSha, checkedAt, mode, error }} />
           </div>
         </header>

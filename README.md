@@ -11,6 +11,16 @@ state of the roadmap:
 
 No prices, tokens, or governance opinions.
 
+## Features
+
+- **Dashboard:** the next upgrade with countdown, readiness and track mix. Also a grouped change feed, status by track, Last Call deadlines (with overdue ones flagged), the upgrade timeline and the pipeline flow.
+- **Inclusion board:** a kanban of EIP-7723 stages for upgrades still being negotiated, such as Hegotá.
+- **Explorer:** search, filters in the URL, sorting, CSV export, copy link, a detail drawer and a "watched only" filter.
+- **Watchlist:** star any EIP to follow it on the dashboard. Stored in your browser only; no account.
+- **Quick search:** press `⌘K` / `Ctrl+K` or `/` to jump to any EIP, upgrade or track.
+- **Share cards:** Open Graph images for the site, each EIP and each upgrade.
+- **Feeds:** `/feed.xml` (RSS), `/api/changes` (JSON), `/api/index` (compact index).
+
 ## Quick start
 
 ```bash

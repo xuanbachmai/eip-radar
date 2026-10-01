@@ -23,9 +23,9 @@ export function Countdown({ ts, label }: { ts: number; label: string }) {
       {past ? (
         <div className="num mt-1 text-2xl font-semibold">activated</div>
       ) : (
-        <div className="num mt-1 flex items-baseline gap-3 text-3xl font-semibold sm:text-4xl" aria-live="off">
+        <div className="num mt-1 flex flex-wrap items-baseline gap-x-2.5 text-[clamp(1.25rem,6vw,2.25rem)] font-semibold whitespace-nowrap" aria-live="off">
           {now === null ? (
-            <span className="text-muted">––d ––h ––m</span>
+            <span className="text-muted">–d ––h ––m</span>
           ) : (
             <>
               <span>
@@ -40,7 +40,7 @@ export function Countdown({ ts, label }: { ts: number; label: string }) {
                 {String(p.m).padStart(2, "0")}
                 <small className="ml-0.5 text-sm text-muted">m</small>
               </span>
-              <span className="text-muted">
+              <span className="hidden text-muted sm:inline">
                 {String(p.s).padStart(2, "0")}
                 <small className="ml-0.5 text-sm">s</small>
               </span>

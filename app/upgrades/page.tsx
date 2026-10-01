@@ -40,7 +40,7 @@ export default async function UpgradesPage() {
             const mix = trackMix(u, eips);
             const stages = ["Scheduled", "Considered", "Proposed", "Declined"] as const;
             return (
-              <li key={u.slug} className="grid gap-2 py-3 sm:grid-cols-[200px_120px_1fr] sm:items-center">
+              <li key={u.slug} className="grid grid-cols-1 gap-2 py-3 sm:grid-cols-[200px_120px_1fr] sm:items-center">
                 <div>
                   <Link href={`/upgrades/${u.slug}`} className="display text-lg font-bold no-underline hover:underline">
                     {u.name}

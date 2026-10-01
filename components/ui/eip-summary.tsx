@@ -6,6 +6,7 @@ import { statusColor } from "@/lib/colors";
 import { fmtDate } from "@/lib/format";
 import type { EipRow } from "@/lib/rows";
 import { EipNumber, StagePill, StatusPill, TrackPill } from "./pills";
+import { WatchButton } from "./watch-button";
 
 export function EipSummary({ row, headingLevel = 2 }: { row: EipRow; headingLevel?: 1 | 2 }) {
   const H = headingLevel === 1 ? "h1" : "h2";
@@ -18,6 +19,9 @@ export function EipSummary({ row, headingLevel = 2 }: { row: EipRow; headingLeve
         <StatusPill status={row.status} />
         <TrackPill track={row.track} link />
         {row.trackSource === "rule" ? <span className="text-xs text-muted">(track auto-classified)</span> : null}
+        <span className="ml-auto">
+          <WatchButton eip={row.eip} />
+        </span>
       </div>
 
       <StatusHistory row={row} />

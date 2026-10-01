@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { InclusionBoard } from "@/components/dashboard/inclusion-board";
 import { EipNumber, StagePill, StatusPill, TrackPill } from "@/components/ui/pills";
 import { PageHeader, Section, Stat } from "@/components/ui/stat";
 import { DataTable } from "@/components/viz/frame";
@@ -97,6 +98,12 @@ export default async function UpgradePage({ params }: Params) {
             ))}
           </ul>
           <p className="mt-2 text-xs text-muted">Across all listed Core EIPs, every stage.</p>
+        </Section>
+      ) : null}
+
+      {members.some((m) => m.stage !== "Scheduled") ? (
+        <Section id="board" eyebrow="EIP-7723 stages" title="Inclusion board">
+          <InclusionBoard members={members} upgradeName={u.name} />
         </Section>
       ) : null}
 
