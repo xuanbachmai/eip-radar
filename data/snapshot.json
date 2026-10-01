@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-01T13:27:45.310Z",
+  "generatedAt": "2026-10-01T22:45:26.161Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "943f8d14e39ef91d96f79b0dde32ccafdd58e7db",
-    "treeSha": "c7874ebf89d6467da2cd4b13177eb1fd2b2e22d4",
-    "committedAt": "2026-10-01T12:35:00Z"
+    "commitSha": "cf88c2e72f4ed82e91638f5fa5b3084ca78df8b8",
+    "treeSha": "29f6ef729dbcdcc6fa77b808835d71e2bf528e01",
+    "committedAt": "2026-10-01T13:53:30Z"
   },
   "eips": [
     {
@@ -8358,7 +8358,7 @@
       "abstract": "This proposal introduces three opcodes, TXTRACE, TXDIFF, and EVENTDATACOPY, that let a contract inspect the outcome of the transaction executing it: the balance, storage, and code changes it produced, and the events it emitted. TXTRACE enumerates the full transaction state diff, TXDIFF reads a single entry by key, and EVENTDATACOPY copies event data into memory. These opcodes are valid only…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "1067a985a4198242b8a8654d5965455a6f3ef415"
+      "blob": "a69c02cefd0038c1a9c5d667e30ff0442ff1fef2"
     },
     {
       "eip": 7907,
@@ -9492,7 +9492,7 @@
       "abstract": "Execution proofs enable consensus layer (CL) nodes to perform stateless validation of execution payloads. Altruistic proof-generating nodes generate execution proofs and broadcast them over the CL p2p network. Proof-verifying nodes consume gossiped execution proofs and check payload validity by verifying those proofs. Verification is stateless and constant time with respect to the payload's gas…",
       "track": "verge",
       "trackSource": "override",
-      "blob": "6287bacd18648daa53c955f5d4674b045b364128"
+      "blob": "e53336d66fe313d5bef534c0d7f3e6f2f64cef07"
     },
     {
       "eip": 8030,
@@ -11806,7 +11806,7 @@
           "handle": "twoeths"
         }
       ],
-      "status": "Draft",
+      "status": "Withdrawn",
       "type": "Standards Track",
       "category": "Core",
       "created": "2026-07-06",
@@ -11815,7 +11815,7 @@
       "abstract": "Anchor the Casper Friendly Finality Gadget (FFG) checkpoint for epoch N to the epoch boundary block, the last block before epoch N, rather than the first block of epoch N. A new accessor get_checkpoint_root replaces get_block_root wherever targets and checkpoints are resolved. Checkpoint epochs are unchanged; only the block root a checkpoint maps to moves.",
       "track": "merge",
       "trackSource": "override",
-      "blob": "ac6461ef9940c1512866f833b2d288335c384fe8"
+      "blob": "6de72126d0b51fb3ca2b6ee0de8c49a369fc5098"
     },
     {
       "eip": 8337,
@@ -19752,7 +19752,7 @@
     },
     {
       "eip": 7906,
-      "blob": "1067a985a4198242b8a8654d5965455a6f3ef415",
+      "blob": "a69c02cefd0038c1a9c5d667e30ff0442ff1fef2",
       "title": "Transaction Assertions via State Diff Opcode",
       "status": "Draft",
       "type": "Standards Track",
@@ -20137,7 +20137,7 @@
     },
     {
       "eip": 8025,
-      "blob": "6287bacd18648daa53c955f5d4674b045b364128",
+      "blob": "e53336d66fe313d5bef534c0d7f3e6f2f64cef07",
       "title": "Optional Execution Proofs",
       "status": "Draft",
       "type": "Standards Track",
@@ -20856,9 +20856,9 @@
     },
     {
       "eip": 8333,
-      "blob": "ac6461ef9940c1512866f833b2d288335c384fe8",
+      "blob": "6de72126d0b51fb3ca2b6ee0de8c49a369fc5098",
       "title": "Align Checkpoint with Epoch Boundary Block",
-      "status": "Draft",
+      "status": "Withdrawn",
       "type": "Standards Track",
       "category": "Core"
     },
