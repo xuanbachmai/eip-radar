@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-09-30T13:16:03.754Z",
+  "generatedAt": "2026-10-01T13:27:45.310Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "66daa41124581e4e839e89d71eb06b6cd4b1f9b8",
-    "treeSha": "917b0019ce345202e7b675a5bf12a55150ff7d02",
-    "committedAt": "2026-09-30T12:28:47Z"
+    "commitSha": "943f8d14e39ef91d96f79b0dde32ccafdd58e7db",
+    "treeSha": "c7874ebf89d6467da2cd4b13177eb1fd2b2e22d4",
+    "committedAt": "2026-10-01T12:35:00Z"
   },
   "eips": [
     {
@@ -8679,7 +8679,7 @@
       "abstract": "This EIP introduces Block-Level Access Lists (BALs) that record all accounts and storage locations accessed during block execution, along with their post-execution values. BALs enable parallel disk reads, parallel transaction validation, parallel state root computation and executionless state updates.",
       "track": "verge",
       "trackSource": "override",
-      "blob": "f834f0004aa5110a5f1ac0d6b80e3dc4b842d040"
+      "blob": "c574b304bedc762ff878e31b9337f46077f52fd7"
     },
     {
       "eip": 7932,
@@ -10525,7 +10525,7 @@
       "abstract": "This EIP proposes an optional mechanism to set custom balance thresholds for sweep withdrawals for compounding withdrawal credentials (0x02) validators. This mechanism allows validators to specify above which balance they want their rewards to be swept to their withdrawal address, providing greater flexibility and control over their staking rewards.",
       "track": "merge",
       "trackSource": "override",
-      "blob": "c03b5471ca4a596ab035e102129b8dea3bbb7e94"
+      "blob": "9943df0030f3ce8774d035200cfa381672b3c208"
     },
     {
       "eip": 8149,
@@ -19862,7 +19862,7 @@
     },
     {
       "eip": 7928,
-      "blob": "f834f0004aa5110a5f1ac0d6b80e3dc4b842d040",
+      "blob": "c574b304bedc762ff878e31b9337f46077f52fd7",
       "title": "Block-Level Access Lists",
       "status": "Review",
       "type": "Standards Track",
@@ -20491,7 +20491,7 @@
     },
     {
       "eip": 8148,
-      "blob": "c03b5471ca4a596ab035e102129b8dea3bbb7e94",
+      "blob": "9943df0030f3ce8774d035200cfa381672b3c208",
       "title": "Custom sweep threshold for validators",
       "status": "Draft",
       "type": "Standards Track",
@@ -20964,6 +20964,14 @@
       "status": "Draft",
       "type": "Standards Track",
       "category": "Core"
+    },
+    {
+      "eip": 8411,
+      "blob": "f7323b6ef0a561de3175b4ba8b70fdf6bafbf7e1",
+      "title": "Fast Execution Payload Broadcast",
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Networking"
     }
   ]
 }
