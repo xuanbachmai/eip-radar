@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-01T22:45:26.161Z",
+  "generatedAt": "2026-10-02T05:48:01.290Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "cf88c2e72f4ed82e91638f5fa5b3084ca78df8b8",
-    "treeSha": "29f6ef729dbcdcc6fa77b808835d71e2bf528e01",
-    "committedAt": "2026-10-01T13:53:30Z"
+    "commitSha": "356a0046e9e7ae4afcdd0cf2507698e04d7f9a37",
+    "treeSha": "2456104b032fe9961d6eb22aea25fdf82311696c",
+    "committedAt": "2026-10-02T02:33:16Z"
   },
   "eips": [
     {
@@ -8679,7 +8679,7 @@
       "abstract": "This EIP introduces Block-Level Access Lists (BALs) that record all accounts and storage locations accessed during block execution, along with their post-execution values. BALs enable parallel disk reads, parallel transaction validation, parallel state root computation and executionless state updates.",
       "track": "verge",
       "trackSource": "override",
-      "blob": "c574b304bedc762ff878e31b9337f46077f52fd7"
+      "blob": "d70db88d1406e81907ae46566af653959ac3a9f3"
     },
     {
       "eip": 7932,
@@ -19862,7 +19862,7 @@
     },
     {
       "eip": 7928,
-      "blob": "c574b304bedc762ff878e31b9337f46077f52fd7",
+      "blob": "d70db88d1406e81907ae46566af653959ac3a9f3",
       "title": "Block-Level Access Lists",
       "status": "Review",
       "type": "Standards Track",
