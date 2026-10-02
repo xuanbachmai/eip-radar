@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-02T05:48:01.290Z",
+  "generatedAt": "2026-10-02T12:46:17.453Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "356a0046e9e7ae4afcdd0cf2507698e04d7f9a37",
-    "treeSha": "2456104b032fe9961d6eb22aea25fdf82311696c",
-    "committedAt": "2026-10-02T02:33:16Z"
+    "commitSha": "ac912ca6a9685590345dd8e5736cda75976d0131",
+    "treeSha": "f1041d746414ba337a8dbf13bb60c4ab3478237a",
+    "committedAt": "2026-10-02T10:32:54Z"
   },
   "eips": [
     {
@@ -8679,7 +8679,7 @@
       "abstract": "This EIP introduces Block-Level Access Lists (BALs) that record all accounts and storage locations accessed during block execution, along with their post-execution values. BALs enable parallel disk reads, parallel transaction validation, parallel state root computation and executionless state updates.",
       "track": "verge",
       "trackSource": "override",
-      "blob": "d70db88d1406e81907ae46566af653959ac3a9f3"
+      "blob": "c9108d3239308fca9055368643462bbbf8393958"
     },
     {
       "eip": 7932,
@@ -9591,6 +9591,14 @@
         {
           "name": "Paweł Bylica",
           "handle": "chfast"
+        },
+        {
+          "name": "Spencer Taylor-Brown",
+          "handle": "spencer-tb"
+        },
+        {
+          "name": "Gary Rong",
+          "handle": "rjl493456442"
         }
       ],
       "status": "Review",
@@ -9613,7 +9621,7 @@
       "abstract": "This proposal increases the cost of state creation operations, thus avoiding excessive state growth under increased block gas limits. It introduces a new variable, CPSB (cost per state byte), and sets this unit of gas costs per new state byte by targeting an average state growth of 120 GiB per year at a reference block gas limit of 150M gas units. It also introduces an independent metering for…",
       "track": "purge",
       "trackSource": "override",
-      "blob": "3f4e3ece24e16596f3e8b93359060c612e9511a5"
+      "blob": "85d6cfd7076fa9f7fea417e4010c73f5014a64a8"
     },
     {
       "eip": 8038,
@@ -11680,10 +11688,10 @@
       "category": "Core",
       "created": "2026-06-11",
       "requires": [
-        3529,
         3607,
         6780,
         7702,
+        7928,
         8037,
         8038
       ],
@@ -11691,7 +11699,7 @@
       "abstract": "This EIP introduces SETCODEFROM, an EVM instruction that sets the current account's code hash to the code hash of a source account with existing deployed code. The new code is visible to later code execution.",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "b1055d044191e0ee5bd295807fb9fa205ac5d904"
+      "blob": "d2a062162646f2ad74ab013fae6fe4498f4496a4"
     },
     {
       "eip": 8304,
@@ -19862,7 +19870,7 @@
     },
     {
       "eip": 7928,
-      "blob": "d70db88d1406e81907ae46566af653959ac3a9f3",
+      "blob": "c9108d3239308fca9055368643462bbbf8393958",
       "title": "Block-Level Access Lists",
       "status": "Review",
       "type": "Standards Track",
@@ -20161,7 +20169,7 @@
     },
     {
       "eip": 8037,
-      "blob": "3f4e3ece24e16596f3e8b93359060c612e9511a5",
+      "blob": "85d6cfd7076fa9f7fea417e4010c73f5014a64a8",
       "title": "State Creation Gas Cost Increase",
       "status": "Review",
       "type": "Standards Track",
@@ -20515,7 +20523,7 @@
     },
     {
       "eip": 8159,
-      "blob": "0438d3d6bf05ede5ad141e70b5e5444f7b1dd3fa",
+      "blob": "6801e51111a0e65ae5fe243e7d29a782db154deb",
       "title": "eth/71 - Block Access List Exchange",
       "status": "Review",
       "type": "Standards Track",
@@ -20816,7 +20824,7 @@
     },
     {
       "eip": 8298,
-      "blob": "b1055d044191e0ee5bd295807fb9fa205ac5d904",
+      "blob": "d2a062162646f2ad74ab013fae6fe4498f4496a4",
       "title": "SETCODEFROM Code Reuse Instruction",
       "status": "Draft",
       "type": "Standards Track",
