@@ -33,6 +33,7 @@ pnpm dev
 |---|---|
 | `pnpm sync [--force] [--strict]` | Runs the pipeline and writes `data/snapshot.json`. New change events are appended to `data/changes.jsonl`. |
 | `pnpm backfill [--days 90]` | Rebuilds change events from commit history. Needs `GITHUB_TOKEN`. |
+| `pnpm obsidian [dir]` | Generates an Obsidian vault (default `obsidian/EIP Radar`) with one linked note per EIP, upgrade, track, lineage and author. It includes graph colours by track and an upgrade-timeline canvas. |
 | `pnpm triage` | Lists Core EIPs whose track came from the regex rules rather than the reviewed map. |
 | `pnpm test` / `pnpm e2e` | Vitest unit tests / Playwright smoke tests (`pnpm build` first). |
 | `pnpm lint` / `pnpm typecheck` / `pnpm build` | Checks and the production build. |

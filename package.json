@@ -17,7 +17,8 @@
     "e2e": "playwright test",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
-    "backfill": "tsx scripts/backfill.ts"
+    "backfill": "tsx scripts/backfill.ts",
+    "obsidian": "tsx scripts/obsidian.ts"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
