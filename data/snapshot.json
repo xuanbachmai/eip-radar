@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-03T11:46:48.656Z",
+  "generatedAt": "2026-10-04T21:35:09.515Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "666fb5ebc712bef2179af03317fffabf15a2f563",
-    "treeSha": "aa43692ed07edef380b38bc9abcac2c44e1f5dac",
-    "committedAt": "2026-10-03T09:17:03Z"
+    "commitSha": "3b3c832577ec4205d463d990d52006e299962449",
+    "treeSha": "e2a94a03d1da59beae868cb170e93c676ae08584",
+    "committedAt": "2026-10-04T15:20:06Z"
   },
   "eips": [
     {
@@ -5814,7 +5814,7 @@
       "abstract": "This EIP introduces a new Simple Serialize (SSZ) type to represent containers with forward-compatible Merkleization: A given field is always assigned the same stable generalized index (gindex) even when different container versions append new fields or drop existing fields.",
       "track": "verge",
       "trackSource": "override",
-      "blob": "94e8d2990877f508a6cecf4a0ccb1c0f1426efdf"
+      "blob": "10f7fcdc7ae5bcdcabc2226f87099a8bc4d72fa2"
     },
     {
       "eip": 7503,
@@ -18799,7 +18799,7 @@
     },
     {
       "eip": 7495,
-      "blob": "94e8d2990877f508a6cecf4a0ccb1c0f1426efdf",
+      "blob": "10f7fcdc7ae5bcdcabc2226f87099a8bc4d72fa2",
       "title": "SSZ ProgressiveContainer",
       "status": "Review",
       "type": "Standards Track",
