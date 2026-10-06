@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-06T00:07:40.418Z",
+  "generatedAt": "2026-10-06T06:29:14.593Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "69075f1b54fc4a116b41f75461a9868755a83e41",
-    "treeSha": "316c8e32166416baaeef005e14da46cda61b96bf",
-    "committedAt": "2026-10-05T21:32:59Z"
+    "commitSha": "288b044ffd2d2a0e8a8b5984c180df6889ccd5e3",
+    "treeSha": "d91fe95e400a5beab17e30338f70a5f3f271fcce",
+    "committedAt": "2026-10-06T05:16:08Z"
   },
   "eips": [
     {
@@ -20269,7 +20269,7 @@
     },
     {
       "eip": 8066,
-      "blob": "4420daaa4a345a1bace06da0716a855b12ec50b8",
+      "blob": "157aa807e1ce5f483f09de208b68f9e8c29c9a55",
       "title": "Upgrade Mascots",
       "status": "Review",
       "type": "Informational"
