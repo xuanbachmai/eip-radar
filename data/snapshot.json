@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-05T05:50:17.838Z",
+  "generatedAt": "2026-10-06T00:07:40.418Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "bcdb27e330c3ba01a20c3fd1e2e592e0d04d2d47",
-    "treeSha": "0089d7c2707bb049749ee4a62ed88189e66d2a86",
-    "committedAt": "2026-10-04T21:53:47Z"
+    "commitSha": "69075f1b54fc4a116b41f75461a9868755a83e41",
+    "treeSha": "316c8e32166416baaeef005e14da46cda61b96bf",
+    "committedAt": "2026-10-05T21:32:59Z"
   },
   "eips": [
     {
@@ -10537,7 +10537,7 @@
       "abstract": "This EIP proposes an optional mechanism to set custom balance thresholds for sweep withdrawals for compounding withdrawal credentials (0x02) validators. This mechanism allows validators to specify above which balance they want their rewards to be swept to their withdrawal address, providing greater flexibility and control over their staking rewards.",
       "track": "merge",
       "trackSource": "override",
-      "blob": "9943df0030f3ce8774d035200cfa381672b3c208"
+      "blob": "df9e6af5aced0b9dc6e91c8aaba84330769db716"
     },
     {
       "eip": 8149,
@@ -13256,7 +13256,7 @@
         },
         {
           "eip": 8198,
-          "stage": "Proposed",
+          "stage": "Considered",
           "section": "core"
         },
         {
@@ -13321,7 +13321,7 @@
         },
         {
           "eip": 8333,
-          "stage": "Proposed",
+          "stage": "Declined",
           "section": "core"
         },
         {
@@ -13331,7 +13331,7 @@
         },
         {
           "eip": 8363,
-          "stage": "Proposed",
+          "stage": "Declined",
           "section": "core"
         },
         {
@@ -13361,7 +13361,7 @@
         },
         {
           "eip": 8379,
-          "stage": "Proposed",
+          "stage": "Declined",
           "section": "core"
         },
         {
@@ -17077,7 +17077,7 @@
     },
     {
       "eip": 5069,
-      "blob": "0e37f8f230d25c80a1f1cb9f15920a63d68fbed6",
+      "blob": "26d70cef89509d19f3caf8b4884fb8fae2c509ad",
       "title": "EIP Editor Handbook",
       "status": "Living",
       "type": "Meta"
@@ -20340,7 +20340,7 @@
     },
     {
       "eip": 8081,
-      "blob": "940bd0f3b8bd178bd7d2304dc0cbfff4e66bb4b9",
+      "blob": "2f0d5c497eca41ee9a13f2aef2598e4ed3ec1597",
       "title": "Hardfork Meta - Hegotá",
       "status": "Draft",
       "type": "Meta"
@@ -20503,7 +20503,7 @@
     },
     {
       "eip": 8148,
-      "blob": "9943df0030f3ce8774d035200cfa381672b3c208",
+      "blob": "df9e6af5aced0b9dc6e91c8aaba84330769db716",
       "title": "Custom sweep threshold for validators",
       "status": "Draft",
       "type": "Standards Track",
