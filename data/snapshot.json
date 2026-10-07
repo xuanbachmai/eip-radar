@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-07T13:33:25.039Z",
+  "generatedAt": "2026-10-07T23:09:52.463Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "1424fd7732f94ccdafc9188db9726ee167ef2c53",
-    "treeSha": "4940541fd7a1ed2469ae62eec6797a36e76d3801",
-    "committedAt": "2026-10-07T11:46:28Z"
+    "commitSha": "6dac5e74918b54511298fdbff79650e8f8d27d78",
+    "treeSha": "33f59ccb503f94ed3f387ce57cc403924c39a38f",
+    "committedAt": "2026-10-07T22:23:55Z"
   },
   "eips": [
     {
@@ -3005,7 +3005,7 @@
       "abstract": "This EIP removes the storage-clearing refund (STORAGE_CLEAR_REFUND, as defined by EIP-8038) and the transaction refund cap (EIP-3529). The EIP-8038's net-metered STORAGE_WRITE reversal remains.",
       "track": "purge",
       "trackSource": "override",
-      "blob": "19be2a355694d7f2a206ea61550d40170b1929e0"
+      "blob": "a618240aad9b098e079270045fcb1380d3e7992a"
     },
     {
       "eip": 3300,
@@ -8367,7 +8367,7 @@
       "abstract": "This proposal introduces three opcodes, TXTRACE, TXDIFF, and EVENTDATACOPY, that let a contract inspect the outcome of the transaction executing it: the balance, storage, and code changes it produced, and the events it emitted. TXTRACE enumerates the full transaction state diff, TXDIFF reads a single entry by key, and EVENTDATACOPY copies event data into memory. These opcodes are valid only…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "95ecc5d5e409287bd1bbcc688cf7e172d01360c4"
+      "blob": "5ec349d0926c5efe8f72dfebf454e9911dad4250"
     },
     {
       "eip": 7907,
@@ -10441,7 +10441,7 @@
       "abstract": "Adds a new transaction whose validity and gas payment can be defined abstractly. This is achieved by decomposing the transaction into a sequence of frames which are contract calls that validate the transaction, approve gas payment, and execute standard user operations.",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "d0d1d86b67e65dc8e8bf504eb3b2f1e9198f8212"
+      "blob": "4e73f1e1f0fdc096d4810f33f0ee977132ecf145"
     },
     {
       "eip": 8142,
@@ -11451,7 +11451,7 @@
       "abstract": "This EIP extends EIP-8141 with a new frame mode that enables EVM-level aggregation of cryptographic signatures and STARK (Scalable Transparent ARguments of Knowledge) proofs. The scheme allows transactions to carry lightweight dependencies — (scheme, data_hash, verification_key_hash) triples — which are aggregated off-chain into a single recursive STARK. Block validity requires this recursive…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "2be71ee739458dc060788322f72751cf91799b15"
+      "blob": "6e055031bf086a618840bd234348be3f0f6ba283"
     },
     {
       "eip": 8289,
@@ -16136,7 +16136,7 @@
     },
     {
       "eip": 3298,
-      "blob": "19be2a355694d7f2a206ea61550d40170b1929e0",
+      "blob": "a618240aad9b098e079270045fcb1380d3e7992a",
       "title": "Remove storage-clear refund and refund cap",
       "status": "Draft",
       "type": "Standards Track",
@@ -19783,7 +19783,7 @@
     },
     {
       "eip": 7906,
-      "blob": "95ecc5d5e409287bd1bbcc688cf7e172d01360c4",
+      "blob": "5ec349d0926c5efe8f72dfebf454e9911dad4250",
       "title": "Transaction Assertions via State Diff Opcode",
       "status": "Draft",
       "type": "Standards Track",
@@ -20498,7 +20498,7 @@
     },
     {
       "eip": 8141,
-      "blob": "d0d1d86b67e65dc8e8bf504eb3b2f1e9198f8212",
+      "blob": "4e73f1e1f0fdc096d4810f33f0ee977132ecf145",
       "title": "Frame Transaction",
       "status": "Draft",
       "type": "Standards Track",
@@ -20799,7 +20799,7 @@
     },
     {
       "eip": 8288,
-      "blob": "2be71ee739458dc060788322f72751cf91799b15",
+      "blob": "6e055031bf086a618840bd234348be3f0f6ba283",
       "title": "In-mempool signature and proof aggregation",
       "status": "Draft",
       "type": "Standards Track",
