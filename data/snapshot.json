@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-07T06:08:03.942Z",
+  "generatedAt": "2026-10-07T13:33:25.039Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "258836f9185999e608aae534567a703079b14767",
-    "treeSha": "54f45cf39515735e1693bd8d738dfa8a24e71ed1",
-    "committedAt": "2026-10-07T03:42:44Z"
+    "commitSha": "1424fd7732f94ccdafc9188db9726ee167ef2c53",
+    "treeSha": "4940541fd7a1ed2469ae62eec6797a36e76d3801",
+    "committedAt": "2026-10-07T11:46:28Z"
   },
   "eips": [
     {
@@ -9723,7 +9723,7 @@
       "abstract": "This EIP proposes a uniform price auction over inclusion lists (UPIL), which ranks transactions by their ranking fee: how much they are willing to pay per gas for inclusion above the base fee. When the block is full, no transaction is allowed to displace an inclusion-list (IL) transaction that offers a higher ranking fee and is valid when accounting for ranking. All included transactions pay a…",
       "track": "scourge",
       "trackSource": "override",
-      "blob": "01ab22ccf0d1f13c1a7778f9f1008ac396e83f8a"
+      "blob": "f880a972fdfd9c05cd575b9a429b4b4ea54714fa"
     },
     {
       "eip": 8051,
@@ -11451,7 +11451,7 @@
       "abstract": "This EIP extends EIP-8141 with a new frame mode that enables EVM-level aggregation of cryptographic signatures and STARK (Scalable Transparent ARguments of Knowledge) proofs. The scheme allows transactions to carry lightweight dependencies — (scheme, data_hash, verification_key_hash) triples — which are aggregated off-chain into a single recursive STARK. Block validity requires this recursive…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "eeb0909f3299f8933ec1c6faba583b4a2e7543ad"
+      "blob": "2be71ee739458dc060788322f72751cf91799b15"
     },
     {
       "eip": 8289,
@@ -20216,7 +20216,7 @@
     },
     {
       "eip": 8046,
-      "blob": "01ab22ccf0d1f13c1a7778f9f1008ac396e83f8a",
+      "blob": "f880a972fdfd9c05cd575b9a429b4b4ea54714fa",
       "title": "Uniform price auction over inclusion lists",
       "status": "Draft",
       "type": "Standards Track",
@@ -20799,7 +20799,7 @@
     },
     {
       "eip": 8288,
-      "blob": "eeb0909f3299f8933ec1c6faba583b4a2e7543ad",
+      "blob": "2be71ee739458dc060788322f72751cf91799b15",
       "title": "In-mempool signature and proof aggregation",
       "status": "Draft",
       "type": "Standards Track",
