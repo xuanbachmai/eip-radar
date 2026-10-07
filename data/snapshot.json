@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-06T18:27:04.714Z",
+  "generatedAt": "2026-10-07T06:08:03.942Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "88fa3e4d24efb0dffdbe1fda2765060b870de784",
-    "treeSha": "f6faf9017f7064e9a4d620e8010aba6b9c2cff10",
-    "committedAt": "2026-10-06T16:08:49Z"
+    "commitSha": "258836f9185999e608aae534567a703079b14767",
+    "treeSha": "54f45cf39515735e1693bd8d738dfa8a24e71ed1",
+    "committedAt": "2026-10-07T03:42:44Z"
   },
   "eips": [
     {
@@ -2418,7 +2418,7 @@
           "handle": "rakita"
         }
       ],
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core",
       "created": "2020-07-11",
@@ -2434,11 +2434,12 @@
         8037,
         8038
       ],
+      "lastCallDeadline": "2026-11-01",
       "discussionsTo": "https://ethereum-magicians.org/t/eip-2780-reduce-intrinsic-cost-of-transactions/4413",
       "abstract": "This EIP decomposes the flat 21,000 intrinsic transaction cost into explicit primitives, each priced to match the resources a transaction actually consumes. A plain ETH transfer to an existing account remains at 21,000 execution gas, and contract-creation transactions cost the same whether or not they carry value. Transactions that create new accounts or interact with EIP-7702 pay the additional…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "aaafb9f1ec841508005e9b202ba7d164f804a2fc"
+      "blob": "08600e48eea38d6e60b76266bd3d18c79ff6be11"
     },
     {
       "eip": 2803,
@@ -6998,7 +6999,7 @@
           "handle": "jwasinger"
         }
       ],
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core",
       "created": "2024-05-17",
@@ -7008,11 +7009,12 @@
         6780,
         8246
       ],
+      "lastCallDeadline": "2026-11-01",
       "discussionsTo": "https://ethereum-magicians.org/t/eip-7708-eth-transfers-emit-a-log/20034",
       "abstract": "All ETH transfers emit a log.",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "8a2354628f7ae0728bbd2a6fc3dc73f902215350"
+      "blob": "43a92464af07aef15aede5fafd210edf21621a1d"
     },
     {
       "eip": 7709,
@@ -7149,16 +7151,17 @@
           "name": "Terence Tsao"
         }
       ],
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core",
       "created": "2024-06-28",
       "requires": [],
+      "lastCallDeadline": "2026-11-01",
       "discussionsTo": "https://ethereum-magicians.org/t/eip-7732-enshrined-proposer-builder-separation-epbs/19634",
       "abstract": "This EIP fundamentally changes the way an Ethereum block is validated by decoupling the execution validation from the consensus validation both logically as well as temporally. It does so by introducing a new in-protocol entity called builders and adding a new duty (submitting payload timeliness attestations) to Ethereum validators. The ExecutionPayload field of the BeaconBlockBody is removed and…",
       "track": "scourge",
       "trackSource": "override",
-      "blob": "fec48f74c51e61d966bb6c5e431c54c66ca5c11f"
+      "blob": "947683d4fe49da8870026cb69c6d9ff8d7d4d6d8"
     },
     {
       "eip": 7736,
@@ -7390,16 +7393,17 @@
           "handle": "nerolation"
         }
       ],
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core",
       "created": "2024-10-01",
       "requires": [],
+      "lastCallDeadline": "2026-11-01",
       "discussionsTo": "https://ethereum-magicians.org/t/eip-7778-prevent-block-gas-smuggling/21234",
       "abstract": "This EIP modifies the block gas accounting mechanism to prevent the circumvention of block gas limits. It proposes that gas refunds, particularly those from SSTORE operations setting storage slots to zero, should not reduce the gas counted toward the block gas limit, while still being applied to transaction gas costs for users.",
       "track": "verge",
       "trackSource": "override",
-      "blob": "4897aec97160c72d2080acf928b132f2efc1a886"
+      "blob": "056a541eabae7a72ea6daf37767dc2fc39a360dc"
     },
     {
       "eip": 7782,
@@ -7880,16 +7884,17 @@
           "handle": "Marchhill"
         }
       ],
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core",
       "created": "2024-12-06",
       "requires": [],
+      "lastCallDeadline": "2026-11-01",
       "discussionsTo": "https://ethereum-magicians.org/t/eip-7843-slotnum-opcode/22234",
       "abstract": "This EIP proposes to add a new opcode SLOTNUM (0x4b), that returns the corresponding slot number for the current block.",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "7b6b1d817e4fb5cbea7178c39f79109079d83cd4"
+      "blob": "2548b927edf0855b136e28f67e0acd84053d1c66"
     },
     {
       "eip": 7848,
@@ -8362,7 +8367,7 @@
       "abstract": "This proposal introduces three opcodes, TXTRACE, TXDIFF, and EVENTDATACOPY, that let a contract inspect the outcome of the transaction executing it: the balance, storage, and code changes it produced, and the events it emitted. TXTRACE enumerates the full transaction state diff, TXDIFF reads a single entry by key, and EVENTDATACOPY copies event data into memory. These opcodes are valid only…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "905d2d8c2b1c3f80f75c3638e20a42e4ef2bf931"
+      "blob": "95ecc5d5e409287bd1bbcc688cf7e172d01360c4"
     },
     {
       "eip": 7907,
@@ -8674,16 +8679,17 @@
           "handle": "qu0b"
         }
       ],
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core",
       "created": "2025-03-31",
       "requires": [],
+      "lastCallDeadline": "2026-11-01",
       "discussionsTo": "https://ethereum-magicians.org/t/eip-7928-block-level-access-lists/23337",
       "abstract": "This EIP introduces Block-Level Access Lists (BALs) that record all accounts and storage locations accessed during block execution, along with their post-execution values. BALs enable parallel disk reads, parallel transaction validation, parallel state root computation and executionless state updates.",
       "track": "verge",
       "trackSource": "override",
-      "blob": "c9108d3239308fca9055368643462bbbf8393958"
+      "blob": "f5828f59cd5073eca7856b62c6d16389d5a2c09d"
     },
     {
       "eip": 7932,
@@ -8866,7 +8872,7 @@
           "handle": "benaadams"
         }
       ],
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core",
       "created": "2025-06-09",
@@ -8874,11 +8880,12 @@
         170,
         3860
       ],
+      "lastCallDeadline": "2026-11-01",
       "discussionsTo": "https://ethereum-magicians.org/t/increase-maximum-contract-size-to-48kb/24509",
       "abstract": "This EIP proposes to raise the maximum allowed size for contract code deployed on Ethereum from 24,576 bytes to 65,536 bytes, and to raise the initcode size limit from 49,152 bytes to 131,072 bytes.",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "2e62d6a88aa596e4efbf3592cda7706f8a51dac3"
+      "blob": "e1b5c551c9d5cd6b007c5ce0ccab167965d4a661"
     },
     {
       "eip": 7956,
@@ -9076,18 +9083,19 @@
           "handle": "nerolation"
         }
       ],
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core",
       "created": "2025-06-18",
       "requires": [
         7623
       ],
+      "lastCallDeadline": "2026-11-01",
       "discussionsTo": "https://ethereum-magicians.org/t/eip-7976-further-increase-calldata-cost/24597",
       "abstract": "This EIP proposes an adjustment to calldata pricing by raising the floor cost from 10/40 to 64/64 gas per calldata byte. This reduces the worst-case block size by ~37% with minimal impact.",
       "track": "surge",
       "trackSource": "override",
-      "blob": "35cdae2ce171eb734dba6ccc8dfe5a760e1bcd86"
+      "blob": "15abf8001a4296864141700add3bf66c9f1b8721"
     },
     {
       "eip": 7979,
@@ -9155,7 +9163,7 @@
           "handle": "nerolation"
         }
       ],
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core",
       "created": "2024-12-27",
@@ -9164,11 +9172,12 @@
         7623,
         7976
       ],
+      "lastCallDeadline": "2026-11-01",
       "discussionsTo": "https://ethereum-magicians.org/t/eip-7981-increase-access-list-cost/24680",
       "abstract": "This EIP charges access lists for their data footprint, preventing the circumvention of the EIP-7623 floor pricing. This effectively reduces the worst-case block size by ~21% with minimal impact on users.",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "8da3cf91d4bc688c43cc25f2f03b7c86c7bbc257"
+      "blob": "aaf7a767fe5ccbd6699099ff39fcbda1195b48e7"
     },
     {
       "eip": 7997,
@@ -9192,18 +9201,19 @@
           "handle": "jochem-brouwer"
         }
       ],
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core",
       "created": "2025-08-03",
       "requires": [
         1014
       ],
+      "lastCallDeadline": "2026-11-01",
       "discussionsTo": "https://ethereum-magicians.org/t/eip-7997-deterministic-factory-predeploy/24998",
       "abstract": "The availability of a well-known CREATE2 factory at 0x4e59b44847b379578588920cA78FbF26c0B4956C is made a formal requirement to enable deterministic deployments at identical addresses across EVM chains. This benefits developer experience, user experience, and security, in particular for multi-chain and cross-chain applications, including account abstraction.",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "192193facea01dfb8b87ad59d67e8385bf9304b1"
+      "blob": "9a4600a229edc4d1fafcc42c3a935cdc1474b72c"
     },
     {
       "eip": 7998,
@@ -9437,16 +9447,17 @@
           "handle": "chfast"
         }
       ],
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core",
       "created": "2025-08-16",
       "requires": [],
+      "lastCallDeadline": "2026-11-01",
       "discussionsTo": "https://ethereum-magicians.org/t/eip-8024-backward-compatible-swapn-dupn-exchange/25486",
       "abstract": "Currently, SWAP* and DUP* instructions are limited to a stack depth of 16. Introduce three new instructions, SWAPN, DUPN and EXCHANGE which lift this limitation and allow accessing the stack at higher depths.",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "7aa9a848e864147c34a5d9147ece9f9179d0ac70"
+      "blob": "d9e7aebfcb8ef1a67e9f5564498dd605c022c30a"
     },
     {
       "eip": 8025,
@@ -9605,7 +9616,7 @@
           "handle": "rjl493456442"
         }
       ],
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core",
       "created": "2025-10-01",
@@ -9621,11 +9632,12 @@
         7976,
         8038
       ],
+      "lastCallDeadline": "2026-11-01",
       "discussionsTo": "https://ethereum-magicians.org/t/eip-8037-state-creation-gas-cost-increase/25694",
       "abstract": "This proposal increases the cost of state creation operations, thus avoiding excessive state growth under increased block gas limits. It introduces a new variable, CPSB (cost per state byte), and sets this unit of gas costs per new state byte by targeting an average state growth of 120 GiB per year at a reference block gas limit of 150M gas units. It also introduces an independent metering for…",
       "track": "purge",
       "trackSource": "override",
-      "blob": "85d6cfd7076fa9f7fea417e4010c73f5014a64a8"
+      "blob": "c8bc85b0bf866089f84d0745769fd848733c2958"
     },
     {
       "eip": 8038,
@@ -9645,18 +9657,19 @@
           "handle": "adietrichs"
         }
       ],
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core",
       "created": "2025-10-03",
       "requires": [
         8037
       ],
+      "lastCallDeadline": "2026-11-01",
       "discussionsTo": "https://ethereum-magicians.org/t/eip-8038-state-access-gas-cost-update/25693",
       "abstract": "This EIP updates the gas cost of state-access operations to reflect Ethereum's larger state and the consequent slowdown of these operations. It dissects the cost of state-touching operations into three components — access, write, and state creation: the cold account access cost (COLD_ACCOUNT_ACCESS) is raised, explicit write surcharges (ACCOUNT_WRITE, STORAGE_WRITE) are introduced, state-creation…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "f83531466a3862853424a81d000727b3043ef2cc"
+      "blob": "94a7a4f13126d591c665bc75ae2cbb98ac5a851d"
     },
     {
       "eip": 8045,
@@ -9672,18 +9685,19 @@
           "handle": "barnabasbusa"
         }
       ],
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core",
       "created": "2025-10-16",
       "requires": [
         7917
       ],
+      "lastCallDeadline": "2026-11-01",
       "discussionsTo": "https://ethereum-magicians.org/t/eip-8045-exclude-slashed-validators-from-proposing/25850",
       "abstract": "This EIP proposes a modification to the beacon chain proposer selection process to exclude slashed validators from being selected as proposers.",
       "track": "scourge",
       "trackSource": "override",
-      "blob": "d38ce1654ef7cb0bba89802339c55438ea1c72e7"
+      "blob": "cb587d68f0d79b003ac5446243f45e9bc88bceda"
     },
     {
       "eip": 8046,
@@ -9700,13 +9714,16 @@
       "category": "Core",
       "created": "2025-10-16",
       "requires": [
-        7805
+        7805,
+        8037,
+        8141,
+        8369
       ],
       "discussionsTo": "https://ethereum-magicians.org/t/eip-8046-uniform-price-auction-over-inclusion-lists/25844",
-      "abstract": "This EIP proposes a uniform price auction over inclusion lists (UPIL), which ranks transactions by their offered ranking fee per gas. When the block is full, no transaction is allowed to displace an inclusion-list (IL) transaction that passes regular inclusion criteria and offers a higher ranking fee per gas. All included transactions pay a uniform inclusion price, equal to the highest ranking…",
+      "abstract": "This EIP proposes a uniform price auction over inclusion lists (UPIL), which ranks transactions by their ranking fee: how much they are willing to pay per gas for inclusion above the base fee. When the block is full, no transaction is allowed to displace an inclusion-list (IL) transaction that offers a higher ranking fee and is valid when accounting for ranking. All included transactions pay a…",
       "track": "scourge",
       "trackSource": "override",
-      "blob": "ee99a90af5a8888145a983561c471822168ae75e"
+      "blob": "01ab22ccf0d1f13c1a7778f9f1008ac396e83f8a"
     },
     {
       "eip": 8051,
@@ -9905,18 +9922,19 @@
           "handle": "anderselowsson"
         }
       ],
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core",
       "created": "2025-10-17",
       "requires": [
         7251
       ],
+      "lastCallDeadline": "2026-11-01",
       "discussionsTo": "https://ethereum-magicians.org/t/eip-8061-increase-churn-limits/25991",
       "abstract": "This EIP roughly doubles the consolidation churn, as well as quadrupling the exit churn and restoring its proportionality to total stake (though maintaining the existing cap on activations). The choice of parameters balances maintaining a sufficiently long weak subjectivity period (~7 days, roughly halving the current period) with achieving two goals: allowing for faster consolidation of the…",
       "track": "merge",
       "trackSource": "override",
-      "blob": "0f9092a01e2f7f4c2d62ded41bd730774d865425"
+      "blob": "6cfa9a34c77580ed47a1f2fd57d81596265dba0d"
     },
     {
       "eip": 8062,
@@ -11391,7 +11409,7 @@
           "name": "Justin Traglia"
         }
       ],
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core",
       "created": "2026-05-22",
@@ -11400,11 +11418,12 @@
         7685,
         7732
       ],
+      "lastCallDeadline": "2026-11-01",
       "discussionsTo": "https://ethereum-magicians.org/t/eip-8282-builder-execution-requests/28699",
       "abstract": "This EIP introduces two EIP-7685 request types and corresponding predeploy contracts for EIP-7732 builders. A builder deposit contract handles initial registration and stake top-ups. A builder exit contract lets a builder's execution_address trigger a full exit. Both contracts follow the request-bus pattern of EIP-7002 and EIP-7251. Builders no longer onboard through the validator deposit flow or…",
       "track": "scourge",
       "trackSource": "override",
-      "blob": "45e570a246207d5b1fb095e259e3f98bb0922639"
+      "blob": "13b923d8effa18ec5eae90c9c5072950539aa0f9"
     },
     {
       "eip": 8288,
@@ -15726,9 +15745,9 @@
     },
     {
       "eip": 2780,
-      "blob": "aaafb9f1ec841508005e9b202ba7d164f804a2fc",
+      "blob": "08600e48eea38d6e60b76266bd3d18c79ff6be11",
       "title": "Resource-based intrinsic transaction gas",
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core"
     },
@@ -19279,9 +19298,9 @@
     },
     {
       "eip": 7708,
-      "blob": "8a2354628f7ae0728bbd2a6fc3dc73f902215350",
+      "blob": "43a92464af07aef15aede5fafd210edf21621a1d",
       "title": "ETH transfers emit a log",
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core"
     },
@@ -19326,9 +19345,9 @@
     },
     {
       "eip": 7732,
-      "blob": "fec48f74c51e61d966bb6c5e431c54c66ca5c11f",
+      "blob": "947683d4fe49da8870026cb69c6d9ff8d7d4d6d8",
       "title": "Enshrined Proposer-Builder Separation",
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core"
     },
@@ -19420,9 +19439,9 @@
     },
     {
       "eip": 7778,
-      "blob": "4897aec97160c72d2080acf928b132f2efc1a886",
+      "blob": "056a541eabae7a72ea6daf37767dc2fc39a360dc",
       "title": "Block Gas Accounting without Refunds",
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core"
     },
@@ -19600,9 +19619,9 @@
     },
     {
       "eip": 7843,
-      "blob": "7b6b1d817e4fb5cbea7178c39f79109079d83cd4",
+      "blob": "2548b927edf0855b136e28f67e0acd84053d1c66",
       "title": "SLOTNUM opcode",
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core"
     },
@@ -19757,14 +19776,14 @@
     },
     {
       "eip": 7904,
-      "blob": "482c586b726fc2ee89146e5e3b56319d3780fe76",
+      "blob": "822b151e5147031adb3a81e65b3f9eb504d6416e",
       "title": "Compute Gas Cost Analysis",
-      "status": "Review",
+      "status": "Last Call",
       "type": "Informational"
     },
     {
       "eip": 7906,
-      "blob": "905d2d8c2b1c3f80f75c3638e20a42e4ef2bf931",
+      "blob": "95ecc5d5e409287bd1bbcc688cf7e172d01360c4",
       "title": "Transaction Assertions via State Diff Opcode",
       "status": "Draft",
       "type": "Standards Track",
@@ -19874,9 +19893,9 @@
     },
     {
       "eip": 7928,
-      "blob": "c9108d3239308fca9055368643462bbbf8393958",
+      "blob": "f5828f59cd5073eca7856b62c6d16389d5a2c09d",
       "title": "Block-Level Access Lists",
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core"
     },
@@ -19958,9 +19977,9 @@
     },
     {
       "eip": 7954,
-      "blob": "2e62d6a88aa596e4efbf3592cda7706f8a51dac3",
+      "blob": "e1b5c551c9d5cd6b007c5ce0ccab167965d4a661",
       "title": "Increase Maximum Contract Size",
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core"
     },
@@ -20030,17 +20049,17 @@
     },
     {
       "eip": 7975,
-      "blob": "d65d30198c64c13078fd055e8636c1a3a4ef008e",
+      "blob": "7a50753a8da587a2bff70825dcc17b382a8eb6e8",
       "title": "eth/70 - partial block receipt lists",
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Networking"
     },
     {
       "eip": 7976,
-      "blob": "35cdae2ce171eb734dba6ccc8dfe5a760e1bcd86",
+      "blob": "15abf8001a4296864141700add3bf66c9f1b8721",
       "title": "Increase Calldata Floor Cost",
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core"
     },
@@ -20062,17 +20081,17 @@
     },
     {
       "eip": 7981,
-      "blob": "8da3cf91d4bc688c43cc25f2f03b7c86c7bbc257",
+      "blob": "aaf7a767fe5ccbd6699099ff39fcbda1195b48e7",
       "title": "Increase Access List Cost",
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core"
     },
     {
       "eip": 7997,
-      "blob": "192193facea01dfb8b87ad59d67e8385bf9304b1",
+      "blob": "9a4600a229edc4d1fafcc42c3a935cdc1474b72c",
       "title": "Deterministic Factory Contract",
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core"
     },
@@ -20141,9 +20160,9 @@
     },
     {
       "eip": 8024,
-      "blob": "7aa9a848e864147c34a5d9147ece9f9179d0ac70",
+      "blob": "d9e7aebfcb8ef1a67e9f5564498dd605c022c30a",
       "title": "Backward compatible SWAPN, DUPN, EXCHANGE",
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core"
     },
@@ -20173,31 +20192,31 @@
     },
     {
       "eip": 8037,
-      "blob": "85d6cfd7076fa9f7fea417e4010c73f5014a64a8",
+      "blob": "c8bc85b0bf866089f84d0745769fd848733c2958",
       "title": "State Creation Gas Cost Increase",
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core"
     },
     {
       "eip": 8038,
-      "blob": "f83531466a3862853424a81d000727b3043ef2cc",
+      "blob": "94a7a4f13126d591c665bc75ae2cbb98ac5a851d",
       "title": "State-access gas cost update",
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core"
     },
     {
       "eip": 8045,
-      "blob": "d38ce1654ef7cb0bba89802339c55438ea1c72e7",
+      "blob": "cb587d68f0d79b003ac5446243f45e9bc88bceda",
       "title": "Exclude slashed validators from proposing",
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core"
     },
     {
       "eip": 8046,
-      "blob": "ee99a90af5a8888145a983561c471822168ae75e",
+      "blob": "01ab22ccf0d1f13c1a7778f9f1008ac396e83f8a",
       "title": "Uniform price auction over inclusion lists",
       "status": "Draft",
       "type": "Standards Track",
@@ -20253,9 +20272,9 @@
     },
     {
       "eip": 8061,
-      "blob": "0f9092a01e2f7f4c2d62ded41bd730774d865425",
+      "blob": "6cfa9a34c77580ed47a1f2fd57d81596265dba0d",
       "title": "Increase exit and consolidation churn",
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core"
     },
@@ -20269,9 +20288,9 @@
     },
     {
       "eip": 8066,
-      "blob": "157aa807e1ce5f483f09de208b68f9e8c29c9a55",
+      "blob": "a0e8c630e4edea82209ff8e6c6584e18067d84e3",
       "title": "Upgrade Mascots",
-      "status": "Review",
+      "status": "Last Call",
       "type": "Informational"
     },
     {
@@ -20284,9 +20303,9 @@
     },
     {
       "eip": 8070,
-      "blob": "5f1154bdeba6fb473a49dbbb430383fa71bc5b3f",
+      "blob": "b65cda59d5a99acb3d20aef088630c9c4f7220f1",
       "title": "eth/72 - Sparse Blobpool",
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Networking"
     },
@@ -20464,9 +20483,9 @@
     },
     {
       "eip": 8136,
-      "blob": "f0fc428cd7445fbae69f13cb0e7ac4e2f72c19c4",
+      "blob": "b5c7430adddf43f5c7381c95131a2c6be099a6b5",
       "title": "Cell-Level Deltas for Data Column Broadcast",
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Networking"
     },
@@ -20527,9 +20546,9 @@
     },
     {
       "eip": 8159,
-      "blob": "6801e51111a0e65ae5fe243e7d29a782db154deb",
+      "blob": "70aa972709bc179e97f55423c035ac8823ee0e8c",
       "title": "eth/71 - Block Access List Exchange",
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Networking"
     },
@@ -20598,9 +20617,9 @@
     },
     {
       "eip": 8189,
-      "blob": "1a1193662715d625597450c459e768eb44069d49",
+      "blob": "cec54301bbcf52db6b51720e9a54a8cc0f0151b7",
       "title": "snap/2 - BAL-Based State Healing",
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Networking"
     },
@@ -20733,9 +20752,9 @@
     },
     {
       "eip": 8261,
-      "blob": "50c69a2d66d767925c09fb66a1d3ea8d1eefa363",
+      "blob": "2f52235592a0a1a392f9261b97048268c4f98867",
       "title": "Gas Limit Schedule",
-      "status": "Review",
+      "status": "Last Call",
       "type": "Informational"
     },
     {
@@ -20772,9 +20791,9 @@
     },
     {
       "eip": 8282,
-      "blob": "45e570a246207d5b1fb095e259e3f98bb0922639",
+      "blob": "13b923d8effa18ec5eae90c9c5072950539aa0f9",
       "title": "Builder Execution Requests",
-      "status": "Review",
+      "status": "Last Call",
       "type": "Standards Track",
       "category": "Core"
     },
