@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-08T13:42:04.490Z",
+  "generatedAt": "2026-10-08T23:25:12.659Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "e32850647e72d6287b7778c6899007abd1a78b1d",
-    "treeSha": "f86a93b08379f6976013da3b5f38f4f762d80543",
-    "committedAt": "2026-10-08T13:13:37Z"
+    "commitSha": "af80fc1c4122c4990b8c84bfd10be60c6e343bb2",
+    "treeSha": "a487a4c67c016da337cbf0cd4ca061663baab215",
+    "committedAt": "2026-10-08T17:50:27Z"
   },
   "eips": [
     {
@@ -8367,7 +8367,7 @@
       "abstract": "This proposal introduces three opcodes, TXTRACE, TXDIFF, and EVENTDATACOPY, that let a contract inspect the outcome of the transaction executing it: the balance, storage, and code changes it produced, and the events it emitted. TXTRACE enumerates the full transaction state diff, TXDIFF reads a single entry by key, and EVENTDATACOPY copies event data into memory. These opcodes are valid only…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "5ec349d0926c5efe8f72dfebf454e9911dad4250"
+      "blob": "7f5c2854ba1f1898e443e6d90fcf418aeb133fcc"
     },
     {
       "eip": 7907,
@@ -10322,7 +10322,7 @@
     {
       "eip": 8130,
       "title": "Keystore Accounts",
-      "description": "Enable account abstraction through onchain keystore accounts and a new transaction type",
+      "description": "An onchain keystore that authorizes account actors through authenticator contracts, usable by any transaction transport",
       "authors": [
         {
           "name": "Chris Hunter",
@@ -10335,14 +10335,13 @@
       "created": "2025-10-14",
       "requires": [
         170,
-        2718,
-        7623
+        1014
       ],
       "discussionsTo": "https://ethereum-magicians.org/t/eip-8130-account-abstraction-by-account-configurations/25952",
-      "abstract": "This proposal introduces a new EIP-2718 transaction type and an onchain Account Configuration system that together provide account abstraction: custom authentication, call batching, and gas sponsorship. Accounts register actors with onchain authenticator contracts. Transactions declare which authenticator to use, enabling nodes to filter transactions without executing arbitrary wallet code. No…",
+      "abstract": "This proposal defines the Keystore: an onchain account configuration system in which each account registers actors, each bound to an authenticator contract that verifies signatures, with a per-actor scope, expiry, and optional policy. Authenticators answer \"who signed\"; the Keystore answers \"what may that actor do\". The Keystore is independent of any one transaction format. It is usable through…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "19027c9767a3b714680d496766a56e5464136163"
+      "blob": "6cbc272018cd0eb029ad30d26bc36b6289689411"
     },
     {
       "eip": 8131,
@@ -10441,7 +10440,7 @@
       "abstract": "Adds a new transaction whose validity and gas payment can be defined abstractly. This is achieved by decomposing the transaction into a sequence of frames which are contract calls that validate the transaction, approve gas payment, and execute standard user operations.",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "4e73f1e1f0fdc096d4810f33f0ee977132ecf145"
+      "blob": "fa69526d147653163d22c535cffce4e18c1606d0"
     },
     {
       "eip": 8142,
@@ -13122,12 +13121,12 @@
         },
         {
           "eip": 4758,
-          "stage": "Proposed",
+          "stage": "Considered",
           "section": "core"
         },
         {
           "eip": 5920,
-          "stage": "Proposed",
+          "stage": "Considered",
           "section": "core"
         },
         {
@@ -13137,7 +13136,7 @@
         },
         {
           "eip": 7666,
-          "stage": "Proposed",
+          "stage": "Declined",
           "section": "core"
         },
         {
@@ -13147,7 +13146,7 @@
         },
         {
           "eip": 7709,
-          "stage": "Proposed",
+          "stage": "Considered",
           "section": "core"
         },
         {
@@ -13186,6 +13185,11 @@
           "section": "core"
         },
         {
+          "eip": 7907,
+          "stage": "Proposed",
+          "section": "core"
+        },
+        {
           "eip": 7923,
           "stage": "Declined",
           "section": "core"
@@ -13207,7 +13211,7 @@
         },
         {
           "eip": 8077,
-          "stage": "Proposed",
+          "stage": "Considered",
           "section": "core"
         },
         {
@@ -13222,7 +13226,7 @@
         },
         {
           "eip": 8116,
-          "stage": "Proposed",
+          "stage": "Considered",
           "section": "core"
         },
         {
@@ -13252,7 +13256,7 @@
         },
         {
           "eip": 8151,
-          "stage": "Proposed",
+          "stage": "Considered",
           "section": "core"
         },
         {
@@ -13327,7 +13331,7 @@
         },
         {
           "eip": 8298,
-          "stage": "Proposed",
+          "stage": "Considered",
           "section": "core"
         },
         {
@@ -13347,7 +13351,12 @@
         },
         {
           "eip": 8355,
-          "stage": "Proposed",
+          "stage": "Declined",
+          "section": "core"
+        },
+        {
+          "eip": 8360,
+          "stage": "Considered",
           "section": "core"
         },
         {
@@ -19785,7 +19794,7 @@
     },
     {
       "eip": 7906,
-      "blob": "5ec349d0926c5efe8f72dfebf454e9911dad4250",
+      "blob": "7f5c2854ba1f1898e443e6d90fcf418aeb133fcc",
       "title": "Transaction Assertions via State Diff Opcode",
       "status": "Draft",
       "type": "Standards Track",
@@ -20337,7 +20346,7 @@
     },
     {
       "eip": 8077,
-      "blob": "a1f03e910d91e3c174ee31a4baeadf95c9ac2714",
+      "blob": "6ac5ec7885b061f7d74001f0e7159a79de1de6cb",
       "title": "eth/XX - announce transactions with nonce",
       "status": "Draft",
       "type": "Standards Track",
@@ -20361,7 +20370,7 @@
     },
     {
       "eip": 8081,
-      "blob": "2f0d5c497eca41ee9a13f2aef2598e4ed3ec1597",
+      "blob": "ecef1753737cc9b60b1d9d086380db88f1e3dc3c",
       "title": "Hardfork Meta - Hegotá",
       "status": "Draft",
       "type": "Meta"
@@ -20448,7 +20457,7 @@
     },
     {
       "eip": 8130,
-      "blob": "19027c9767a3b714680d496766a56e5464136163",
+      "blob": "6cbc272018cd0eb029ad30d26bc36b6289689411",
       "title": "Keystore Accounts",
       "status": "Draft",
       "type": "Standards Track",
@@ -20500,7 +20509,7 @@
     },
     {
       "eip": 8141,
-      "blob": "4e73f1e1f0fdc096d4810f33f0ee977132ecf145",
+      "blob": "fa69526d147653163d22c535cffce4e18c1606d0",
       "title": "Frame Transaction",
       "status": "Draft",
       "type": "Standards Track",
