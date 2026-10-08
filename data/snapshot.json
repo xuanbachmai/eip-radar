@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-07T23:09:52.463Z",
+  "generatedAt": "2026-10-08T13:42:04.490Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "6dac5e74918b54511298fdbff79650e8f8d27d78",
-    "treeSha": "33f59ccb503f94ed3f387ce57cc403924c39a38f",
-    "committedAt": "2026-10-07T22:23:55Z"
+    "commitSha": "e32850647e72d6287b7778c6899007abd1a78b1d",
+    "treeSha": "f86a93b08379f6976013da3b5f38f4f762d80543",
+    "committedAt": "2026-10-08T13:13:37Z"
   },
   "eips": [
     {
@@ -11154,15 +11154,17 @@
       "category": "Core",
       "created": "2026-04-16",
       "requires": [
-        7623,
+        7928,
+        7976,
         8037,
+        8038,
         8141
       ],
       "discussionsTo": "https://ethereum-magicians.org/t/eip-8250-keyed-nonces-for-frame-transactions/28437",
       "abstract": "Replaces the single sender nonce of an EIP-8141 frame transaction with (nonce_keys, nonce_seq): a bounded set of nonce keys sharing one sequence number. nonce_keys == [0] aliases the legacy account nonce; each non-zero key selects an independent protocol-managed nonce sequence stored in a NONCE_MANAGER system contract. Transactions whose non-zero key sets do not overlap are replay-independent…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "e49b435eb2ddab14b15c56eea93f719d75886f38"
+      "blob": "f8db63dd96df22c2ee9475ccec41fa9b8cbcb226"
     },
     {
       "eip": 8253,
@@ -11360,7 +11362,7 @@
       "abstract": "EIP-8141 frame transactions can verify recent roots through a canonical VERIFY frame. The frame carries one to sixteen (source_id, slot, root) tuples and calls a recent root contract that checks each tuple against its storage. Root sources write to the same contract. Each root is keyed by (source_id, slot), where source_id is derived from the writer address and a salt. The frame runs before…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "274ce98c57ec285862f4d2ff48cd9f545c385f12"
+      "blob": "0acc21ad8359be83c0929c7cc70e45326be8acff"
     },
     {
       "eip": 8279,
@@ -20713,7 +20715,7 @@
     },
     {
       "eip": 8250,
-      "blob": "e49b435eb2ddab14b15c56eea93f719d75886f38",
+      "blob": "f8db63dd96df22c2ee9475ccec41fa9b8cbcb226",
       "title": "Keyed Nonces for Frame Transactions",
       "status": "Draft",
       "type": "Standards Track",
@@ -20775,7 +20777,7 @@
     },
     {
       "eip": 8272,
-      "blob": "274ce98c57ec285862f4d2ff48cd9f545c385f12",
+      "blob": "0acc21ad8359be83c0929c7cc70e45326be8acff",
       "title": "Recent Roots for Frame Transactions",
       "status": "Draft",
       "type": "Standards Track",
