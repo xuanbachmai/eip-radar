@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-09T06:17:18.089Z",
+  "generatedAt": "2026-10-09T13:30:19.205Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "f5151dcfbad07a7ba677cb59038ac2985c63356e",
-    "treeSha": "ff0c6b0ba4274b511fe8d065772f3c8f4bec4e70",
-    "committedAt": "2026-10-09T06:02:25Z"
+    "commitSha": "7d3570401baf6d9eac25c4f8fccf26d05de37032",
+    "treeSha": "99a662d04b6477f5d1cd1cb91403b46dafe8cd03",
+    "committedAt": "2026-10-09T13:07:07Z"
   },
   "eips": [
     {
@@ -8367,7 +8367,7 @@
       "abstract": "This proposal introduces three opcodes, TXTRACE, TXDIFF, and EVENTDATACOPY, that let a contract inspect the outcome of the transaction executing it: the balance, storage, and code changes it produced, and the events it emitted. TXTRACE enumerates the full transaction state diff, TXDIFF reads a single entry by key, and EVENTDATACOPY copies event data into memory. These opcodes are valid only…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "a901a7226b689207fc47c79e8071c93287914765"
+      "blob": "b3581fc80d0346ac04081a2fa0b02273c1607de6"
     },
     {
       "eip": 7907,
@@ -11125,6 +11125,29 @@
       "track": "purge",
       "trackSource": "override",
       "blob": "84613eac60cd9823399285fb5cfbbd6ec330f19c"
+    },
+    {
+      "eip": 8247,
+      "title": "Ancestor-Indexed BALs",
+      "description": "Compact references to recent block access lists for repeated addresses and storage slots",
+      "authors": [
+        {
+          "name": "Toni Wahrstätter",
+          "handle": "nerolation"
+        }
+      ],
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core",
+      "created": "2026-05-03",
+      "requires": [
+        7928
+      ],
+      "discussionsTo": "https://ethereum-magicians.org/t/eip-8247-ancestor-indexed-bals/29926",
+      "abstract": "Replace repeated 20-byte addresses and 32-byte storage keys in EIP-7928 Block Access Lists (BALs) with compact references into one of the last eight canonical ancestor BALs. Expected reduction in BAL size is approximately 30–50%, depending on cross-block reuse.",
+      "track": "merge",
+      "trackSource": "rule",
+      "blob": "f9c3f712e0558fc340b881a92577eda5ed92eb55"
     },
     {
       "eip": 8250,
@@ -19794,7 +19817,7 @@
     },
     {
       "eip": 7906,
-      "blob": "a901a7226b689207fc47c79e8071c93287914765",
+      "blob": "b3581fc80d0346ac04081a2fa0b02273c1607de6",
       "title": "Transaction Assertions via State Diff Opcode",
       "status": "Draft",
       "type": "Standards Track",
@@ -20346,7 +20369,7 @@
     },
     {
       "eip": 8077,
-      "blob": "6ac5ec7885b061f7d74001f0e7159a79de1de6cb",
+      "blob": "332882d69198352605a679e72ae851aa28c4e4df",
       "title": "eth/XX - announce transactions with nonce",
       "status": "Draft",
       "type": "Standards Track",
@@ -20719,6 +20742,14 @@
       "blob": "84613eac60cd9823399285fb5cfbbd6ec330f19c",
       "title": "Remove SELFDESTRUCT Burn",
       "status": "Last Call",
+      "type": "Standards Track",
+      "category": "Core"
+    },
+    {
+      "eip": 8247,
+      "blob": "f9c3f712e0558fc340b881a92577eda5ed92eb55",
+      "title": "Ancestor-Indexed BALs",
+      "status": "Draft",
       "type": "Standards Track",
       "category": "Core"
     },

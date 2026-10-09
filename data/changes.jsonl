@@ -221,3 +221,4 @@
 {"at":"2026-10-08T23:25:12.659Z","commit":"af80fc1c4122c4990b8c84bfd10be60c6e343bb2","type":"fork_inclusion_change","eip":8355,"title":"Precompiles for ML-DSA Verification","track":"splurge","upgrade":"hegota","from":"Proposed","to":"Declined"}
 {"at":"2026-10-08T23:25:12.659Z","commit":"af80fc1c4122c4990b8c84bfd10be60c6e343bb2","type":"fork_inclusion_change","eip":7907,"title":"Meter Contract Code Size","track":"splurge","upgrade":"hegota","from":null,"to":"Proposed"}
 {"at":"2026-10-08T23:25:12.659Z","commit":"af80fc1c4122c4990b8c84bfd10be60c6e343bb2","type":"fork_inclusion_change","eip":8360,"title":"TCREATE Opcode","track":"splurge","upgrade":"hegota","from":null,"to":"Considered"}
+{"at":"2026-10-09T13:30:19.205Z","commit":"7d3570401baf6d9eac25c4f8fccf26d05de37032","type":"new_eip","eip":8247,"title":"Ancestor-Indexed BALs","track":"merge","status":"Draft"}
