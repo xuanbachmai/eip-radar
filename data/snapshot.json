@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-09T13:30:19.205Z",
+  "generatedAt": "2026-10-09T22:43:30.471Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "7d3570401baf6d9eac25c4f8fccf26d05de37032",
-    "treeSha": "99a662d04b6477f5d1cd1cb91403b46dafe8cd03",
-    "committedAt": "2026-10-09T13:07:07Z"
+    "commitSha": "af3a7802c8ea516f717c6013e27d0f529046f007",
+    "treeSha": "637fa4693463e25017634e455cef7708c288d57e",
+    "committedAt": "2026-10-09T16:58:06Z"
   },
   "eips": [
     {
@@ -8137,7 +8137,7 @@
       "abstract": "This EIP specifies a series of new RETURN opcodes which allow the user to specify which data location to return from instead of defaulting to returning from memory.",
       "track": "purge",
       "trackSource": "override",
-      "blob": "f12e08efe026016ef4dd28d04db489ac74a63114"
+      "blob": "68cce4ede71933749f038631c8d77ba83259a5be"
     },
     {
       "eip": 7880,
@@ -8367,7 +8367,7 @@
       "abstract": "This proposal introduces three opcodes, TXTRACE, TXDIFF, and EVENTDATACOPY, that let a contract inspect the outcome of the transaction executing it: the balance, storage, and code changes it produced, and the events it emitted. TXTRACE enumerates the full transaction state diff, TXDIFF reads a single entry by key, and EVENTDATACOPY copies event data into memory. These opcodes are valid only…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "b3581fc80d0346ac04081a2fa0b02273c1607de6"
+      "blob": "c2be6cc080e715ccdf932688402b853c16f194b5"
     },
     {
       "eip": 7907,
@@ -10440,7 +10440,7 @@
       "abstract": "Adds a new transaction whose validity and gas payment can be defined abstractly. This is achieved by decomposing the transaction into a sequence of frames which are contract calls that validate the transaction, approve gas payment, and execute standard user operations.",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "fa69526d147653163d22c535cffce4e18c1606d0"
+      "blob": "aa1754918a99fe472934e6e78817194a47718c73"
     },
     {
       "eip": 8142,
@@ -19731,7 +19731,7 @@
     },
     {
       "eip": 7877,
-      "blob": "f12e08efe026016ef4dd28d04db489ac74a63114",
+      "blob": "68cce4ede71933749f038631c8d77ba83259a5be",
       "title": "Enhanced RETURN opcodes",
       "status": "Stagnant",
       "type": "Standards Track",
@@ -19817,7 +19817,7 @@
     },
     {
       "eip": 7906,
-      "blob": "b3581fc80d0346ac04081a2fa0b02273c1607de6",
+      "blob": "c2be6cc080e715ccdf932688402b853c16f194b5",
       "title": "Transaction Assertions via State Diff Opcode",
       "status": "Draft",
       "type": "Standards Track",
@@ -20532,7 +20532,7 @@
     },
     {
       "eip": 8141,
-      "blob": "fa69526d147653163d22c535cffce4e18c1606d0",
+      "blob": "aa1754918a99fe472934e6e78817194a47718c73",
       "title": "Frame Transaction",
       "status": "Draft",
       "type": "Standards Track",
