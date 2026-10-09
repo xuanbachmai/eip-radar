@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-08T23:25:12.659Z",
+  "generatedAt": "2026-10-09T06:17:18.089Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "af80fc1c4122c4990b8c84bfd10be60c6e343bb2",
-    "treeSha": "a487a4c67c016da337cbf0cd4ca061663baab215",
-    "committedAt": "2026-10-08T17:50:27Z"
+    "commitSha": "f5151dcfbad07a7ba677cb59038ac2985c63356e",
+    "treeSha": "ff0c6b0ba4274b511fe8d065772f3c8f4bec4e70",
+    "committedAt": "2026-10-09T06:02:25Z"
   },
   "eips": [
     {
@@ -8367,7 +8367,7 @@
       "abstract": "This proposal introduces three opcodes, TXTRACE, TXDIFF, and EVENTDATACOPY, that let a contract inspect the outcome of the transaction executing it: the balance, storage, and code changes it produced, and the events it emitted. TXTRACE enumerates the full transaction state diff, TXDIFF reads a single entry by key, and EVENTDATACOPY copies event data into memory. These opcodes are valid only…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "7f5c2854ba1f1898e443e6d90fcf418aeb133fcc"
+      "blob": "a901a7226b689207fc47c79e8071c93287914765"
     },
     {
       "eip": 7907,
@@ -19794,7 +19794,7 @@
     },
     {
       "eip": 7906,
-      "blob": "7f5c2854ba1f1898e443e6d90fcf418aeb133fcc",
+      "blob": "a901a7226b689207fc47c79e8071c93287914765",
       "title": "Transaction Assertions via State Diff Opcode",
       "status": "Draft",
       "type": "Standards Track",
