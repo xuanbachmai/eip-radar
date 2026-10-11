@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-09T22:43:30.471Z",
+  "generatedAt": "2026-10-11T13:00:52.571Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "af3a7802c8ea516f717c6013e27d0f529046f007",
-    "treeSha": "637fa4693463e25017634e455cef7708c288d57e",
-    "committedAt": "2026-10-09T16:58:06Z"
+    "commitSha": "adef17dd9a60c2f93cb17b07e56929baf5a085b9",
+    "treeSha": "3a99b9e054d3bce20f6932b6a494111270f75d4b",
+    "committedAt": "2026-10-11T06:42:30Z"
   },
   "eips": [
     {
@@ -9127,7 +9127,7 @@
       "abstract": "This is a minimal change to the Ethereum Virtual Machine (EVM) to support calls and returns. This proposal introduces three new control-flow instructions to the EVM: * CALLSUB transfers control to the destination on the data stack. * CALLDEST marks a subroutine entry: the destination of a CALLSUB, or of a JUMP that eliminates a call. * RETURNSUB returns to the PC after the most recent CALLSUB…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "32de0d1ffe9c491ca0e9f53b84394f28ce052c8b"
+      "blob": "eb750fb43ff3c7f031420c0d6f26f20c7c8f640a"
     },
     {
       "eip": 7980,
@@ -11905,7 +11905,7 @@
       "abstract": "Code can be prefixed with MAGIC bytes. MAGIC code is validated at CREATE time to ensure that it cannot execute invalid instructions, jump to invalid destinations, or underflow the data stack, that every return has a call to return from, and that within each subroutine the depth of the data stack at every instruction is the same on every execution. Stack overflow remains checked at run time, as…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "e19c8aae4e07cbc9840fbe040019af41bc0b5458"
+      "blob": "59bd6d1af8f42d7b06cfc620b6a51d4d930f86a6"
     },
     {
       "eip": 8347,
@@ -20099,7 +20099,7 @@
     },
     {
       "eip": 7979,
-      "blob": "32de0d1ffe9c491ca0e9f53b84394f28ce052c8b",
+      "blob": "eb750fb43ff3c7f031420c0d6f26f20c7c8f640a",
       "title": "Call and Return Opcodes for the EVM",
       "status": "Draft",
       "type": "Standards Track",
@@ -20937,7 +20937,7 @@
     },
     {
       "eip": 8337,
-      "blob": "e19c8aae4e07cbc9840fbe040019af41bc0b5458",
+      "blob": "59bd6d1af8f42d7b06cfc620b6a51d4d930f86a6",
       "title": "Validated EVM Code",
       "status": "Draft",
       "type": "Standards Track",
