@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-12T06:07:02.697Z",
+  "generatedAt": "2026-10-12T15:38:42.606Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "2abbb3d99cb1c03d35c94cc66aeac6218dd09400",
-    "treeSha": "2c5fdc0c604e8e4ae2a55823fe125625f206e54c",
-    "committedAt": "2026-10-12T03:15:26Z"
+    "commitSha": "fa3915674078b4e79252df34ac9599d4195f11b1",
+    "treeSha": "05994f493d107aae2d1901b925788b982d6a6f27",
+    "committedAt": "2026-10-12T15:10:13Z"
   },
   "eips": [
     {
@@ -11746,7 +11746,7 @@
       "abstract": "This EIP introduces SETCODEFROM, an EVM instruction that sets the current account's code hash to the code hash of a source account with existing deployed code. The new code is visible to later code execution.",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "7608d692a07937802ebef079c87e3853e1278dc5"
+      "blob": "c1f1ee144b0ebc9bc7b377f2be669d5c7e15cdda"
     },
     {
       "eip": 8304,
@@ -20604,7 +20604,7 @@
     },
     {
       "eip": 8173,
-      "blob": "88edbe6bb37db8fe3c28c56c38fd3a375c4fc4de",
+      "blob": "97e0da05d2f1762cd3b0ff22d485f48acde64d7f",
       "title": "Foundations of EVM Control Flow",
       "status": "Draft",
       "type": "Informational"
@@ -20889,7 +20889,7 @@
     },
     {
       "eip": 8298,
-      "blob": "7608d692a07937802ebef079c87e3853e1278dc5",
+      "blob": "c1f1ee144b0ebc9bc7b377f2be669d5c7e15cdda",
       "title": "SETCODEFROM Code Reuse Instruction",
       "status": "Draft",
       "type": "Standards Track",
