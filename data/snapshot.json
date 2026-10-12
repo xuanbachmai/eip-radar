@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-11T22:04:34.174Z",
+  "generatedAt": "2026-10-12T06:07:02.697Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "3aea9f3673a684dddfcc17c0d1f74d484e20e6ac",
-    "treeSha": "3912c288ad08cf0683b7465fa854c6da17fc37ab",
-    "committedAt": "2026-10-11T21:25:09Z"
+    "commitSha": "2abbb3d99cb1c03d35c94cc66aeac6218dd09400",
+    "treeSha": "2c5fdc0c604e8e4ae2a55823fe125625f206e54c",
+    "committedAt": "2026-10-12T03:15:26Z"
   },
   "eips": [
     {
@@ -9127,7 +9127,7 @@
       "abstract": "This is a minimal change to the Ethereum Virtual Machine (EVM) to support calls and returns. This proposal introduces three new control-flow instructions to the EVM: * CALLSUB transfers control to the destination on the data stack. * CALLDEST marks a subroutine entry: the destination of a CALLSUB, or of a JUMP that eliminates a call. * RETURNSUB returns to the PC after the most recent CALLSUB…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "6b96f969c6fcc80567aa325ecc38399fb3948719"
+      "blob": "54988aac0322c6e87f6dd465c66f2c29fc033611"
     },
     {
       "eip": 7980,
@@ -11875,7 +11875,7 @@
     {
       "eip": 8337,
       "title": "Validated EVM Code",
-      "description": "Code prefixed with MAGIC bytes is proven at CREATE time to have fully static control flow and to never underflow the data stack.",
+      "description": "Code prefixed with MAGIC bytes is proven at CREATE time to have fully static *control flow* and to never underflow the *data stack*.",
       "authors": [
         {
           "name": "Greg Colvin",
@@ -11905,7 +11905,7 @@
       "abstract": "Code can be prefixed with MAGIC bytes. MAGIC code is validated at CREATE time to ensure that it cannot execute invalid instructions, jump to invalid destinations, or underflow the data stack, that every return has a call to return from, and that within each subroutine the depth of the data stack at every instruction is the same on every execution. Stack overflow remains checked at run time, as…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "68121160ad5329e25b1bd8f99a1d596dec1f93fe"
+      "blob": "342cff1be5be32df7f842abecf6d0003223300e2"
     },
     {
       "eip": 8347,
@@ -20099,7 +20099,7 @@
     },
     {
       "eip": 7979,
-      "blob": "6b96f969c6fcc80567aa325ecc38399fb3948719",
+      "blob": "54988aac0322c6e87f6dd465c66f2c29fc033611",
       "title": "Call and Return Opcodes for the EVM",
       "status": "Draft",
       "type": "Standards Track",
@@ -20604,7 +20604,7 @@
     },
     {
       "eip": 8173,
-      "blob": "3ec00e60c2bfef410ead80af3eda917aed37f38e",
+      "blob": "88edbe6bb37db8fe3c28c56c38fd3a375c4fc4de",
       "title": "Foundations of EVM Control Flow",
       "status": "Draft",
       "type": "Informational"
@@ -20937,7 +20937,7 @@
     },
     {
       "eip": 8337,
-      "blob": "68121160ad5329e25b1bd8f99a1d596dec1f93fe",
+      "blob": "342cff1be5be32df7f842abecf6d0003223300e2",
       "title": "Validated EVM Code",
       "status": "Draft",
       "type": "Standards Track",
