@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-13T00:47:55.675Z",
+  "generatedAt": "2026-10-13T14:20:04.405Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "3db7d3f45df167d635f0b4cbbe28e5dc4cc5b866",
-    "treeSha": "dd788f17b2bdb85370041648c9a0aa69b9edcfb9",
-    "committedAt": "2026-10-12T21:42:07Z"
+    "commitSha": "c1a1eb21b465c9c42704a8a5743ad0694aedbff7",
+    "treeSha": "aa6975c76dded1e0cc899733e935f2e3d54a1271",
+    "committedAt": "2026-10-13T03:04:10Z"
   },
   "eips": [
     {
@@ -20604,7 +20604,7 @@
     },
     {
       "eip": 8173,
-      "blob": "4a43993f902ecd2abfa6d762e8884984e8d5036f",
+      "blob": "32ec4aba603120321932ef469ebe12c45577edbc",
       "title": "Foundations of EVM Control Flow",
       "status": "Draft",
       "type": "Informational"
