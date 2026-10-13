@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-12T15:38:42.606Z",
+  "generatedAt": "2026-10-13T00:47:55.675Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "fa3915674078b4e79252df34ac9599d4195f11b1",
-    "treeSha": "05994f493d107aae2d1901b925788b982d6a6f27",
-    "committedAt": "2026-10-12T15:10:13Z"
+    "commitSha": "3db7d3f45df167d635f0b4cbbe28e5dc4cc5b866",
+    "treeSha": "dd788f17b2bdb85370041648c9a0aa69b9edcfb9",
+    "committedAt": "2026-10-12T21:42:07Z"
   },
   "eips": [
     {
@@ -11207,10 +11207,10 @@
         684
       ],
       "discussionsTo": "https://ethereum-magicians.org/t/eip-8253-upgrade-pre-spurious-dragon-accounts/28505",
-      "abstract": "At the start of the designated fork block, set the nonce to 1 for a fixed list of accounts that have empty code, zero nonce, and non-empty storage. Bumping the nonce makes these accounts fail the EIP-684 precondition for contract creation (nonce == 0), so a future CREATE/CREATE2 cannot collide with their storage. This is offered as an alternative to EIP-7610, which adds a runtime storage check on…",
+      "abstract": "At the start of the designated fork block, set the nonce to 1 for a per-chain, configured list of accounts that have empty code, zero nonce, and non-empty storage. Bumping the nonce restores the invariant that zero nonce and empty code imply empty storage: the accounts then fail the EIP-684 precondition for contract creation (nonce == 0), so no runtime storage check at contract creation is needed.",
       "track": "purge",
       "trackSource": "override",
-      "blob": "1c8c02121c7fdb8fc53a06491de530fd7b76ac60"
+      "blob": "0c7875bbc55420068c0cd60b8ec31293a8007f78"
     },
     {
       "eip": 8254,
@@ -20604,7 +20604,7 @@
     },
     {
       "eip": 8173,
-      "blob": "97e0da05d2f1762cd3b0ff22d485f48acde64d7f",
+      "blob": "4a43993f902ecd2abfa6d762e8884984e8d5036f",
       "title": "Foundations of EVM Control Flow",
       "status": "Draft",
       "type": "Informational"
@@ -20770,7 +20770,7 @@
     },
     {
       "eip": 8253,
-      "blob": "1c8c02121c7fdb8fc53a06491de530fd7b76ac60",
+      "blob": "0c7875bbc55420068c0cd60b8ec31293a8007f78",
       "title": "Bump nonce of zero-nonce storage accounts",
       "status": "Draft",
       "type": "Standards Track",
