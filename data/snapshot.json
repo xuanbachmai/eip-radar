@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-14T05:01:05.883Z",
+  "generatedAt": "2026-10-14T12:02:03.173Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "9c1342da0e323c336927b3ec0559836812a57357",
-    "treeSha": "c78ca4e0a66c4346582e232ae7823dc43a9c9dd5",
-    "committedAt": "2026-10-14T02:39:24Z"
+    "commitSha": "a53ca05661e55cb4326a7ece19c444d324e3d420",
+    "treeSha": "31d5a133a320e3ab4b5bbe05fcf7dbfc1aa74a2a",
+    "committedAt": "2026-10-14T11:08:16Z"
   },
   "eips": [
     {
@@ -12259,6 +12259,30 @@
       "track": "splurge",
       "trackSource": "rule",
       "blob": "be65e05c5b4a8ce99075663f4e4c6099ebf19206"
+    },
+    {
+      "eip": 8433,
+      "title": "Retire 0x00 Validators",
+      "description": "Exit remaining validators with 0x00 withdrawal credentials at a capped rate after a grace period, keeping the credential change path open",
+      "authors": [
+        {
+          "name": "NC",
+          "handle": "ensi321"
+        }
+      ],
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core",
+      "created": "2026-09-28",
+      "requires": [
+        7251,
+        8365
+      ],
+      "discussionsTo": "https://ethereum-magicians.org/t/eip-8433-retire-0x00-validators/29808",
+      "abstract": "This EIP retires the remaining validators whose withdrawal credentials carry the BLS_WITHDRAWAL_PREFIX (0x00). Starting at a fixed epoch after fork activation, a standing rule in epoch processing initiates the exit of active 0x00 validators at a capped rate through the standard exit churn. The BLSToExecutionChange operation is unchanged: a retired validator's full balance remains recoverable at…",
+      "track": "merge",
+      "trackSource": "rule",
+      "blob": "568a546ba41ea288eb67e0f84bd3ef1d196657c8"
     }
   ],
   "upgrades": [
@@ -20690,9 +20714,9 @@
     },
     {
       "eip": 8173,
-      "blob": "95b2d417cf188a1588c0da7657330697927f5e76",
+      "blob": "7111e89d5ec42506dcb427ccafc528aad1a2ff0b",
       "title": "Foundations of EVM Control Flow",
-      "status": "Draft",
+      "status": "Review",
       "type": "Informational"
     },
     {
@@ -21155,6 +21179,14 @@
       "status": "Draft",
       "type": "Standards Track",
       "category": "Networking"
+    },
+    {
+      "eip": 8433,
+      "blob": "568a546ba41ea288eb67e0f84bd3ef1d196657c8",
+      "title": "Retire 0x00 Validators",
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core"
     }
   ]
 }

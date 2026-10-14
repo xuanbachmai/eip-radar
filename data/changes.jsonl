@@ -225,3 +225,4 @@
 {"at":"2026-10-14T05:01:05.883Z","commit":"9c1342da0e323c336927b3ec0559836812a57357","type":"new_eip","eip":8357,"title":"EVM Verification Key Registry","track":"verge","status":"Draft"}
 {"at":"2026-10-14T05:01:05.883Z","commit":"9c1342da0e323c336927b3ec0559836812a57357","type":"new_eip","eip":8364,"title":"SSZ Compact Multiproofs","track":"verge","status":"Draft"}
 {"at":"2026-10-14T05:01:05.883Z","commit":"9c1342da0e323c336927b3ec0559836812a57357","type":"new_eip","eip":8397,"title":"Frame Authenticator Signatures","track":"splurge","status":"Draft"}
+{"at":"2026-10-14T12:02:03.173Z","commit":"a53ca05661e55cb4326a7ece19c444d324e3d420","type":"new_eip","eip":8433,"title":"Retire 0x00 Validators","track":"merge","status":"Draft"}
