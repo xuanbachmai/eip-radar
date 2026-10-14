@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-13T14:20:04.405Z",
+  "generatedAt": "2026-10-14T05:01:05.883Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "c1a1eb21b465c9c42704a8a5743ad0694aedbff7",
-    "treeSha": "aa6975c76dded1e0cc899733e935f2e3d54a1271",
-    "committedAt": "2026-10-13T03:04:10Z"
+    "commitSha": "9c1342da0e323c336927b3ec0559836812a57357",
+    "treeSha": "c78ca4e0a66c4346582e232ae7823dc43a9c9dd5",
+    "committedAt": "2026-10-14T02:39:24Z"
   },
   "eips": [
     {
@@ -9124,10 +9124,10 @@
       "created": "2025-12-17",
       "requires": [],
       "discussionsTo": "https://ethereum-magicians.org/t/eip-7979-call-and-return-opcodes-for-the-evm/24615",
-      "abstract": "This is a minimal change to the Ethereum Virtual Machine (EVM) to support calls and returns. This proposal introduces three new control-flow instructions to the EVM: * CALLSUB transfers control to the destination on the data stack. * CALLDEST marks a subroutine entry: the destination of a CALLSUB, or of a JUMP that eliminates a call. * RETURNSUB returns to the PC after the most recent CALLSUB…",
+      "abstract": "This is a minimal change to the Ethereum Virtual Machine (EVM) to support calls and returns. Compilers must now synthesize calls with dynamic jumps: the flow of control is obscured, and every analysis pays. These instructions make calls explicit — saving code and gas, putting return addresses securely beyond the reach of code, and supporting fully static control flow — code that can be validated…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "54988aac0322c6e87f6dd465c66f2c29fc033611"
+      "blob": "ffa33a6e4fd5b0b0fb4a8de9246e82d37bb5c6bc"
     },
     {
       "eip": 7980,
@@ -11875,7 +11875,7 @@
     {
       "eip": 8337,
       "title": "Validated EVM Code",
-      "description": "Code prefixed with MAGIC bytes is proven at CREATE time to have fully static *control flow* and to never underflow the *data stack*.",
+      "description": "Code prefixed with MAGIC bytes is proven at CREATE time to have fully static control flow and to never underflow the data stack.",
       "authors": [
         {
           "name": "Greg Colvin",
@@ -11905,7 +11905,7 @@
       "abstract": "Code can be prefixed with MAGIC bytes. MAGIC code is validated at CREATE time to ensure that it cannot execute invalid instructions, jump to invalid destinations, or underflow the data stack, that every return has a call to return from, and that within each subroutine the depth of the data stack at every instruction is the same on every execution. Stack overflow remains checked at run time, as…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "342cff1be5be32df7f842abecf6d0003223300e2"
+      "blob": "415e5f559d791d37ceffa9744a069f9b8c4d2ee8"
     },
     {
       "eip": 8347,
@@ -11961,6 +11961,37 @@
       "track": "splurge",
       "trackSource": "override",
       "blob": "2db59ad3f975b7146ded39543d64e7c22bbca648"
+    },
+    {
+      "eip": 8357,
+      "title": "EVM Verification Key Registry",
+      "description": "Exposes fork-approved EVM verification key hashes and their stateless input schema IDs to contracts",
+      "authors": [
+        {
+          "name": "Luca Donno",
+          "handle": "lucadonnoh"
+        }
+      ],
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core",
+      "created": "2026-07-30",
+      "requires": [
+        161,
+        1014,
+        1559,
+        7910,
+        7928,
+        7997,
+        8025,
+        8037,
+        8288
+      ],
+      "discussionsTo": "https://ethereum-magicians.org/t/eip-8357-evm-verification-key-registry/29222",
+      "abstract": "This EIP creates a fixed-address system contract containing the canonical EVM verification key hash for each registered L1 feature fork. Each entry maps one exact verification key hash to the schema_id of the stateless input accepted by the fork-specific EVM program bound by the corresponding verification key. The contract stores one current_verification_key_hash. A caller may retrieve either the…",
+      "track": "verge",
+      "trackSource": "rule",
+      "blob": "f2d07e4ed458cc601a6bd4db057b6e0f0579b393"
     },
     {
       "eip": 8360,
@@ -12044,6 +12075,35 @@
       "track": "scourge",
       "trackSource": "override",
       "blob": "6c90e8f1db6cc9f9ddf261c19d7d9cf267616a2e"
+    },
+    {
+      "eip": 8364,
+      "title": "SSZ Compact Multiproofs",
+      "description": "A request-friendly Merkle multiproof format using a proof descriptor bitlist",
+      "authors": [
+        {
+          "name": "Zsolt Felföldi",
+          "handle": "zsfelfoldi"
+        },
+        {
+          "name": "Cayman",
+          "handle": "wemeetagain"
+        },
+        {
+          "name": "Lodekeeper",
+          "handle": "lodekeeper"
+        }
+      ],
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core",
+      "created": "2026-08-04",
+      "requires": [],
+      "discussionsTo": "https://ethereum-magicians.org/t/eip-8364-ssz-compact-multiproofs/29277",
+      "abstract": "This EIP introduces a compact encoding for Merkle multiproofs. A multiproof of N tree nodes is encoded as a proof descriptor, a bitlist of 2 * N - 1 bits describing the shape of the proof as a traversal of the Merkle tree, followed by the N nodes in traversal order. The descriptor encodes requested nodes and helper nodes uniformly. The descriptor doubles as a request format: a client can describe…",
+      "track": "verge",
+      "trackSource": "rule",
+      "blob": "60187987dcfa77a7fdd6bc7b9e690d00f82d7f2b"
     },
     {
       "eip": 8365,
@@ -12173,6 +12233,32 @@
       "track": "merge",
       "trackSource": "override",
       "blob": "7eec243ab691c80e18d3ad8a96546dccb31b8952"
+    },
+    {
+      "eip": 8397,
+      "title": "Frame Authenticator Signatures",
+      "description": "Adds a bounded, state-independent custom-authentication signature scheme to frame transactions.",
+      "authors": [
+        {
+          "name": "Taek",
+          "handle": "leekt"
+        }
+      ],
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core",
+      "created": "2026-08-26",
+      "requires": [
+        2929,
+        7702,
+        7928,
+        8141
+      ],
+      "discussionsTo": "https://ethereum-magicians.org/t/eip-8397-frame-authenticator-signatures/29517",
+      "abstract": "This proposal extends EIP-8141 with an AUTHENTICATOR signature scheme: a bounded, state-independent custom-authentication path for frame transactions. AUTHENTICATOR allows a frame transaction to carry a custom authentication proof whose expensive cryptographic verification is executed by protocol in a bounded state-independent context. The signature entry's signer is an authenticator contract…",
+      "track": "splurge",
+      "trackSource": "rule",
+      "blob": "be65e05c5b4a8ce99075663f4e4c6099ebf19206"
     }
   ],
   "upgrades": [
@@ -20099,7 +20185,7 @@
     },
     {
       "eip": 7979,
-      "blob": "54988aac0322c6e87f6dd465c66f2c29fc033611",
+      "blob": "ffa33a6e4fd5b0b0fb4a8de9246e82d37bb5c6bc",
       "title": "Call and Return Opcodes for the EVM",
       "status": "Draft",
       "type": "Standards Track",
@@ -20604,7 +20690,7 @@
     },
     {
       "eip": 8173,
-      "blob": "32ec4aba603120321932ef469ebe12c45577edbc",
+      "blob": "95b2d417cf188a1588c0da7657330697927f5e76",
       "title": "Foundations of EVM Control Flow",
       "status": "Draft",
       "type": "Informational"
@@ -20937,7 +21023,7 @@
     },
     {
       "eip": 8337,
-      "blob": "342cff1be5be32df7f842abecf6d0003223300e2",
+      "blob": "415e5f559d791d37ceffa9744a069f9b8c4d2ee8",
       "title": "Validated EVM Code",
       "status": "Draft",
       "type": "Standards Track",
@@ -20960,6 +21046,14 @@
       "category": "Core"
     },
     {
+      "eip": 8357,
+      "blob": "f2d07e4ed458cc601a6bd4db057b6e0f0579b393",
+      "title": "EVM Verification Key Registry",
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core"
+    },
+    {
       "eip": 8360,
       "blob": "708361f5cabccc801c9c415d52ae21c5da4646ad",
       "title": "TCREATE Opcode",
@@ -20971,6 +21065,14 @@
       "eip": 8363,
       "blob": "6c90e8f1db6cc9f9ddf261c19d7d9cf267616a2e",
       "title": "Tapered Issuance Burn",
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core"
+    },
+    {
+      "eip": 8364,
+      "blob": "60187987dcfa77a7fdd6bc7b9e690d00f82d7f2b",
+      "title": "SSZ Compact Multiproofs",
       "status": "Draft",
       "type": "Standards Track",
       "category": "Core"
@@ -21034,6 +21136,14 @@
       "eip": 8390,
       "blob": "7eec243ab691c80e18d3ad8a96546dccb31b8952",
       "title": "Remove the Sync Committee",
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core"
+    },
+    {
+      "eip": 8397,
+      "blob": "be65e05c5b4a8ce99075663f4e4c6099ebf19206",
+      "title": "Frame Authenticator Signatures",
       "status": "Draft",
       "type": "Standards Track",
       "category": "Core"
