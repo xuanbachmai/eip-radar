@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-14T12:02:03.173Z",
+  "generatedAt": "2026-10-15T04:49:16.256Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "a53ca05661e55cb4326a7ece19c444d324e3d420",
-    "treeSha": "31d5a133a320e3ab4b5bbe05fcf7dbfc1aa74a2a",
-    "committedAt": "2026-10-14T11:08:16Z"
+    "commitSha": "72ca2dd7919259a408eaf46aa127adf98cfd4ae3",
+    "treeSha": "e5c226ce53b1514abf44cd4efe5bb527ae027c7e",
+    "committedAt": "2026-10-15T02:43:12Z"
   },
   "eips": [
     {
@@ -9118,7 +9118,7 @@
           "name": "John Max Skaller"
         }
       ],
-      "status": "Draft",
+      "status": "Review",
       "type": "Standards Track",
       "category": "Core",
       "created": "2025-12-17",
@@ -9127,7 +9127,7 @@
       "abstract": "This is a minimal change to the Ethereum Virtual Machine (EVM) to support calls and returns. Compilers must now synthesize calls with dynamic jumps: the flow of control is obscured, and every analysis pays. These instructions make calls explicit — saving code and gas, putting return addresses securely beyond the reach of code, and supporting fully static control flow — code that can be validated…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "ffa33a6e4fd5b0b0fb4a8de9246e82d37bb5c6bc"
+      "blob": "8dc76752d1688cb96cdb05f11fbddcf6c73eb264"
     },
     {
       "eip": 7980,
@@ -11475,7 +11475,7 @@
       "abstract": "This EIP extends EIP-8141 with a new frame mode that enables EVM-level aggregation of cryptographic signatures and STARK (Scalable Transparent ARguments of Knowledge) proofs. The scheme allows transactions to carry lightweight dependencies — (scheme, data_hash, verification_key_hash) triples — which are aggregated off-chain into a single recursive STARK. Block validity requires this recursive…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "6e055031bf086a618840bd234348be3f0f6ba283"
+      "blob": "9d41a62d1590777759946ed0780e838ae3411c31"
     },
     {
       "eip": 8289,
@@ -11994,6 +11994,41 @@
       "blob": "f2d07e4ed458cc601a6bd4db057b6e0f0579b393"
     },
     {
+      "eip": 8358,
+      "title": "Net Gas Metering for Account Changes",
+      "description": "Make repeated value transfers cheaper by charging account changes once per transaction and refunding accounts that return to original state",
+      "authors": [
+        {
+          "name": "Dragan Rakita",
+          "handle": "rakita"
+        },
+        {
+          "name": "Charles Cooper",
+          "handle": "charles-cooper"
+        }
+      ],
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core",
+      "created": "2026-07-26",
+      "requires": [
+        161,
+        2200,
+        2780,
+        2929,
+        3529,
+        7702,
+        7708,
+        8037,
+        8038
+      ],
+      "discussionsTo": "https://ethereum-magicians.org/t/eip-8358-net-gas-metering-for-account-changes/29304",
+      "abstract": "This EIP applies net gas metering to account balance changes. A value-bearing CALL pays a base cost and a charge for each account it changes for the first time in the transaction. Later changes to the same accounts cost less, and restoring an account's original balance earns a refund if its nonce is also unchanged. The gas stipend becomes a minimum callee gas limit. An applied EIP-7702…",
+      "track": "purge",
+      "trackSource": "rule",
+      "blob": "de43883fc4183dab850b3531cc6345787f6c853d"
+    },
+    {
       "eip": 8360,
       "title": "TCREATE Opcode",
       "description": "Introduce a new opcode for creating contracts that exist only for the duration of a single transaction",
@@ -12183,6 +12218,29 @@
       "track": "purge",
       "trackSource": "override",
       "blob": "d5bd301b8036a5a9ca6bf5b65f723815c9f3c74e"
+    },
+    {
+      "eip": 8374,
+      "title": "Persist Warm Access Sets Across Reverts",
+      "description": "Accessed addresses and storage keys stay warm when a call frame reverts, as the data is already loaded by the client",
+      "authors": [
+        {
+          "name": "Dragan Rakita",
+          "handle": "rakita"
+        }
+      ],
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core",
+      "created": "2026-08-06",
+      "requires": [
+        2929
+      ],
+      "discussionsTo": "https://ethereum-magicians.org/t/eip-8374-persist-warm-access-sets-across-reverts/29341",
+      "abstract": "EIP-2929 tracks accessed addresses and storage keys in the transaction-scoped sets accessed_addresses and accessed_storage_keys, and rolls both sets back to their pre-call state when a call frame reverts or exceptionally halts. This EIP removes that rollback: once an address or storage key is added to an access set, it remains warm for the rest of the transaction, regardless of any subsequent…",
+      "track": "splurge",
+      "trackSource": "rule",
+      "blob": "03bdd8b097b4fb7e603ebfe3eafa4aeb0b2e8df7"
     },
     {
       "eip": 8379,
@@ -20209,9 +20267,9 @@
     },
     {
       "eip": 7979,
-      "blob": "ffa33a6e4fd5b0b0fb4a8de9246e82d37bb5c6bc",
+      "blob": "8dc76752d1688cb96cdb05f11fbddcf6c73eb264",
       "title": "Call and Return Opcodes for the EVM",
-      "status": "Draft",
+      "status": "Review",
       "type": "Standards Track",
       "category": "Core"
     },
@@ -20951,7 +21009,7 @@
     },
     {
       "eip": 8288,
-      "blob": "6e055031bf086a618840bd234348be3f0f6ba283",
+      "blob": "9d41a62d1590777759946ed0780e838ae3411c31",
       "title": "In-mempool signature and proof aggregation",
       "status": "Draft",
       "type": "Standards Track",
@@ -21030,6 +21088,14 @@
       "category": "Core"
     },
     {
+      "eip": 8317,
+      "blob": "4d347202e4f1a3f5cd65ca45fb3f8766dd35d16f",
+      "title": "Contract Storage Layout Descriptor Format",
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Interface"
+    },
+    {
       "eip": 8321,
       "blob": "5f7c43156745a370a8fcebdcf8b1da28adeeaafe",
       "title": "Hash-Chain RANDAO",
@@ -21073,6 +21139,14 @@
       "eip": 8357,
       "blob": "f2d07e4ed458cc601a6bd4db057b6e0f0579b393",
       "title": "EVM Verification Key Registry",
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core"
+    },
+    {
+      "eip": 8358,
+      "blob": "de43883fc4183dab850b3531cc6345787f6c853d",
+      "title": "Net Gas Metering for Account Changes",
       "status": "Draft",
       "type": "Standards Track",
       "category": "Core"
@@ -21136,6 +21210,14 @@
       "eip": 8372,
       "blob": "d5bd301b8036a5a9ca6bf5b65f723815c9f3c74e",
       "title": "Normalized state gas limit",
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core"
+    },
+    {
+      "eip": 8374,
+      "blob": "03bdd8b097b4fb7e603ebfe3eafa4aeb0b2e8df7",
+      "title": "Persist Warm Access Sets Across Reverts",
       "status": "Draft",
       "type": "Standards Track",
       "category": "Core"

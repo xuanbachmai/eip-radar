@@ -226,3 +226,6 @@
 {"at":"2026-10-14T05:01:05.883Z","commit":"9c1342da0e323c336927b3ec0559836812a57357","type":"new_eip","eip":8364,"title":"SSZ Compact Multiproofs","track":"verge","status":"Draft"}
 {"at":"2026-10-14T05:01:05.883Z","commit":"9c1342da0e323c336927b3ec0559836812a57357","type":"new_eip","eip":8397,"title":"Frame Authenticator Signatures","track":"splurge","status":"Draft"}
 {"at":"2026-10-14T12:02:03.173Z","commit":"a53ca05661e55cb4326a7ece19c444d324e3d420","type":"new_eip","eip":8433,"title":"Retire 0x00 Validators","track":"merge","status":"Draft"}
+{"at":"2026-10-15T04:49:16.256Z","commit":"72ca2dd7919259a408eaf46aa127adf98cfd4ae3","type":"status_change","eip":7979,"title":"Call and Return Opcodes for the EVM","track":"splurge","from":"Draft","to":"Review"}
+{"at":"2026-10-15T04:49:16.256Z","commit":"72ca2dd7919259a408eaf46aa127adf98cfd4ae3","type":"new_eip","eip":8358,"title":"Net Gas Metering for Account Changes","track":"purge","status":"Draft"}
+{"at":"2026-10-15T04:49:16.256Z","commit":"72ca2dd7919259a408eaf46aa127adf98cfd4ae3","type":"new_eip","eip":8374,"title":"Persist Warm Access Sets Across Reverts","track":"splurge","status":"Draft"}
