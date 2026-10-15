@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-15T04:49:16.256Z",
+  "generatedAt": "2026-10-15T17:07:22.506Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "72ca2dd7919259a408eaf46aa127adf98cfd4ae3",
-    "treeSha": "e5c226ce53b1514abf44cd4efe5bb527ae027c7e",
-    "committedAt": "2026-10-15T02:43:12Z"
+    "commitSha": "8b1cae50601fb194452db0ed857f4c237ca62c1f",
+    "treeSha": "d77c3edd69a8017134fbfd45281e7cf6e7cd6b5a",
+    "committedAt": "2026-10-15T14:33:13Z"
   },
   "eips": [
     {
@@ -8367,7 +8367,7 @@
       "abstract": "This proposal introduces three opcodes, TXTRACE, TXDIFF, and EVENTDATACOPY, that let a contract inspect the outcome of the transaction executing it: the balance, storage, and code changes it produced, and the events it emitted. TXTRACE enumerates the full transaction state diff, TXDIFF reads a single entry by key, and EVENTDATACOPY copies event data into memory. These opcodes are valid only…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "c2be6cc080e715ccdf932688402b853c16f194b5"
+      "blob": "d8433dfd524456fa6eb6b2ce9f3921ffe5af70a2"
     },
     {
       "eip": 7907,
@@ -9669,7 +9669,7 @@
       "abstract": "This EIP updates the gas cost of state-access operations to reflect Ethereum's larger state and the consequent slowdown of these operations. It dissects the cost of state-touching operations into three components — access, write, and state creation: the cold account access cost (COLD_ACCOUNT_ACCESS) is raised, explicit write surcharges (ACCOUNT_WRITE, STORAGE_WRITE) are introduced, state-creation…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "94a7a4f13126d591c665bc75ae2cbb98ac5a851d"
+      "blob": "e4d626af391afa0abdd36651625f319bac2b19d8"
     },
     {
       "eip": 8045,
@@ -10991,7 +10991,7 @@
       "abstract": "This EIP builds on top of Frame Transactions to introduce a mechanism of front-running protection using a simple commit-reveal scheme for transaction frame payloads. It introduces two new frame modes called \"COMMIT\" and \"REVEAL\". The \"COMMIT\" frames serve as both user commitment and an inclusion guarantee in block N-1, and \"REVEAL\" executes the payload in block N. This approach avoids any…",
       "track": "scourge",
       "trackSource": "override",
-      "blob": "90d1bb41aad570c5792d5527b94aac07c9b5db95"
+      "blob": "38fe5640ebb7e4e5c1d2e686159dc99f9ae36ebc"
     },
     {
       "eip": 8219,
@@ -19985,7 +19985,7 @@
     },
     {
       "eip": 7906,
-      "blob": "c2be6cc080e715ccdf932688402b853c16f194b5",
+      "blob": "d8433dfd524456fa6eb6b2ce9f3921ffe5af70a2",
       "title": "Transaction Assertions via State Diff Opcode",
       "status": "Draft",
       "type": "Standards Track",
@@ -20402,7 +20402,7 @@
     },
     {
       "eip": 8038,
-      "blob": "94a7a4f13126d591c665bc75ae2cbb98ac5a851d",
+      "blob": "e4d626af391afa0abdd36651625f319bac2b19d8",
       "title": "State-access gas cost update",
       "status": "Last Call",
       "type": "Standards Track",
@@ -20867,7 +20867,7 @@
     },
     {
       "eip": 8209,
-      "blob": "90d1bb41aad570c5792d5527b94aac07c9b5db95",
+      "blob": "38fe5640ebb7e4e5c1d2e686159dc99f9ae36ebc",
       "title": "Commit-Reveal Transaction Frames",
       "status": "Draft",
       "type": "Standards Track",
