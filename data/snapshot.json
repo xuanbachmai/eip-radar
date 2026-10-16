@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-15T17:07:22.506Z",
+  "generatedAt": "2026-10-16T04:39:24.609Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "8b1cae50601fb194452db0ed857f4c237ca62c1f",
-    "treeSha": "d77c3edd69a8017134fbfd45281e7cf6e7cd6b5a",
-    "committedAt": "2026-10-15T14:33:13Z"
+    "commitSha": "f0d0311f553c8df5960cf1a1c1b86eddb3704567",
+    "treeSha": "043b4fffffe48bfd4f823f13cfb1612b43df8109",
+    "committedAt": "2026-10-15T22:11:45Z"
   },
   "eips": [
     {
@@ -9127,7 +9127,7 @@
       "abstract": "This is a minimal change to the Ethereum Virtual Machine (EVM) to support calls and returns. Compilers must now synthesize calls with dynamic jumps: the flow of control is obscured, and every analysis pays. These instructions make calls explicit — saving code and gas, putting return addresses securely beyond the reach of code, and supporting fully static control flow — code that can be validated…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "8dc76752d1688cb96cdb05f11fbddcf6c73eb264"
+      "blob": "dd41e59d8945b53cc7f248d6cf366559442e0f2e"
     },
     {
       "eip": 7980,
@@ -20267,7 +20267,7 @@
     },
     {
       "eip": 7979,
-      "blob": "8dc76752d1688cb96cdb05f11fbddcf6c73eb264",
+      "blob": "dd41e59d8945b53cc7f248d6cf366559442e0f2e",
       "title": "Call and Return Opcodes for the EVM",
       "status": "Review",
       "type": "Standards Track",
