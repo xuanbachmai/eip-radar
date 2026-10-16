@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-16T04:39:24.609Z",
+  "generatedAt": "2026-10-16T11:33:01.644Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "f0d0311f553c8df5960cf1a1c1b86eddb3704567",
-    "treeSha": "043b4fffffe48bfd4f823f13cfb1612b43df8109",
-    "committedAt": "2026-10-15T22:11:45Z"
+    "commitSha": "56b645be8a4c7830ee3ea94aa7eda1e3b5ed7fe7",
+    "treeSha": "04417da1089e106d70b815ed72e5a6aa4721429a",
+    "committedAt": "2026-10-16T09:02:26Z"
   },
   "eips": [
     {
@@ -2439,7 +2439,7 @@
       "abstract": "This EIP decomposes the flat 21,000 intrinsic transaction cost into explicit primitives, each priced to match the resources a transaction actually consumes. A plain ETH transfer to an existing account remains at 21,000 execution gas, and contract-creation transactions cost the same whether or not they carry value. Transactions that create new accounts or interact with EIP-7702 pay the additional…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "08600e48eea38d6e60b76266bd3d18c79ff6be11"
+      "blob": "7425bd1e7d2df7308e1c92eb6515a6355f7cce69"
     },
     {
       "eip": 2803,
@@ -11183,10 +11183,10 @@
         8141
       ],
       "discussionsTo": "https://ethereum-magicians.org/t/eip-8250-keyed-nonces-for-frame-transactions/28437",
-      "abstract": "Replaces the single sender nonce of an EIP-8141 frame transaction with (nonce_keys, nonce_seq): a bounded set of nonce keys sharing one sequence number. nonce_keys == [0] aliases the legacy account nonce; each non-zero key selects an independent protocol-managed nonce sequence stored in a NONCE_MANAGER system contract. Transactions whose non-zero key sets do not overlap are replay-independent…",
+      "abstract": "Replaces the single sender nonce of an EIP-8141 frame transaction with (nonce_keys, nonce_seq): a bounded set of nonce keys sharing one sequence number. nonce_keys == [] selects the legacy account nonce; each key selects an independent protocol-managed nonce sequence stored in a NONCE_MANAGER system contract. Transactions whose key sets do not overlap are replay-independent. This helps privacy…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "f8db63dd96df22c2ee9475ccec41fa9b8cbcb226"
+      "blob": "e2689ddae35a7ca0c0c6e4afeb41d35f6b09e1ab"
     },
     {
       "eip": 8253,
@@ -15947,7 +15947,7 @@
     },
     {
       "eip": 2780,
-      "blob": "08600e48eea38d6e60b76266bd3d18c79ff6be11",
+      "blob": "7425bd1e7d2df7308e1c92eb6515a6355f7cce69",
       "title": "Resource-based intrinsic transaction gas",
       "status": "Last Call",
       "type": "Standards Track",
@@ -20923,7 +20923,7 @@
     },
     {
       "eip": 8250,
-      "blob": "f8db63dd96df22c2ee9475ccec41fa9b8cbcb226",
+      "blob": "e2689ddae35a7ca0c0c6e4afeb41d35f6b09e1ab",
       "title": "Keyed Nonces for Frame Transactions",
       "status": "Draft",
       "type": "Standards Track",
