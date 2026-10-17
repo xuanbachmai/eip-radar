@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-16T21:18:36.998Z",
+  "generatedAt": "2026-10-17T04:37:00.004Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "5930e94b0cdb7b88f8c96c75555cf4fc2b3cb3b0",
-    "treeSha": "616d83ebe8dd551ce2516b394ec13326f34c4e17",
-    "committedAt": "2026-10-16T20:17:34Z"
+    "commitSha": "deb8f0d3ea9167bd30775fb3d45d052fce651d56",
+    "treeSha": "5e44ef92a985067b323c896aff7edd66aa2e8a4e",
+    "committedAt": "2026-10-16T22:47:58Z"
   },
   "eips": [
     {
@@ -10991,7 +10991,7 @@
       "abstract": "This EIP builds on top of Frame Transactions to introduce a mechanism of front-running protection using a simple commit-reveal scheme for transaction frame payloads. It introduces two new frame modes called \"COMMIT\" and \"REVEAL\". The \"COMMIT\" frames serve as both user commitment and an inclusion guarantee in block N-1, and \"REVEAL\" executes the payload in block N. This approach avoids any…",
       "track": "scourge",
       "trackSource": "override",
-      "blob": "38fe5640ebb7e4e5c1d2e686159dc99f9ae36ebc"
+      "blob": "0345ed135a6dcf2d212952e92066bdfb9750cd76"
     },
     {
       "eip": 8219,
@@ -20867,7 +20867,7 @@
     },
     {
       "eip": 8209,
-      "blob": "38fe5640ebb7e4e5c1d2e686159dc99f9ae36ebc",
+      "blob": "0345ed135a6dcf2d212952e92066bdfb9750cd76",
       "title": "Commit-Reveal Transaction Frames",
       "status": "Draft",
       "type": "Standards Track",
