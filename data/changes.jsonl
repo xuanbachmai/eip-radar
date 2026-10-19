@@ -229,3 +229,6 @@
 {"at":"2026-10-15T04:49:16.256Z","commit":"72ca2dd7919259a408eaf46aa127adf98cfd4ae3","type":"status_change","eip":7979,"title":"Call and Return Opcodes for the EVM","track":"splurge","from":"Draft","to":"Review"}
 {"at":"2026-10-15T04:49:16.256Z","commit":"72ca2dd7919259a408eaf46aa127adf98cfd4ae3","type":"new_eip","eip":8358,"title":"Net Gas Metering for Account Changes","track":"purge","status":"Draft"}
 {"at":"2026-10-15T04:49:16.256Z","commit":"72ca2dd7919259a408eaf46aa127adf98cfd4ae3","type":"new_eip","eip":8374,"title":"Persist Warm Access Sets Across Reverts","track":"splurge","status":"Draft"}
+{"at":"2026-10-19T22:26:20.464Z","commit":"0ce679f4654ba4d120c97113626f320475e22fa9","type":"fork_inclusion_change","eip":7716,"title":"Anti-Correlation Attestation Penalties","track":"scourge","upgrade":"hegota","from":"Proposed","to":"Declined"}
+{"at":"2026-10-19T22:26:20.464Z","commit":"0ce679f4654ba4d120c97113626f320475e22fa9","type":"fork_inclusion_change","eip":8025,"title":"Optional Execution Proofs","track":"verge","upgrade":"hegota","from":"Proposed","to":"Declined"}
+{"at":"2026-10-19T22:26:20.464Z","commit":"0ce679f4654ba4d120c97113626f320475e22fa9","type":"fork_inclusion_change","eip":8371,"upgrade":"hegota","from":"Proposed","to":"Declined"}

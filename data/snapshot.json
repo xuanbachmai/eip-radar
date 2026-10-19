@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-19T13:30:48.175Z",
+  "generatedAt": "2026-10-19T22:26:20.464Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "41a838decba33325d01bd99b1cd6072c51214fac",
-    "treeSha": "9977a9e172e4a7e54751ac0be405f69608e10251",
-    "committedAt": "2026-10-19T08:19:17Z"
+    "commitSha": "0ce679f4654ba4d120c97113626f320475e22fa9",
+    "treeSha": "4f8cc87877732b7c7786f87f6104aa046d0c9112",
+    "committedAt": "2026-10-19T20:52:40Z"
   },
   "eips": [
     {
@@ -8689,7 +8689,7 @@
       "abstract": "This EIP introduces Block-Level Access Lists (BALs) that record all accounts and storage locations accessed during block execution, along with their post-execution values. BALs enable parallel disk reads, parallel transaction validation, parallel state root computation and executionless state updates.",
       "track": "verge",
       "trackSource": "override",
-      "blob": "96933027a9d8619b0e123b4cb123178855499c59"
+      "blob": "da3508ff6d73d53c9ffa9fc55f0724fb4c99198b"
     },
     {
       "eip": 7932,
@@ -10864,10 +10864,10 @@
         7892
       ],
       "discussionsTo": "https://ethereum-magicians.org/t/eip-8198-quick-slots/28057",
-      "abstract": "This EIP makes SLOT_DURATION_MS a runtime configuration on the consensus layer rather than a compile-time constant, then uses that infrastructure to reduce slot duration. Block gas limits and blob parameters scale proportionally to maintain constant throughput per unit time.",
+      "abstract": "This EIP makes the slot duration a scheduled consensus-layer configuration — a SLOT_DURATION_SCHEDULE whose entries each activate a slot duration at an upgrade epoch — rather than a compile-time constant, then uses that infrastructure to reduce slot duration from twelve to ten seconds. Duration-dependent consensus quantities are rescaled by the exact slot-duration ratio, applied inline in each…",
       "track": "merge",
       "trackSource": "override",
-      "blob": "1e65ed9f133f74916712ff709e38feb05457abd5"
+      "blob": "e256c0d5ef51182f42488b5d1da2eb57228b8dd8"
     },
     {
       "eip": 8200,
@@ -11186,7 +11186,7 @@
       "abstract": "Replaces the single sender nonce of an EIP-8141 frame transaction with (nonce_keys, nonce_seq): a bounded set of nonce keys sharing one sequence number. nonce_keys == [] selects the legacy account nonce; each key selects an independent protocol-managed nonce sequence stored in a NONCE_MANAGER system contract. Transactions whose key sets do not overlap are replay-independent. This helps privacy…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "e2689ddae35a7ca0c0c6e4afeb41d35f6b09e1ab"
+      "blob": "10bd1d84c9534c9db65f9ccbffcf8d5902b9c1ae"
     },
     {
       "eip": 8253,
@@ -13288,11 +13288,13 @@
       "activations": [
         {
           "network": "Sepolia",
-          "key": "sepolia"
+          "key": "sepolia",
+          "epoch": 353024
         },
         {
           "network": "Hoodi",
-          "key": "hoodi"
+          "key": "hoodi",
+          "epoch": 132352
         },
         {
           "network": "Mainnet",
@@ -13342,7 +13344,7 @@
         },
         {
           "eip": 7716,
-          "stage": "Proposed",
+          "stage": "Declined",
           "section": "core"
         },
         {
@@ -13397,7 +13399,7 @@
         },
         {
           "eip": 8025,
-          "stage": "Proposed",
+          "stage": "Declined",
           "section": "core"
         },
         {
@@ -13572,7 +13574,7 @@
         },
         {
           "eip": 8371,
-          "stage": "Proposed",
+          "stage": "Declined",
           "section": "core"
         },
         {
@@ -20095,7 +20097,7 @@
     },
     {
       "eip": 7928,
-      "blob": "96933027a9d8619b0e123b4cb123178855499c59",
+      "blob": "da3508ff6d73d53c9ffa9fc55f0724fb4c99198b",
       "title": "Block-Level Access Lists",
       "status": "Last Call",
       "type": "Standards Track",
@@ -20561,7 +20563,7 @@
     },
     {
       "eip": 8081,
-      "blob": "ecef1753737cc9b60b1d9d086380db88f1e3dc3c",
+      "blob": "7386ae919b35a8f69cdba2a0334d595754c8a84a",
       "title": "Hardfork Meta - Hegotá",
       "status": "Draft",
       "type": "Meta"
@@ -20835,7 +20837,7 @@
     },
     {
       "eip": 8198,
-      "blob": "1e65ed9f133f74916712ff709e38feb05457abd5",
+      "blob": "e256c0d5ef51182f42488b5d1da2eb57228b8dd8",
       "title": "Quick Slots",
       "status": "Draft",
       "type": "Standards Track",
@@ -20923,7 +20925,7 @@
     },
     {
       "eip": 8250,
-      "blob": "e2689ddae35a7ca0c0c6e4afeb41d35f6b09e1ab",
+      "blob": "10bd1d84c9534c9db65f9ccbffcf8d5902b9c1ae",
       "title": "Keyed Nonces for Frame Transactions",
       "status": "Draft",
       "type": "Standards Track",
