@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-18T20:51:51.606Z",
+  "generatedAt": "2026-10-19T04:50:40.411Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "d4b89184433ec8bcd0f6acdebb055ad2ae9f1615",
-    "treeSha": "0cdd762a6870631c756d6c1edbe4f21818d186af",
-    "committedAt": "2026-10-18T18:52:24Z"
+    "commitSha": "94130330d2e97fd7153b8c88346b85f8444b2ca2",
+    "treeSha": "5690ddb7f319ef503e9d265b6279f342bed724b6",
+    "committedAt": "2026-10-19T01:24:17Z"
   },
   "eips": [
     {
@@ -11905,7 +11905,7 @@
       "abstract": "Code can be prefixed with MAGIC bytes. MAGIC code is validated at CREATE time to ensure that it cannot execute invalid instructions, jump to invalid destinations, or underflow the data stack, that every return has a call to return from, and that within each subroutine the depth of the data stack at every instruction is the same on every execution. Stack overflow remains checked at run time, as…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "415e5f559d791d37ceffa9744a069f9b8c4d2ee8"
+      "blob": "b8bfa3d43a0f5db5dd03fceda21bf3656bb862b5"
     },
     {
       "eip": 8347,
@@ -21113,7 +21113,7 @@
     },
     {
       "eip": 8337,
-      "blob": "415e5f559d791d37ceffa9744a069f9b8c4d2ee8",
+      "blob": "b8bfa3d43a0f5db5dd03fceda21bf3656bb862b5",
       "title": "Validated EVM Code",
       "status": "Draft",
       "type": "Standards Track",
