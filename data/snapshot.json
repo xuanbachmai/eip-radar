@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-19T22:26:20.464Z",
+  "generatedAt": "2026-10-20T17:16:33.313Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "0ce679f4654ba4d120c97113626f320475e22fa9",
-    "treeSha": "4f8cc87877732b7c7786f87f6104aa046d0c9112",
-    "committedAt": "2026-10-19T20:52:40Z"
+    "commitSha": "cd7b26d2cf39d2eb071a26e1890e331f58767079",
+    "treeSha": "7379332e77a470a0e48ec57e38f9f6be260feba5",
+    "committedAt": "2026-10-20T16:54:43Z"
   },
   "eips": [
     {
@@ -7155,13 +7155,15 @@
       "type": "Standards Track",
       "category": "Core",
       "created": "2024-06-28",
-      "requires": [],
+      "requires": [
+        7685
+      ],
       "lastCallDeadline": "2026-11-01",
       "discussionsTo": "https://ethereum-magicians.org/t/eip-7732-enshrined-proposer-builder-separation-epbs/19634",
       "abstract": "This EIP fundamentally changes the way an Ethereum block is validated by decoupling the execution validation from the consensus validation both logically as well as temporally. It does so by introducing a new in-protocol entity called builders and adding a new duty (submitting payload timeliness attestations) to Ethereum validators. The ExecutionPayload field of the BeaconBlockBody is removed and…",
       "track": "scourge",
       "trackSource": "override",
-      "blob": "947683d4fe49da8870026cb69c6d9ff8d7d4d6d8"
+      "blob": "ffb4ba18e44307f58d2a19c33fb7339d5c5fd9c2"
     },
     {
       "eip": 7736,
@@ -8353,6 +8355,10 @@
         {
           "name": "Daniil Ankushin",
           "handle": "AnkushinDaniil"
+        },
+        {
+          "name": "lightclient",
+          "handle": "lightclient"
         }
       ],
       "status": "Draft",
@@ -8364,10 +8370,10 @@
         8141
       ],
       "discussionsTo": "https://ethereum-magicians.org/t/eip-restricted-behavior-transaction-type/23130",
-      "abstract": "This proposal introduces three opcodes, TXTRACE, TXDIFF, and EVENTDATACOPY, that let a contract inspect the outcome of the transaction executing it: the balance, storage, and code changes it produced, and the events it emitted. TXTRACE enumerates the full transaction state diff, TXDIFF reads a single entry by key, and EVENTDATACOPY copies event data into memory. These opcodes are valid only…",
+      "abstract": "This proposal introduces two opcodes, TXTRACE and EVENTDATACOPY, that let a contract inspect the outcome of the transaction executing it: the balance, storage, code, and nonce changes it produced, and the events it emitted. TXTRACE enumerates the full transaction state diff, and EVENTDATACOPY copies event data into memory. These opcodes are valid only inside an ASSERT frame, a new EIP-8141 frame…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "2129305a8ffe2f75e9af7be544192e5471685083"
+      "blob": "57b71a63125088fe6927a6346be4225b98d84ced"
     },
     {
       "eip": 7907,
@@ -19549,7 +19555,7 @@
     },
     {
       "eip": 7732,
-      "blob": "947683d4fe49da8870026cb69c6d9ff8d7d4d6d8",
+      "blob": "ffb4ba18e44307f58d2a19c33fb7339d5c5fd9c2",
       "title": "Enshrined Proposer-Builder Separation",
       "status": "Last Call",
       "type": "Standards Track",
@@ -19879,7 +19885,7 @@
     },
     {
       "eip": 7870,
-      "blob": "bb57c29036d774609cbc325714770687b8096385",
+      "blob": "31cf53d5e6e641f8d69f9dc65774cf0653d1bb36",
       "title": "Hardware and Bandwidth Recommendations",
       "status": "Living",
       "type": "Informational"
@@ -19987,7 +19993,7 @@
     },
     {
       "eip": 7906,
-      "blob": "2129305a8ffe2f75e9af7be544192e5471685083",
+      "blob": "57b71a63125088fe6927a6346be4225b98d84ced",
       "title": "Transaction Assertions via State Diff Opcode",
       "status": "Draft",
       "type": "Standards Track",
