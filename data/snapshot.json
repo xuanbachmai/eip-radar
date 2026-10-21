@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-21T04:57:54.768Z",
+  "generatedAt": "2026-10-21T11:59:00.058Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "25b1952395d99df32f4a540028c48ae5c1b837ec",
-    "treeSha": "1fff31eb0af690116b3323d204e5e07379f99675",
-    "committedAt": "2026-10-20T22:17:31Z"
+    "commitSha": "5a4387b9574508c1d1f70ad9ce079e92478f2e45",
+    "treeSha": "c28f668f87894a1c2c793809a427f94afeef7c1d",
+    "committedAt": "2026-10-21T09:34:01Z"
   },
   "eips": [
     {
@@ -11409,16 +11409,17 @@
       "requires": [
         7623,
         7702,
+        7825,
         7928,
         7976,
         7981,
         8131
       ],
       "discussionsTo": "https://ethereum-magicians.org/t/eip-8279-block-access-list-byte-floor/28662",
-      "abstract": "Meter the bytes each opcode adds to the EIP-7928 Block Access List in an explicit per-transaction counter, and fold that count, at 64 gas/byte, into the transaction's floor accumulator — checked at runtime before the BAL grows. Today an attacker can pack ~1.55 MB into a 60M-gas block: 75% of gas on cold SLOADs (32 BAL bytes per 2,100 gas) + 25% on calldata at 16 gas/byte. On top of EIP-8131's…",
+      "abstract": "Meter the bytes execution adds to the EIP-7928 Block Access List in an explicit per-transaction counter, and fold that count, at 64 gas/byte, into the transaction's floor accumulator — checked at runtime before the BAL grows. Today an attacker can pack ~1.55 MiB into a 60M-gas block: 75% of gas on cold SLOADs (32 BAL bytes per 2,100 gas) + 25% on calldata at 16 gas/byte. On top of EIP-8131's…",
       "track": "verge",
       "trackSource": "override",
-      "blob": "43a44216d4d2daed998542b506b14ae5f368f557"
+      "blob": "80417aec44b93e64ec92a5db673c0b9c91543d68"
     },
     {
       "eip": 8282,
@@ -21001,7 +21002,7 @@
     },
     {
       "eip": 8279,
-      "blob": "43a44216d4d2daed998542b506b14ae5f368f557",
+      "blob": "80417aec44b93e64ec92a5db673c0b9c91543d68",
       "title": "Block Access List Byte Floor",
       "status": "Draft",
       "type": "Standards Track",
