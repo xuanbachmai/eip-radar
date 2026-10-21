@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-20T21:42:03.894Z",
+  "generatedAt": "2026-10-21T04:57:54.768Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "cae82202be652e492ef28d2d03202a270a376dad",
-    "treeSha": "38453d3847bdd6ce6185ce1b7e462e9665a0e7d0",
-    "committedAt": "2026-10-20T19:50:01Z"
+    "commitSha": "25b1952395d99df32f4a540028c48ae5c1b837ec",
+    "treeSha": "1fff31eb0af690116b3323d204e5e07379f99675",
+    "committedAt": "2026-10-20T22:17:31Z"
   },
   "eips": [
     {
@@ -13150,7 +13150,9 @@
         },
         {
           "network": "Hoodi",
-          "key": "hoodi"
+          "key": "hoodi",
+          "epoch": 132352,
+          "timestamp": 1793036568
         },
         {
           "network": "Mainnet",
@@ -13294,13 +13296,11 @@
       "activations": [
         {
           "network": "Sepolia",
-          "key": "sepolia",
-          "epoch": 353024
+          "key": "sepolia"
         },
         {
           "network": "Hoodi",
-          "key": "hoodi",
-          "epoch": 132352
+          "key": "hoodi"
         },
         {
           "network": "Mainnet",
@@ -19634,7 +19634,7 @@
     },
     {
       "eip": 7773,
-      "blob": "c6b80d7f3d36bcb5d041ca30c6026133602900ea",
+      "blob": "94b90da54273434f67e263527c0d08f5e4793cfb",
       "title": "Hardfork Meta - Glamsterdam",
       "status": "Review",
       "type": "Meta"
@@ -20569,7 +20569,7 @@
     },
     {
       "eip": 8081,
-      "blob": "7386ae919b35a8f69cdba2a0334d595754c8a84a",
+      "blob": "3e65690f78221f358d980cbb33ea843e21bc9e7d",
       "title": "Hardfork Meta - Hegotá",
       "status": "Draft",
       "type": "Meta"
