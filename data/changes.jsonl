@@ -233,3 +233,4 @@
 {"at":"2026-10-19T22:26:20.464Z","commit":"0ce679f4654ba4d120c97113626f320475e22fa9","type":"fork_inclusion_change","eip":8025,"title":"Optional Execution Proofs","track":"verge","upgrade":"hegota","from":"Proposed","to":"Declined"}
 {"at":"2026-10-19T22:26:20.464Z","commit":"0ce679f4654ba4d120c97113626f320475e22fa9","type":"fork_inclusion_change","eip":8371,"upgrade":"hegota","from":"Proposed","to":"Declined"}
 {"at":"2026-10-21T04:57:54.768Z","commit":"25b1952395d99df32f4a540028c48ae5c1b837ec","type":"activation_scheduled","upgrade":"glamsterdam","network":"Hoodi","timestamp":1793036568}
+{"at":"2026-10-21T17:19:07.361Z","commit":"dbf75397edf6299ba5d549c5eb0883c0fa83b037","type":"new_eip","eip":8450,"title":"Post-Quantum Validator Key Registry","track":"merge","status":"Draft"}

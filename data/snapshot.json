@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-21T11:59:00.058Z",
+  "generatedAt": "2026-10-21T17:19:07.361Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "5a4387b9574508c1d1f70ad9ce079e92478f2e45",
-    "treeSha": "c28f668f87894a1c2c793809a427f94afeef7c1d",
-    "committedAt": "2026-10-21T09:34:01Z"
+    "commitSha": "dbf75397edf6299ba5d549c5eb0883c0fa83b037",
+    "treeSha": "58c02db07327cac98b95ac7da1a46cf076a87584",
+    "committedAt": "2026-10-21T16:32:49Z"
   },
   "eips": [
     {
@@ -12348,6 +12348,43 @@
       "track": "merge",
       "trackSource": "rule",
       "blob": "568a546ba41ea288eb67e0f84bd3ef1d196657c8"
+    },
+    {
+      "eip": 8450,
+      "title": "Post-Quantum Validator Key Registry",
+      "description": "Register dormant hash-based consensus keys for every validator ahead of the post-quantum signature switch",
+      "authors": [
+        {
+          "name": "Thomas Coratger",
+          "handle": "tcoratger"
+        },
+        {
+          "name": "Kevaundray Wedderburn",
+          "handle": "kevaundray"
+        },
+        {
+          "name": "Tom Wambsgans",
+          "handle": "TomWambsgans"
+        },
+        {
+          "name": "Justin Drake",
+          "handle": "JustinDrake"
+        }
+      ],
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core",
+      "created": "2026-10-15",
+      "requires": [
+        7002,
+        7685,
+        7916
+      ],
+      "discussionsTo": "https://ethereum-magicians.org/t/TBD/0",
+      "abstract": "This EIP adds a post-quantum public key registry to the beacon state. Each validator registers one hash-based public key, bound to its existing validator index: a leanXMSS key, used for every message the validator signs once duties switch to it. The leanXMSS key is a two-layer tree: a top tree of 216 one-time keys, each of which certifies a bottom tree of 216 one-time keys, for a lifetime of 232…",
+      "track": "merge",
+      "trackSource": "rule",
+      "blob": "e9f1fd7948773e64cf2b65910064e569d04967cb"
     }
   ],
   "upgrades": [
@@ -17307,7 +17344,7 @@
     },
     {
       "eip": 5069,
-      "blob": "26d70cef89509d19f3caf8b4884fb8fae2c509ad",
+      "blob": "3d51d7956eb20d2ff1e92c5db56317096b7d9e66",
       "title": "EIP Editor Handbook",
       "status": "Living",
       "type": "Meta"
@@ -21275,6 +21312,14 @@
       "eip": 8433,
       "blob": "568a546ba41ea288eb67e0f84bd3ef1d196657c8",
       "title": "Retire 0x00 Validators",
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core"
+    },
+    {
+      "eip": 8450,
+      "blob": "e9f1fd7948773e64cf2b65910064e569d04967cb",
+      "title": "Post-Quantum Validator Key Registry",
       "status": "Draft",
       "type": "Standards Track",
       "category": "Core"
