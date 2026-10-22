@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-22T17:16:44.359Z",
+  "generatedAt": "2026-10-22T21:42:32.743Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "f1ade090fd315895461fc3e249cb1a675aeb55a9",
-    "treeSha": "662d387b0ab278c23283cf09543a17b560e4d76b",
-    "committedAt": "2026-10-22T14:08:27Z"
+    "commitSha": "d02998e877c6589597f887df324d550a8e07389a",
+    "treeSha": "978f4fba41202121f3ab5c2ebd11f1450d258435",
+    "committedAt": "2026-10-22T19:45:46Z"
   },
   "eips": [
     {
@@ -10446,7 +10446,7 @@
       "abstract": "Adds a new transaction whose validity and gas payment can be defined abstractly. This is achieved by decomposing the transaction into a sequence of frames which are contract calls that validate the transaction, approve gas payment, and execute standard user operations.",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "47ea9b566109f3ef98eda33010cb25927f34eb60"
+      "blob": "83647152db0b8602844ab72e8c30b0c50a1b98a6"
     },
     {
       "eip": 8142,
@@ -11327,7 +11327,7 @@
       "abstract": "Adds an \"expiring nonce\" mode to EIP-8141 frame transactions in which replay protection is bounded by a short transaction deadline rather than the sender's account nonce. Once a deadline passes, the slot used to track that transaction is freed and reused, so unlike account or keyed nonces the scheme adds no permanent state growth.",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "c828d6a2f82feef91ebc1ebd508a9624dcc6cd14"
+      "blob": "08e4662c36aff46b7d6639299614561b7240918b"
     },
     {
       "eip": 8268,
@@ -11753,7 +11753,7 @@
       "abstract": "This EIP introduces SETCODEFROM, an EVM instruction that sets the current account's code hash to the code hash of a source account with existing deployed code. The new code is visible to later code execution.",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "c1f1ee144b0ebc9bc7b377f2be669d5c7e15cdda"
+      "blob": "94f01555581bef0588f71aa8520b6c289c468890"
     },
     {
       "eip": 8304,
@@ -20746,7 +20746,7 @@
     },
     {
       "eip": 8141,
-      "blob": "47ea9b566109f3ef98eda33010cb25927f34eb60",
+      "blob": "83647152db0b8602844ab72e8c30b0c50a1b98a6",
       "title": "Frame Transaction",
       "status": "Draft",
       "type": "Standards Track",
@@ -21015,7 +21015,7 @@
     },
     {
       "eip": 8266,
-      "blob": "c828d6a2f82feef91ebc1ebd508a9624dcc6cd14",
+      "blob": "08e4662c36aff46b7d6639299614561b7240918b",
       "title": "Expiring Nonces for Frame Transactions",
       "status": "Draft",
       "type": "Standards Track",
@@ -21103,7 +21103,7 @@
     },
     {
       "eip": 8298,
-      "blob": "c1f1ee144b0ebc9bc7b377f2be669d5c7e15cdda",
+      "blob": "94f01555581bef0588f71aa8520b6c289c468890",
       "title": "SETCODEFROM Code Reuse Instruction",
       "status": "Draft",
       "type": "Standards Track",
