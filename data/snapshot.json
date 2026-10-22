@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-22T04:58:38.096Z",
+  "generatedAt": "2026-10-22T17:16:44.359Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "46005d745a5d921702f12d64a1b85e712e2b6051",
-    "treeSha": "cae58c0cdd66a0c64ccbecb54e31c9b2998917bd",
-    "committedAt": "2026-10-22T00:27:07Z"
+    "commitSha": "f1ade090fd315895461fc3e249cb1a675aeb55a9",
+    "treeSha": "662d387b0ab278c23283cf09543a17b560e4d76b",
+    "committedAt": "2026-10-22T14:08:27Z"
   },
   "eips": [
     {
@@ -2386,7 +2386,7 @@
     },
     {
       "eip": 2780,
-      "title": "Resource-based intrinsic transaction gas",
+      "title": "Resource-Based Intrinsic Transaction Gas",
       "description": "Decompose the flat intrinsic transaction cost into explicit primitives priced to match the resources a transaction actually consumes",
       "authors": [
         {
@@ -2439,7 +2439,7 @@
       "abstract": "This EIP decomposes the flat 21,000 intrinsic transaction cost into explicit primitives, each priced to match the resources a transaction actually consumes. A plain ETH transfer to an existing account remains at 21,000 execution gas, and contract-creation transactions cost the same whether or not they carry value. Transactions that create new accounts or interact with EIP-7702 pay the additional…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "7425bd1e7d2df7308e1c92eb6515a6355f7cce69"
+      "blob": "c41fa1eeced3c08914c6d2333102b04b69e80e68"
     },
     {
       "eip": 2803,
@@ -6696,7 +6696,7 @@
     },
     {
       "eip": 7688,
-      "title": "Forward compatible consensus data structures",
+      "title": "Forward Compatible Consensus Data Structures",
       "description": "Transition consensus SSZ data structures to ProgressiveContainer",
       "authors": [
         {
@@ -6721,7 +6721,7 @@
       "abstract": "This EIP defines the changes needed to adopt ProgressiveContainer from EIP-7495 and ProgressiveList from EIP-7916 in consensus data structures. Only merkleization changes; serialization of affected types is unchanged.",
       "track": "verge",
       "trackSource": "override",
-      "blob": "4ef02cb8e37cfe78ac11fb82c3a54d8cc2ed715a"
+      "blob": "bdb1119c814c032e65580118d64e12039eafe63b"
     },
     {
       "eip": 7691,
@@ -6971,7 +6971,7 @@
     },
     {
       "eip": 7708,
-      "title": "ETH transfers emit a log",
+      "title": "ETH Transfers Emit a Log",
       "description": "All ETH transfers emit a log",
       "authors": [
         {
@@ -7014,7 +7014,7 @@
       "abstract": "All ETH transfers emit a log.",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "43a92464af07aef15aede5fafd210edf21621a1d"
+      "blob": "1fa00f6a2a425b73e0054d6b59f41ae68639413c"
     },
     {
       "eip": 7709,
@@ -7126,7 +7126,7 @@
     {
       "eip": 7732,
       "title": "Enshrined Proposer-Builder Separation",
-      "description": "Separates the ethereum block in consensus and execution parts, adds a mechanism for the consensus proposer to choose the execution proposer.",
+      "description": "Separates the Ethereum block into consensus and execution parts and lets the consensus proposer choose the execution proposer",
       "authors": [
         {
           "name": "Francesco D'Amato"
@@ -7163,7 +7163,7 @@
       "abstract": "This EIP fundamentally changes the way an Ethereum block is validated by decoupling the execution validation from the consensus validation both logically as well as temporally. It does so by introducing a new in-protocol entity called builders and adding a new duty (submitting payload timeliness attestations) to Ethereum validators. The ExecutionPayload field of the BeaconBlockBody is removed and…",
       "track": "scourge",
       "trackSource": "override",
-      "blob": "ffb4ba18e44307f58d2a19c33fb7339d5c5fd9c2"
+      "blob": "5baf745271ab7dce5863c1be123ddb783987bd44"
     },
     {
       "eip": 7736,
@@ -7384,7 +7384,7 @@
     {
       "eip": 7778,
       "title": "Block Gas Accounting without Refunds",
-      "description": "Prevent Block Gas Limit Circumvention by Excluding Refunds from Block Gas Accounting",
+      "description": "Prevent block gas limit circumvention by excluding refunds from block gas accounting",
       "authors": [
         {
           "name": "Ben Adams",
@@ -7405,7 +7405,7 @@
       "abstract": "This EIP modifies the block gas accounting mechanism to prevent the circumvention of block gas limits. It proposes that gas refunds, particularly those from SSTORE operations setting storage slots to zero, should not reduce the gas counted toward the block gas limit, while still being applied to transaction gas costs for users.",
       "track": "verge",
       "trackSource": "override",
-      "blob": "056a541eabae7a72ea6daf37767dc2fc39a360dc"
+      "blob": "f84b208173a52b419164465f4ae304726878fd75"
     },
     {
       "eip": 7782,
@@ -7878,7 +7878,7 @@
     },
     {
       "eip": 7843,
-      "title": "SLOTNUM opcode",
+      "title": "SLOTNUM Opcode",
       "description": "Opcode to get the current slot number",
       "authors": [
         {
@@ -7896,7 +7896,7 @@
       "abstract": "This EIP proposes to add a new opcode SLOTNUM (0x4b), that returns the corresponding slot number for the current block.",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "2548b927edf0855b136e28f67e0acd84053d1c66"
+      "blob": "0a3c68bbd8af638d9ff91197f64cb07bb104a3a2"
     },
     {
       "eip": 7848,
@@ -8867,7 +8867,7 @@
     {
       "eip": 7954,
       "title": "Increase Maximum Contract Size",
-      "description": "Raise the maximum contract code size from 24KiB to 64KiB and initcode size from 48KiB to 128KiB.",
+      "description": "Raise the maximum contract code size from 24KiB to 64KiB and initcode size from 48KiB to 128KiB",
       "authors": [
         {
           "name": "Giulio Rebuffo",
@@ -8891,7 +8891,7 @@
       "abstract": "This EIP proposes to raise the maximum allowed size for contract code deployed on Ethereum from 24,576 bytes to 65,536 bytes, and to raise the initcode size limit from 49,152 bytes to 131,072 bytes.",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "e1b5c551c9d5cd6b007c5ce0ccab167965d4a661"
+      "blob": "850e9d488f1f7280bdfece3d38a94a3facc0d933"
     },
     {
       "eip": 7956,
@@ -9188,7 +9188,7 @@
     {
       "eip": 7997,
       "title": "Deterministic Factory Contract",
-      "description": "A minimal `CREATE2` factory shared by EVM chains.",
+      "description": "A minimal `CREATE2` factory shared by EVM chains",
       "authors": [
         {
           "name": "Francisco Giordano",
@@ -9219,7 +9219,7 @@
       "abstract": "The availability of a well-known CREATE2 factory at 0x4e59b44847b379578588920cA78FbF26c0B4956C is made a formal requirement to enable deterministic deployments at identical addresses across EVM chains. This benefits developer experience, user experience, and security, in particular for multi-chain and cross-chain applications, including account abstraction.",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "9a4600a229edc4d1fafcc42c3a935cdc1474b72c"
+      "blob": "96a932023940e8b5d27539b51499592c5b3cb841"
     },
     {
       "eip": 7998,
@@ -9433,7 +9433,7 @@
     },
     {
       "eip": 8024,
-      "title": "Backward compatible SWAPN, DUPN, EXCHANGE",
+      "title": "Backward Compatible SWAPN, DUPN, EXCHANGE",
       "description": "Introduce additional instructions for manipulating the stack which allow accessing the stack at higher depths",
       "authors": [
         {
@@ -9463,7 +9463,7 @@
       "abstract": "Currently, SWAP* and DUP* instructions are limited to a stack depth of 16. Introduce three new instructions, SWAPN, DUPN and EXCHANGE which lift this limitation and allow accessing the stack at higher depths.",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "d9e7aebfcb8ef1a67e9f5564498dd605c022c30a"
+      "blob": "b15042f65157134c398a8dd0f2d6759893f2f81e"
     },
     {
       "eip": 8025,
@@ -9647,8 +9647,8 @@
     },
     {
       "eip": 8038,
-      "title": "State-access gas cost update",
-      "description": "Increases the gas cost of state-access operations to reflect Ethereum’s larger state",
+      "title": "State-Access Gas Cost Update",
+      "description": "Increases the gas cost of state-access operations to reflect Ethereum's larger state",
       "authors": [
         {
           "name": "Maria Silva",
@@ -9675,11 +9675,11 @@
       "abstract": "This EIP updates the gas cost of state-access operations to reflect Ethereum's larger state and the consequent slowdown of these operations. It dissects the cost of state-touching operations into three components — access, write, and state creation: the cold account access cost (COLD_ACCOUNT_ACCESS) is raised, explicit write surcharges (ACCOUNT_WRITE, STORAGE_WRITE) are introduced, state-creation…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "e4d626af391afa0abdd36651625f319bac2b19d8"
+      "blob": "a1c73c4f5bffc6b4ed69556c497fec6c3d24e287"
     },
     {
       "eip": 8045,
-      "title": "Exclude slashed validators from proposing",
+      "title": "Exclude Slashed Validators from Proposing",
       "description": "Modify proposer selection to exclude slashed validators, improving network resilience and performance after mass slashings",
       "authors": [
         {
@@ -9703,7 +9703,7 @@
       "abstract": "This EIP proposes a modification to the beacon chain proposer selection process to exclude slashed validators from being selected as proposers.",
       "track": "scourge",
       "trackSource": "override",
-      "blob": "cb587d68f0d79b003ac5446243f45e9bc88bceda"
+      "blob": "e1e2887cf958f03d25096aa03621f9e2cc1ad311"
     },
     {
       "eip": 8046,
@@ -9916,8 +9916,8 @@
     },
     {
       "eip": 8061,
-      "title": "Increase exit and consolidation churn",
-      "description": "Increase the exit and consolidation churn and create a separate consolidation churn limit parameter.",
+      "title": "Increase Exit and Consolidation Churn",
+      "description": "Increase the exit and consolidation churn and create a separate consolidation churn limit parameter",
       "authors": [
         {
           "name": "Francesco D'Amato",
@@ -9940,7 +9940,7 @@
       "abstract": "This EIP roughly doubles the consolidation churn, as well as quadrupling the exit churn and restoring its proportionality to total stake (though maintaining the existing cap on activations). The choice of parameters balances maintaining a sufficiently long weak subjectivity period (~7 days, roughly halving the current period) with achieving two goals: allowing for faster consolidation of the…",
       "track": "merge",
       "trackSource": "override",
-      "blob": "6cfa9a34c77580ed47a1f2fd57d81596265dba0d"
+      "blob": "dadac31f4d7dfb97ff3cbdadf8c6997715ed3c87"
     },
     {
       "eip": 8062,
@@ -11110,7 +11110,7 @@
     {
       "eip": 8246,
       "title": "Remove SELFDESTRUCT Burn",
-      "description": "Eliminate the remaining cases where SELFDESTRUCT burns ETH.",
+      "description": "Eliminate the remaining cases where SELFDESTRUCT burns ETH",
       "authors": [
         {
           "name": "Paweł Bylica",
@@ -11130,7 +11130,7 @@
       "abstract": "This EIP removes the remaining cases where SELFDESTRUCT burns ETH. Accounts marked for selfdestruction still have their code, storage, and nonce cleared at transaction finalization, but any remaining balance is preserved.",
       "track": "purge",
       "trackSource": "override",
-      "blob": "84613eac60cd9823399285fb5cfbbd6ec330f19c"
+      "blob": "6c80a64ed3651696cc7d9251ec3bac2ed199ec6d"
     },
     {
       "eip": 8247,
@@ -15993,8 +15993,8 @@
     },
     {
       "eip": 2780,
-      "blob": "7425bd1e7d2df7308e1c92eb6515a6355f7cce69",
-      "title": "Resource-based intrinsic transaction gas",
+      "blob": "c41fa1eeced3c08914c6d2333102b04b69e80e68",
+      "title": "Resource-Based Intrinsic Transaction Gas",
       "status": "Last Call",
       "type": "Standards Track",
       "category": "Core"
@@ -19467,8 +19467,8 @@
     },
     {
       "eip": 7688,
-      "blob": "4ef02cb8e37cfe78ac11fb82c3a54d8cc2ed715a",
-      "title": "Forward compatible consensus data structures",
+      "blob": "bdb1119c814c032e65580118d64e12039eafe63b",
+      "title": "Forward Compatible Consensus Data Structures",
       "status": "Review",
       "type": "Standards Track",
       "category": "Core"
@@ -19546,8 +19546,8 @@
     },
     {
       "eip": 7708,
-      "blob": "43a92464af07aef15aede5fafd210edf21621a1d",
-      "title": "ETH transfers emit a log",
+      "blob": "1fa00f6a2a425b73e0054d6b59f41ae68639413c",
+      "title": "ETH Transfers Emit a Log",
       "status": "Last Call",
       "type": "Standards Track",
       "category": "Core"
@@ -19593,7 +19593,7 @@
     },
     {
       "eip": 7732,
-      "blob": "ffb4ba18e44307f58d2a19c33fb7339d5c5fd9c2",
+      "blob": "5baf745271ab7dce5863c1be123ddb783987bd44",
       "title": "Enshrined Proposer-Builder Separation",
       "status": "Last Call",
       "type": "Standards Track",
@@ -19672,7 +19672,7 @@
     },
     {
       "eip": 7773,
-      "blob": "94b90da54273434f67e263527c0d08f5e4793cfb",
+      "blob": "3b0d9db14e6a1069652045329101d907d0b739c8",
       "title": "Hardfork Meta - Glamsterdam",
       "status": "Review",
       "type": "Meta"
@@ -19687,7 +19687,7 @@
     },
     {
       "eip": 7778,
-      "blob": "056a541eabae7a72ea6daf37767dc2fc39a360dc",
+      "blob": "f84b208173a52b419164465f4ae304726878fd75",
       "title": "Block Gas Accounting without Refunds",
       "status": "Last Call",
       "type": "Standards Track",
@@ -19867,8 +19867,8 @@
     },
     {
       "eip": 7843,
-      "blob": "2548b927edf0855b136e28f67e0acd84053d1c66",
-      "title": "SLOTNUM opcode",
+      "blob": "0a3c68bbd8af638d9ff91197f64cb07bb104a3a2",
+      "title": "SLOTNUM Opcode",
       "status": "Last Call",
       "type": "Standards Track",
       "category": "Core"
@@ -20225,7 +20225,7 @@
     },
     {
       "eip": 7954,
-      "blob": "e1b5c551c9d5cd6b007c5ce0ccab167965d4a661",
+      "blob": "850e9d488f1f7280bdfece3d38a94a3facc0d933",
       "title": "Increase Maximum Contract Size",
       "status": "Last Call",
       "type": "Standards Track",
@@ -20297,8 +20297,8 @@
     },
     {
       "eip": 7975,
-      "blob": "7a50753a8da587a2bff70825dcc17b382a8eb6e8",
-      "title": "eth/70 - partial block receipt lists",
+      "blob": "20f2bcf741f3aaf8f42f1071564f286e855c83a6",
+      "title": "eth/70 - Partial Block Receipt Lists",
       "status": "Last Call",
       "type": "Standards Track",
       "category": "Networking"
@@ -20337,7 +20337,7 @@
     },
     {
       "eip": 7997,
-      "blob": "9a4600a229edc4d1fafcc42c3a935cdc1474b72c",
+      "blob": "96a932023940e8b5d27539b51499592c5b3cb841",
       "title": "Deterministic Factory Contract",
       "status": "Last Call",
       "type": "Standards Track",
@@ -20408,8 +20408,8 @@
     },
     {
       "eip": 8024,
-      "blob": "d9e7aebfcb8ef1a67e9f5564498dd605c022c30a",
-      "title": "Backward compatible SWAPN, DUPN, EXCHANGE",
+      "blob": "b15042f65157134c398a8dd0f2d6759893f2f81e",
+      "title": "Backward Compatible SWAPN, DUPN, EXCHANGE",
       "status": "Last Call",
       "type": "Standards Track",
       "category": "Core"
@@ -20448,16 +20448,16 @@
     },
     {
       "eip": 8038,
-      "blob": "e4d626af391afa0abdd36651625f319bac2b19d8",
-      "title": "State-access gas cost update",
+      "blob": "a1c73c4f5bffc6b4ed69556c497fec6c3d24e287",
+      "title": "State-Access Gas Cost Update",
       "status": "Last Call",
       "type": "Standards Track",
       "category": "Core"
     },
     {
       "eip": 8045,
-      "blob": "cb587d68f0d79b003ac5446243f45e9bc88bceda",
-      "title": "Exclude slashed validators from proposing",
+      "blob": "e1e2887cf958f03d25096aa03621f9e2cc1ad311",
+      "title": "Exclude Slashed Validators from Proposing",
       "status": "Last Call",
       "type": "Standards Track",
       "category": "Core"
@@ -20520,8 +20520,8 @@
     },
     {
       "eip": 8061,
-      "blob": "6cfa9a34c77580ed47a1f2fd57d81596265dba0d",
-      "title": "Increase exit and consolidation churn",
+      "blob": "dadac31f4d7dfb97ff3cbdadf8c6997715ed3c87",
+      "title": "Increase Exit and Consolidation Churn",
       "status": "Last Call",
       "type": "Standards Track",
       "category": "Core"
@@ -20731,7 +20731,7 @@
     },
     {
       "eip": 8136,
-      "blob": "b5c7430adddf43f5c7381c95131a2c6be099a6b5",
+      "blob": "63ceeb9c08554e0c7d978bb68917043cd89c6408",
       "title": "Cell-Level Deltas for Data Column Broadcast",
       "status": "Last Call",
       "type": "Standards Track",
@@ -20953,7 +20953,7 @@
     },
     {
       "eip": 8246,
-      "blob": "84613eac60cd9823399285fb5cfbbd6ec330f19c",
+      "blob": "6c80a64ed3651696cc7d9251ec3bac2ed199ec6d",
       "title": "Remove SELFDESTRUCT Burn",
       "status": "Last Call",
       "type": "Standards Track",
@@ -21008,7 +21008,7 @@
     },
     {
       "eip": 8261,
-      "blob": "2f52235592a0a1a392f9261b97048268c4f98867",
+      "blob": "28a1a1587eb170e4b1c44f1f2cc031625e02d244",
       "title": "Gas Limit Schedule",
       "status": "Last Call",
       "type": "Informational"
