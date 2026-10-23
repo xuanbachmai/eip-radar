@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-23T04:59:58.493Z",
+  "generatedAt": "2026-10-23T17:14:44.810Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "f1bcca1b56ee91fe115d2a8d8fd731fd6ca38bb3",
-    "treeSha": "0945c8e088a3ce5f74287fd05f90219951cbfe99",
-    "committedAt": "2026-10-22T22:15:35Z"
+    "commitSha": "25ac2920ea3a958911e380498bb7c8fbca201542",
+    "treeSha": "21c6e790bd26499e1b2df2135a4a5129bd521e7d",
+    "committedAt": "2026-10-23T14:11:51Z"
   },
   "eips": [
     {
@@ -8373,7 +8373,7 @@
       "abstract": "This proposal introduces two opcodes, TXTRACE and EVENTDATACOPY, that let a contract inspect the outcome of the transaction executing it: the balance, storage, code, and nonce changes it produced, and the events it emitted. TXTRACE enumerates the full transaction state diff, and EVENTDATACOPY copies event data into memory. These opcodes are valid only inside an ASSERT frame, a new EIP-8141 frame…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "57b71a63125088fe6927a6346be4225b98d84ced"
+      "blob": "bc7b52baf2668b0741453669713a2ba49911b48b"
     },
     {
       "eip": 7907,
@@ -10860,6 +10860,14 @@
         {
           "name": "Carl Beekhuizen",
           "handle": "carlbeek"
+        },
+        {
+          "name": "Barnabé Monnot",
+          "handle": "barnabemonnot"
+        },
+        {
+          "name": "Barnabas Busa",
+          "handle": "barnabasbusa"
         }
       ],
       "status": "Draft",
@@ -10867,13 +10875,14 @@
       "category": "Core",
       "created": "2026-03-17",
       "requires": [
+        7843,
         7892
       ],
       "discussionsTo": "https://ethereum-magicians.org/t/eip-8198-quick-slots/28057",
       "abstract": "This EIP makes the slot duration a scheduled consensus-layer configuration — a SLOT_DURATION_SCHEDULE whose entries each activate a slot duration at an upgrade epoch — rather than a compile-time constant, then uses that infrastructure to reduce slot duration from twelve to ten seconds. Duration-dependent consensus quantities are rescaled by the exact slot-duration ratio, applied inline in each…",
       "track": "merge",
       "trackSource": "override",
-      "blob": "e256c0d5ef51182f42488b5d1da2eb57228b8dd8"
+      "blob": "4df317ffd98e5ddf9063610416690a67b89b728a"
     },
     {
       "eip": 8200,
@@ -20031,7 +20040,7 @@
     },
     {
       "eip": 7906,
-      "blob": "57b71a63125088fe6927a6346be4225b98d84ced",
+      "blob": "bc7b52baf2668b0741453669713a2ba49911b48b",
       "title": "Transaction Assertions via State Diff Opcode",
       "status": "Draft",
       "type": "Standards Track",
@@ -20881,7 +20890,7 @@
     },
     {
       "eip": 8198,
-      "blob": "e256c0d5ef51182f42488b5d1da2eb57228b8dd8",
+      "blob": "4df317ffd98e5ddf9063610416690a67b89b728a",
       "title": "Quick Slots",
       "status": "Draft",
       "type": "Standards Track",
