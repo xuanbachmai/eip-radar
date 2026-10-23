@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-22T21:42:32.743Z",
+  "generatedAt": "2026-10-23T04:59:58.493Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "d02998e877c6589597f887df324d550a8e07389a",
-    "treeSha": "978f4fba41202121f3ab5c2ebd11f1450d258435",
-    "committedAt": "2026-10-22T19:45:46Z"
+    "commitSha": "f1bcca1b56ee91fe115d2a8d8fd731fd6ca38bb3",
+    "treeSha": "0945c8e088a3ce5f74287fd05f90219951cbfe99",
+    "committedAt": "2026-10-22T22:15:35Z"
   },
   "eips": [
     {
@@ -10446,7 +10446,7 @@
       "abstract": "Adds a new transaction whose validity and gas payment can be defined abstractly. This is achieved by decomposing the transaction into a sequence of frames which are contract calls that validate the transaction, approve gas payment, and execute standard user operations.",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "83647152db0b8602844ab72e8c30b0c50a1b98a6"
+      "blob": "39bbb12f10f24beb1a60c6c42f5eba4b6008c44e"
     },
     {
       "eip": 8142,
@@ -20746,7 +20746,7 @@
     },
     {
       "eip": 8141,
-      "blob": "83647152db0b8602844ab72e8c30b0c50a1b98a6",
+      "blob": "39bbb12f10f24beb1a60c6c42f5eba4b6008c44e",
       "title": "Frame Transaction",
       "status": "Draft",
       "type": "Standards Track",
