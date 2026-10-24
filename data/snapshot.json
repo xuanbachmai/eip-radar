@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-24T11:12:29.771Z",
+  "generatedAt": "2026-10-24T20:56:24.127Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "fb527daa1830467d6be1336cbf36ed11ef23e6a2",
-    "treeSha": "c34fd3878b732e16676e1d559a4d9725673e1d9c",
-    "committedAt": "2026-10-24T08:36:31Z"
+    "commitSha": "e858e912ff55370eb8125873455af531e322d9b2",
+    "treeSha": "9681250f0613571866f97dd0c0d7f6ffc8cb57f8",
+    "committedAt": "2026-10-24T16:18:39Z"
   },
   "eips": [
     {
@@ -12340,7 +12340,7 @@
     {
       "eip": 8425,
       "title": "Quantum Freeze and Account Recovery",
-      "description": "Disables legacy ECDSA authorization and provides recovery paths for unmigrated accounts.",
+      "description": "Disables legacy ECDSA authorization and provides account recovery paths.",
       "authors": [
         {
           "name": "Liyi Guo",
@@ -12356,10 +12356,10 @@
         7702
       ],
       "discussionsTo": "https://ethereum-magicians.org/t/preparing-for-q-day-should-ethereum-standardize-account-freezing-and-recovery/29770",
-      "abstract": "This EIP defines a freeze of legacy ECDSA authorization and two recovery paths for unmigrated accounts: a recovery commitment registered before a trusted cutoff, or stronger ownership evidence such as a proof of knowledge of the original seed. Recovery installs successor authorization without restoring the legacy ECDSA path. Recovery algorithms are TBD.",
+      "abstract": "This EIP defines a freeze of legacy ECDSA authorization and two account recovery paths: a recovery commitment registered before a trusted cutoff, or stronger ownership evidence such as a proof of knowledge of the original seed. Recovery installs successor authorization without restoring the legacy ECDSA path. Recovery algorithms are TBD.",
       "track": "splurge",
       "trackSource": "rule",
-      "blob": "b115368f4c3715941f64a7db982639067d8911cc"
+      "blob": "f20dc8d91e476e3e924100caa6bd694b4f839a87"
     },
     {
       "eip": 8433,
@@ -21383,7 +21383,7 @@
     },
     {
       "eip": 8425,
-      "blob": "b115368f4c3715941f64a7db982639067d8911cc",
+      "blob": "f20dc8d91e476e3e924100caa6bd694b4f839a87",
       "title": "Quantum Freeze and Account Recovery",
       "status": "Draft",
       "type": "Standards Track",
