@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-24T04:44:53.760Z",
+  "generatedAt": "2026-10-24T11:12:29.771Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "5e2a3e3e09dcb180bf08321785e836156ffd5f13",
-    "treeSha": "7e52288480a8c66f9a379402791987dd1807a9ce",
-    "committedAt": "2026-10-24T02:52:10Z"
+    "commitSha": "fb527daa1830467d6be1336cbf36ed11ef23e6a2",
+    "treeSha": "c34fd3878b732e16676e1d559a4d9725673e1d9c",
+    "committedAt": "2026-10-24T08:36:31Z"
   },
   "eips": [
     {
@@ -9133,7 +9133,7 @@
       "abstract": "This is a minimal change to the Ethereum Virtual Machine (EVM) to support calls and returns. Compilers must now synthesize calls with dynamic jumps: the flow of control is obscured, and every analysis pays. These instructions make calls explicit — saving code and gas, putting return addresses securely beyond the reach of code, and supporting fully static control flow — code that can be validated…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "7797afc2f44d200d2e875b03b815d852081ea788"
+      "blob": "16caa29774246c33b2bc23886c3282a6209b744f"
     },
     {
       "eip": 7980,
@@ -11921,7 +11921,7 @@
       "abstract": "Code can be prefixed with MAGIC bytes. MAGIC code is validated at CREATE time to ensure that it cannot execute invalid instructions, jump to invalid destinations, or underflow the data stack, that every return has a call to return from, and that within each subroutine the depth of the data stack at every instruction is the same on every execution. Stack overflow remains checked at run time, as…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "b8bfa3d43a0f5db5dd03fceda21bf3656bb862b5"
+      "blob": "b1f35c18588bdff358ff57e11fa94104d1c2a7b9"
     },
     {
       "eip": 8347,
@@ -12075,7 +12075,10 @@
         684,
         1014,
         1153,
+        2681,
         3529,
+        6780,
+        7708,
         7928,
         8037,
         8038
@@ -12084,7 +12087,7 @@
       "abstract": "This EIP introduces a new EVM opcode, TCREATE, where T stands for transient, providing an official, gas-efficient, and state-aware mechanism for deploying temporary contracts.",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "708361f5cabccc801c9c415d52ae21c5da4646ad"
+      "blob": "c2417fd47cd749c0c523627fc035d06cb19b36ec"
     },
     {
       "eip": 8363,
@@ -12333,6 +12336,30 @@
       "track": "splurge",
       "trackSource": "rule",
       "blob": "be65e05c5b4a8ce99075663f4e4c6099ebf19206"
+    },
+    {
+      "eip": 8425,
+      "title": "Quantum Freeze and Account Recovery",
+      "description": "Disables legacy ECDSA authorization and provides recovery paths for unmigrated accounts.",
+      "authors": [
+        {
+          "name": "Liyi Guo",
+          "handle": "colinlyguo"
+        }
+      ],
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core",
+      "created": "2026-09-27",
+      "requires": [
+        2929,
+        7702
+      ],
+      "discussionsTo": "https://ethereum-magicians.org/t/preparing-for-q-day-should-ethereum-standardize-account-freezing-and-recovery/29770",
+      "abstract": "This EIP defines a freeze of legacy ECDSA authorization and two recovery paths for unmigrated accounts: a recovery commitment registered before a trusted cutoff, or stronger ownership evidence such as a proof of knowledge of the original seed. Recovery installs successor authorization without restoring the legacy ECDSA path. Recovery algorithms are TBD.",
+      "track": "splurge",
+      "trackSource": "rule",
+      "blob": "b115368f4c3715941f64a7db982639067d8911cc"
     },
     {
       "eip": 8433,
@@ -20351,7 +20378,7 @@
     },
     {
       "eip": 7979,
-      "blob": "7797afc2f44d200d2e875b03b815d852081ea788",
+      "blob": "16caa29774246c33b2bc23886c3282a6209b744f",
       "title": "Call and Return Opcodes for the EVM",
       "status": "Review",
       "type": "Standards Track",
@@ -21197,7 +21224,7 @@
     },
     {
       "eip": 8337,
-      "blob": "b8bfa3d43a0f5db5dd03fceda21bf3656bb862b5",
+      "blob": "b1f35c18588bdff358ff57e11fa94104d1c2a7b9",
       "title": "Validated EVM Code",
       "status": "Draft",
       "type": "Standards Track",
@@ -21237,7 +21264,7 @@
     },
     {
       "eip": 8360,
-      "blob": "708361f5cabccc801c9c415d52ae21c5da4646ad",
+      "blob": "c2417fd47cd749c0c523627fc035d06cb19b36ec",
       "title": "TCREATE Opcode",
       "status": "Draft",
       "type": "Standards Track",
@@ -21353,6 +21380,14 @@
       "status": "Draft",
       "type": "Standards Track",
       "category": "Networking"
+    },
+    {
+      "eip": 8425,
+      "blob": "b115368f4c3715941f64a7db982639067d8911cc",
+      "title": "Quantum Freeze and Account Recovery",
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core"
     },
     {
       "eip": 8433,
