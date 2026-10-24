@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-23T17:14:44.810Z",
+  "generatedAt": "2026-10-24T04:44:53.760Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "25ac2920ea3a958911e380498bb7c8fbca201542",
-    "treeSha": "21c6e790bd26499e1b2df2135a4a5129bd521e7d",
-    "committedAt": "2026-10-23T14:11:51Z"
+    "commitSha": "5e2a3e3e09dcb180bf08321785e836156ffd5f13",
+    "treeSha": "7e52288480a8c66f9a379402791987dd1807a9ce",
+    "committedAt": "2026-10-24T02:52:10Z"
   },
   "eips": [
     {
@@ -12359,6 +12359,35 @@
       "blob": "568a546ba41ea288eb67e0f84bd3ef1d196657c8"
     },
     {
+      "eip": 8435,
+      "title": "Last-Written Block in PBT Leaves",
+      "description": "Packs last_written_block write-age metadata into the account and storage leaves of the Partitioned Binary Tree.",
+      "authors": [
+        {
+          "name": "Iman Kalyan Chakraborty",
+          "handle": "astrion-coder"
+        },
+        {
+          "name": "Wei Han Ng",
+          "handle": "weiihann"
+        }
+      ],
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core",
+      "created": "2026-10-04",
+      "requires": [
+        7954,
+        8037,
+        8297
+      ],
+      "discussionsTo": "https://ethereum-magicians.org/t/eip-8435-last-written-block-in-pbt-leaves/29860",
+      "abstract": "This proposal puts the last_written_block metadata defined in EIP-8188 directly into the leaves of the Partitioned Binary Tree (PBT) defined in EIP-8297. For accounts, last_written_block is packed into the existing BASIC_DATA leaf. It takes the three reserved bytes plus one byte freed by narrowing code_size from four bytes in the original PBT design to three. For storage slots, the leaf value…",
+      "track": "verge",
+      "trackSource": "rule",
+      "blob": "d2d977673b030ffcc126762e193b9a19d219e88e"
+    },
+    {
       "eip": 8450,
       "title": "Post-Quantum Validator Key Registry",
       "description": "Register dormant hash-based consensus keys for every validator ahead of the post-quantum signature switch",
@@ -21329,6 +21358,14 @@
       "eip": 8433,
       "blob": "568a546ba41ea288eb67e0f84bd3ef1d196657c8",
       "title": "Retire 0x00 Validators",
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core"
+    },
+    {
+      "eip": 8435,
+      "blob": "d2d977673b030ffcc126762e193b9a19d219e88e",
+      "title": "Last-Written Block in PBT Leaves",
       "status": "Draft",
       "type": "Standards Track",
       "category": "Core"
