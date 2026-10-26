@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-25T16:30:43.219Z",
+  "generatedAt": "2026-10-26T13:14:06.769Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "7372d10a457b29eceb02cd052345af165de1fb60",
-    "treeSha": "9681250f0613571866f97dd0c0d7f6ffc8cb57f8",
-    "committedAt": "2026-10-25T11:56:57Z"
+    "commitSha": "32678e29a6ddf80185f888b402988b662c727939",
+    "treeSha": "bb4b2da9208acb08d9ff1e537f912298e845af47",
+    "committedAt": "2026-10-26T09:19:51Z"
   },
   "eips": [
     {
@@ -9813,18 +9813,27 @@
         {
           "name": "Maria Silva",
           "handle": "misilva73"
+        },
+        {
+          "name": "Łukasz Rozmej",
+          "handle": "LukaszRozmej"
         }
       ],
       "status": "Draft",
       "type": "Standards Track",
       "category": "Core",
       "created": "2025-10-17",
-      "requires": [],
+      "requires": [
+        150,
+        2200,
+        2780,
+        8037
+      ],
       "discussionsTo": "https://ethereum-magicians.org/t/eip-8053-milli-gas-counter-for-high-precision-gas-metering/25946",
       "abstract": "This proposal introduces the milli-gas counter as the EVM's internal gas accounting. Gas costs are defined in milli_gas and internal EVM gas accounting is entirely carried out in milli_gas. At the end of transaction execution, milli_gas is rounded up to gas. Gas limits and transaction fees are still computed and verified using the current gas_used counter. This new counter enables a more precise…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "30db53c8b2c843a5d7c794118e9518eeab3139fd"
+      "blob": "8c24e98506c7a8c89f1b4e9996470969cf1b4890"
     },
     {
       "eip": 8057,
@@ -20553,7 +20562,7 @@
     },
     {
       "eip": 8053,
-      "blob": "30db53c8b2c843a5d7c794118e9518eeab3139fd",
+      "blob": "8c24e98506c7a8c89f1b4e9996470969cf1b4890",
       "title": "Milli-gas for High-precision Gas Metering",
       "status": "Draft",
       "type": "Standards Track",
