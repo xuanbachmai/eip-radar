@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-27T22:21:26.994Z",
+  "generatedAt": "2026-10-30T13:05:33.022Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "d4c575521d99ec881a444ab3af604e684b5f0743",
-    "treeSha": "c0e321b18111cdeccea9b281d5e944ecfa11681a",
-    "committedAt": "2026-10-27T16:04:29Z"
+    "commitSha": "298dd6799a35591506e8d202c23be6aafdc27c14",
+    "treeSha": "cb7170e19f00c20e68cf75235e33746f61fdc4a9",
+    "committedAt": "2026-10-30T11:21:52Z"
   },
   "eips": [
     {
@@ -10569,7 +10569,7 @@
       "abstract": "This EIP proposes an optional mechanism to set custom balance thresholds for sweep withdrawals for compounding withdrawal credentials (0x02) validators. This mechanism allows validators to specify above which balance they want their rewards to be swept to their withdrawal address, providing greater flexibility and control over their staking rewards.",
       "track": "merge",
       "trackSource": "override",
-      "blob": "df9e6af5aced0b9dc6e91c8aaba84330769db716"
+      "blob": "7bb307319ad39e51e2377a2c3b932c2979e9da1d"
     },
     {
       "eip": 8149,
@@ -20844,7 +20844,7 @@
     },
     {
       "eip": 8148,
-      "blob": "df9e6af5aced0b9dc6e91c8aaba84330769db716",
+      "blob": "7bb307319ad39e51e2377a2c3b932c2979e9da1d",
       "title": "Custom sweep threshold for validators",
       "status": "Draft",
       "type": "Standards Track",
