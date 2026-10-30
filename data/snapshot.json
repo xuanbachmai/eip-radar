@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-10-30T13:05:33.022Z",
+  "generatedAt": "2026-10-30T22:26:48.552Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "298dd6799a35591506e8d202c23be6aafdc27c14",
-    "treeSha": "cb7170e19f00c20e68cf75235e33746f61fdc4a9",
-    "committedAt": "2026-10-30T11:21:52Z"
+    "commitSha": "c1ff0a992ef65c0321b098a890b6d1c44b3fdb93",
+    "treeSha": "c8636e646d4050ec1b65d2847eef963a6966efac",
+    "committedAt": "2026-10-30T14:27:56Z"
   },
   "eips": [
     {
@@ -12425,8 +12425,8 @@
     },
     {
       "eip": 8450,
-      "title": "Post-Quantum Validator Key Registry",
-      "description": "Register dormant hash-based consensus keys for every validator ahead of the post-quantum signature switch",
+      "title": "Post-Quantum Consensus Key Registry",
+      "description": "Register dormant hash-based consensus keys for validators and builders ahead of the post-quantum signature switch",
       "authors": [
         {
           "name": "Thomas Coratger",
@@ -12450,15 +12450,15 @@
       "category": "Core",
       "created": "2026-10-15",
       "requires": [
-        7002,
-        7685,
+        7495,
+        7732,
         7916
       ],
-      "discussionsTo": "https://ethereum-magicians.org/t/TBD/0",
-      "abstract": "This EIP adds a post-quantum public key registry to the beacon state. Each validator registers one hash-based public key, bound to its existing validator index: a leanXMSS key, used for every message the validator signs once duties switch to it. The leanXMSS key is a two-layer tree: a top tree of 216 one-time keys, each of which certifies a bottom tree of 216 one-time keys, for a lifetime of 232…",
+      "discussionsTo": "https://ethereum-magicians.org/t/eip-8450-post-quantum-validator-key-registry/30046",
+      "abstract": "This EIP adds a post-quantum public key registry to the beacon state. Each validator registers two hash-based commitments: a leanXMSS key, which will sign all its messages once duties switch to it, and the 32-byte root of a verifiable random function (VRF) tree, which fixes one verifiable random output per index. Each builder registers only a leanXMSS key. Registration is a new beacon block…",
       "track": "merge",
       "trackSource": "rule",
-      "blob": "e9f1fd7948773e64cf2b65910064e569d04967cb"
+      "blob": "85820f9f241944d36851e82c54d7f9f52f878103"
     }
   ],
   "upgrades": [
@@ -21416,8 +21416,8 @@
     },
     {
       "eip": 8450,
-      "blob": "e9f1fd7948773e64cf2b65910064e569d04967cb",
-      "title": "Post-Quantum Validator Key Registry",
+      "blob": "85820f9f241944d36851e82c54d7f9f52f878103",
+      "title": "Post-Quantum Consensus Key Registry",
       "status": "Draft",
       "type": "Standards Track",
       "category": "Core"
