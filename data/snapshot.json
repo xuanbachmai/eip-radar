@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-11-01T17:57:18.415Z",
+  "generatedAt": "2026-11-04T06:37:13.808Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "dc5d5fa688b7fe87b95a907fcc128b4fde2f4d2f",
-    "treeSha": "68324ab03c74d2b977baa0004bc0f4f3f2f5851a",
-    "committedAt": "2026-11-01T11:20:25Z"
+    "commitSha": "46976b2a9bf99f727fb87dc8c809e3a3cdc6b445",
+    "treeSha": "d601be4423831d55a92773b93b1968e3609f1bed",
+    "committedAt": "2026-11-03T23:14:48Z"
   },
   "eips": [
     {
@@ -12424,6 +12424,29 @@
       "blob": "d2d977673b030ffcc126762e193b9a19d219e88e"
     },
     {
+      "eip": 8449,
+      "title": "Engine API Proposal Lookahead",
+      "description": "The consensus layer tells the execution layer, ahead of time, at which slots it will ask for a payload",
+      "authors": [
+        {
+          "name": "Csaba Kiraly",
+          "handle": "cskiraly"
+        }
+      ],
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core",
+      "created": "2026-10-19",
+      "requires": [
+        7917
+      ],
+      "discussionsTo": "https://ethereum-magicians.org/t/eip-8449-engine-api-proposal-lookahead/30016",
+      "abstract": "This EIP adds an Engine API method, engine_proposalLookaheadUpdatedV1, with which a consensus layer client (CL) tells its execution layer client (EL) the slots, timestamps, fee recipients and target gas limits of the blocks its validators are scheduled to propose in the current and next epoch. It is a notice, not a command: it starts no build, names no parent block and changes no consensus rule…",
+      "track": "merge",
+      "trackSource": "rule",
+      "blob": "a9b08fd71b46780f836fdcb3909c7eb230459679"
+    },
+    {
       "eip": 8450,
       "title": "Post-Quantum Consensus Key Registry",
       "description": "Register dormant hash-based consensus keys for validators and builders ahead of the post-quantum signature switch",
@@ -21415,12 +21438,27 @@
       "category": "Core"
     },
     {
+      "eip": 8449,
+      "blob": "a9b08fd71b46780f836fdcb3909c7eb230459679",
+      "title": "Engine API Proposal Lookahead",
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core"
+    },
+    {
       "eip": 8450,
       "blob": "85820f9f241944d36851e82c54d7f9f52f878103",
       "title": "Post-Quantum Consensus Key Registry",
       "status": "Draft",
       "type": "Standards Track",
       "category": "Core"
+    },
+    {
+      "eip": 8457,
+      "blob": "f0d41c8acb6bb15ed9ec0ba61733e41c4a46e852",
+      "title": "Batched KZG Point Evaluation via EIP-2537",
+      "status": "Draft",
+      "type": "Informational"
     }
   ]
 }
