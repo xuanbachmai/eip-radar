@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-11-04T06:37:13.808Z",
+  "generatedAt": "2026-11-05T20:02:28.388Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "46976b2a9bf99f727fb87dc8c809e3a3cdc6b445",
-    "treeSha": "d601be4423831d55a92773b93b1968e3609f1bed",
-    "committedAt": "2026-11-03T23:14:48Z"
+    "commitSha": "af5ea76669821d1eb8dfc60e3373a0a7fa9a7759",
+    "treeSha": "0281083e5147f888609bc0ec9e9de7384de1defb",
+    "committedAt": "2026-11-05T15:26:46Z"
   },
   "eips": [
     {
@@ -7941,10 +7941,10 @@
         7702
       ],
       "discussionsTo": "https://ethereum-magicians.org/t/eip-7851-code-controlled-eoa-delegation/22344",
-      "abstract": "This EIP extends EIP-7702 with an ECDSA-disabled delegation prefix 0xef0101 and a self-only opcode SETSELFDELEGATE. EIP-7702 bootstraps delegation by writing 0xef0100 || delegate_address through the original EOA key. Delegated wallet code can then call SETSELFDELEGATE to write 0xef0101 || delegate_address, permanently disabling residual ECDSA authority while preserving code-controlled delegate…",
+      "abstract": "This EIP extends EIP-7702 with an ECDSA-disabled delegation prefix 0xef0101 and a self-only EVM instruction SETSELFDELEGATE. EIP-7702 bootstraps delegation by writing 0xef0100 || delegate_address through the original EOA key. Delegated wallet code can then call SETSELFDELEGATE to write 0xef0101 || delegate_address, permanently disabling residual ECDSA authority while preserving code-controlled…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "a659ac72d473505f6a106e7bfa0364df16808cf1"
+      "blob": "a7f71c36afda1a9a78f476168d37b8463181b0aa"
     },
     {
       "eip": 7862,
@@ -10621,7 +10621,7 @@
       "abstract": "This EIP modifies the ecRecover precompile at address 0x0000000000000000000000000000000000000001 to apply the EIP-3607 account-code restriction, except for delegation indicators specified by EIP-7702. After performing ECDSA public key recovery, the precompile returns the recovered address only if its current raw account code is empty, or exactly an EIP-7702 delegation indicator. Otherwise, it…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "81d0372e97adda22e02471b44639e242556c59de"
+      "blob": "d7b8181cae5088779776cb15b9964e2d5bec3a03"
     },
     {
       "eip": 8163,
@@ -12475,13 +12475,14 @@
       "requires": [
         7495,
         7732,
-        7916
+        7916,
+        8282
       ],
       "discussionsTo": "https://ethereum-magicians.org/t/eip-8450-post-quantum-validator-key-registry/30046",
-      "abstract": "This EIP adds a post-quantum public key registry to the beacon state. Each validator registers two hash-based commitments: a leanXMSS key, which will sign all its messages once duties switch to it, and the 32-byte root of a verifiable random function (VRF) tree, which fixes one verifiable random output per index. Each builder registers only a leanXMSS key. Registration is a new beacon block…",
+      "abstract": "This EIP adds a post-quantum public key registry to the beacon state. Each validator registers two hash-based commitments: a leanXMSS key, which will sign all its messages once duties switch to it, and the 32-byte root of a verifiable random function (VRF) tree, which fixes one verifiable random output per index. Each builder registers a leanXMSS key and a zero VRF root. Registration is a new…",
       "track": "merge",
       "trackSource": "rule",
-      "blob": "85820f9f241944d36851e82c54d7f9f52f878103"
+      "blob": "31a0ee508088d913cf1a3a87eea997fce3429fee"
     }
   ],
   "upgrades": [
@@ -19980,7 +19981,7 @@
     },
     {
       "eip": 7851,
-      "blob": "a659ac72d473505f6a106e7bfa0364df16808cf1",
+      "blob": "a7f71c36afda1a9a78f476168d37b8463181b0aa",
       "title": "Code-Controlled EOA Delegation",
       "status": "Draft",
       "type": "Standards Track",
@@ -20883,7 +20884,7 @@
     },
     {
       "eip": 8151,
-      "blob": "81d0372e97adda22e02471b44639e242556c59de",
+      "blob": "d7b8181cae5088779776cb15b9964e2d5bec3a03",
       "title": "Account Code Restricted ecRecover",
       "status": "Draft",
       "type": "Standards Track",
@@ -21447,7 +21448,7 @@
     },
     {
       "eip": 8450,
-      "blob": "85820f9f241944d36851e82c54d7f9f52f878103",
+      "blob": "31a0ee508088d913cf1a3a87eea997fce3429fee",
       "title": "Post-Quantum Consensus Key Registry",
       "status": "Draft",
       "type": "Standards Track",
