@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-11-07T21:57:01.420Z",
+  "generatedAt": "2026-11-10T19:49:33.339Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "542e62eb129517130b7facc52bbb9a1f333c711e",
-    "treeSha": "c2f1b52fde5b1efae86602606bf41a438ed36718",
-    "committedAt": "2026-11-07T21:56:29Z"
+    "commitSha": "bd93d240b72702450920eeeadc2ce593626bfd8a",
+    "treeSha": "b20740b3a33aea9a688b2efdda8517531e951bdd",
+    "committedAt": "2026-11-10T16:25:20Z"
   },
   "eips": [
     {
