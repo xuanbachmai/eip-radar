@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-11-10T19:49:33.339Z",
+  "generatedAt": "2026-11-12T07:21:02.948Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "bd93d240b72702450920eeeadc2ce593626bfd8a",
-    "treeSha": "b20740b3a33aea9a688b2efdda8517531e951bdd",
-    "committedAt": "2026-11-10T16:25:20Z"
+    "commitSha": "253f6bd20d1b1b600228c0d696775a90720ba5f1",
+    "treeSha": "cfb252c2293ed010af8de39ca49f3fbb20ce5c99",
+    "committedAt": "2026-11-11T21:09:41Z"
   },
   "eips": [
     {
@@ -11465,14 +11465,15 @@
       "requires": [
         1559,
         7685,
-        7732
+        7732,
+        7997
       ],
       "lastCallDeadline": "2026-11-01",
       "discussionsTo": "https://ethereum-magicians.org/t/eip-8282-builder-execution-requests/28699",
       "abstract": "This EIP introduces two EIP-7685 request types and corresponding predeploy contracts for EIP-7732 builders. A builder deposit contract handles initial registration and stake top-ups. A builder exit contract lets a builder's execution_address trigger a full exit. Both contracts follow the request-bus pattern of EIP-7002 and EIP-7251. Builders no longer onboard through the validator deposit flow or…",
       "track": "scourge",
       "trackSource": "override",
-      "blob": "13b923d8effa18ec5eae90c9c5072950539aa0f9"
+      "blob": "0a763f9f61f2fa96dbafb1ecc66059c27e245407"
     },
     {
       "eip": 8288,
@@ -21145,7 +21146,7 @@
     },
     {
       "eip": 8282,
-      "blob": "13b923d8effa18ec5eae90c9c5072950539aa0f9",
+      "blob": "0a763f9f61f2fa96dbafb1ecc66059c27e245407",
       "title": "Builder Execution Requests",
       "status": "Last Call",
       "type": "Standards Track",
