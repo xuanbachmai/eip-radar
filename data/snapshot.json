@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-11-14T06:37:33.746Z",
+  "generatedAt": "2026-11-16T22:14:50.494Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "79e11d2a55b6b3e75adda8859299741dd00fff3e",
-    "treeSha": "6d58f23be56bc41a38fd60eac63a104d85712e49",
-    "committedAt": "2026-11-13T21:48:17Z"
+    "commitSha": "8194528a2ee9a4893a398a5871c470ab0ac3b09a",
+    "treeSha": "0e54fc884bb203f15c258d110341bdba6678f85a",
+    "committedAt": "2026-11-16T10:09:44Z"
   },
   "eips": [
     {
@@ -10621,7 +10621,7 @@
       "abstract": "This EIP modifies the ecRecover precompile at address 0x0000000000000000000000000000000000000001 to apply the EIP-3607 account-code restriction, except for delegation indicators specified by EIP-7702. After performing ECDSA public key recovery, the precompile returns the recovered address only if its current raw account code is empty, or exactly an EIP-7702 delegation indicator. Otherwise, it…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "d7b8181cae5088779776cb15b9964e2d5bec3a03"
+      "blob": "bfd0db906f55033442a064357d8e6768490b8fd5"
     },
     {
       "eip": 8163,
@@ -20885,7 +20885,7 @@
     },
     {
       "eip": 8151,
-      "blob": "d7b8181cae5088779776cb15b9964e2d5bec3a03",
+      "blob": "bfd0db906f55033442a064357d8e6768490b8fd5",
       "title": "Account Code Restricted ecRecover",
       "status": "Draft",
       "type": "Standards Track",
