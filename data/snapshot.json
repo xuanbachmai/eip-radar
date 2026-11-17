@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-11-16T22:14:50.494Z",
+  "generatedAt": "2026-11-17T21:01:31.908Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "8194528a2ee9a4893a398a5871c470ab0ac3b09a",
-    "treeSha": "0e54fc884bb203f15c258d110341bdba6678f85a",
-    "committedAt": "2026-11-16T10:09:44Z"
+    "commitSha": "3db38a3725105cb67b8804ac3e147967113bc3ca",
+    "treeSha": "e89b5735bbcf9fa3a4df6d9fb04be1776a35d7ff",
+    "committedAt": "2026-11-17T11:57:44Z"
   },
   "eips": [
     {
@@ -7715,7 +7715,7 @@
       "abstract": "This EIP migrates the execution block to Simple Serialize (SSZ), including the block hash, request hash, and the per-block tries. Notably, individual transaction, receipt, and withdrawal list elements as well as the state trie are not affected by this EIP.",
       "track": "verge",
       "trackSource": "override",
-      "blob": "3f2dc991ac65153842fd9b894c04ba590d58d3e6"
+      "blob": "de4fa7868206a7c4755200d56ae855e10bcd77d9"
     },
     {
       "eip": 7819,
@@ -19896,7 +19896,7 @@
     },
     {
       "eip": 7807,
-      "blob": "3f2dc991ac65153842fd9b894c04ba590d58d3e6",
+      "blob": "de4fa7868206a7c4755200d56ae855e10bcd77d9",
       "title": "SSZ execution blocks",
       "status": "Draft",
       "type": "Standards Track",
