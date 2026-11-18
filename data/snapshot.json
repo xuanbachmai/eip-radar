@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-11-17T21:01:31.908Z",
+  "generatedAt": "2026-11-18T20:38:53.811Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "3db38a3725105cb67b8804ac3e147967113bc3ca",
-    "treeSha": "e89b5735bbcf9fa3a4df6d9fb04be1776a35d7ff",
-    "committedAt": "2026-11-17T11:57:44Z"
+    "commitSha": "b055feec322fbc37e9d77a393a50b3ff56b31c92",
+    "treeSha": "8d8edb9cf424d200670370c317a1eed6ca29ffb8",
+    "committedAt": "2026-11-18T18:05:04Z"
   },
   "eips": [
     {
@@ -13287,9 +13287,7 @@
         },
         {
           "network": "Hoodi",
-          "key": "hoodi",
-          "epoch": 132352,
-          "timestamp": 1793036568
+          "key": "hoodi"
         },
         {
           "network": "Mainnet",
@@ -13299,6 +13297,11 @@
       "eips": [
         {
           "eip": 2780,
+          "stage": "Scheduled",
+          "section": "core"
+        },
+        {
+          "eip": 7495,
           "stage": "Scheduled",
           "section": "core"
         },
@@ -13331,6 +13334,11 @@
           "eip": 7904,
           "stage": "Scheduled",
           "section": "other"
+        },
+        {
+          "eip": 7916,
+          "stage": "Scheduled",
+          "section": "core"
         },
         {
           "eip": 7928,
@@ -19771,7 +19779,7 @@
     },
     {
       "eip": 7773,
-      "blob": "3b0d9db14e6a1069652045329101d907d0b739c8",
+      "blob": "a78ab57b16c8bcccec0175667f75115a8dc18971",
       "title": "Hardfork Meta - Glamsterdam",
       "status": "Review",
       "type": "Meta"
