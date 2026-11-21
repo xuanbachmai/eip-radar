@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-11-18T20:38:53.811Z",
+  "generatedAt": "2026-11-21T19:24:09.809Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "b055feec322fbc37e9d77a393a50b3ff56b31c92",
-    "treeSha": "8d8edb9cf424d200670370c317a1eed6ca29ffb8",
-    "committedAt": "2026-11-18T18:05:04Z"
+    "commitSha": "b4b2ac745e77291d7b47d45665d4e016ab58d31e",
+    "treeSha": "64592782e3059a6acf68823e4fefe5a640b9e13e",
+    "committedAt": "2026-11-21T09:01:17Z"
   },
   "eips": [
     {
@@ -10374,17 +10374,20 @@
       "created": "2025-01-21",
       "requires": [
         2028,
+        2780,
+        2930,
         4844,
         7623,
         7702,
+        7825,
         7976,
         7981
       ],
-      "discussionsTo": "https://ethereum-magicians.org/t/eip-9999-add-auth-data-to-eip-7623-floor/12345",
-      "abstract": "Charge every user-controlled byte in a transaction (calldata, access-list entries, EIP-7702 auths, EIP-4844 blob hashes) at a flat 64 gas at the floor. One rule replaces EIP-7623/EIP-7976 and EIP-7981 and closes the auth and blob hash floor gaps. Worst-case user-controlled tx content per block is bounded by block_gas_limit / 64 ≈ 0.89 MB, a hard cap that shrinks worst-case blocks at an unchanged…",
+      "discussionsTo": "https://ethereum-magicians.org/t/eip-8131-add-auth-data-to-eip-7623-floor/27567",
+      "abstract": "Charge every user-controlled byte in a transaction (calldata, access-list entries, EIP-7702 auths, EIP-4844 blob hashes) at a flat 64 gas at the floor. One floor rule replaces the floor terms of EIP-7623/EIP-7976 and EIP-7981 and closes the auth and blob hash floor gaps. Worst-case user-controlled transaction content per block is bounded by block_gas_limit / 64 (0.89 MiB at 60M gas). Together…",
       "track": "surge",
       "trackSource": "override",
-      "blob": "8710275f91d09d700cd16746748f9a4baef7c3d2"
+      "blob": "05b974cbc0c00d340f17ee7cbf9d176cc5bb5647"
     },
     {
       "eip": 8141,
@@ -11413,7 +11416,7 @@
     {
       "eip": 8279,
       "title": "Block Access List Byte Floor",
-      "description": "Meter EIP-7928 Block Access List bytes at runtime and fold them into the EIP-7623 transaction floor, capping worst-case block size.",
+      "description": "Meter EIP-7928 Block Access List bytes at runtime and fold them into the EIP-8131 transaction floor, capping worst-case block size.",
       "authors": [
         {
           "name": "Toni Wahrstätter",
@@ -11425,19 +11428,22 @@
       "category": "Core",
       "created": "2026-05-23",
       "requires": [
+        2780,
         7623,
         7702,
         7825,
         7928,
         7976,
         7981,
+        8037,
+        8038,
         8131
       ],
       "discussionsTo": "https://ethereum-magicians.org/t/eip-8279-block-access-list-byte-floor/28662",
-      "abstract": "Meter the bytes execution adds to the EIP-7928 Block Access List in an explicit per-transaction counter, and fold that count, at 64 gas/byte, into the transaction's floor accumulator — checked at runtime before the BAL grows. Today an attacker can pack ~1.55 MiB into a 60M-gas block: 75% of gas on cold SLOADs (32 BAL bytes per 2,100 gas) + 25% on calldata at 16 gas/byte. On top of EIP-8131's…",
+      "abstract": "Meter the bytes execution adds to the EIP-7928 Block Access List in an explicit per-transaction counter, and fold that count, at 64 gas/byte, into the transaction's floor accumulator — checked at runtime before the BAL grows. With EIP-7928 BALs, an attacker can pack ~1.55 MiB into a 60M-gas block: 75% of gas on cold SLOADs (32 BAL bytes per 2,100 gas) + 25% on calldata at 16 gas/byte. On top of…",
       "track": "verge",
       "trackSource": "override",
-      "blob": "80417aec44b93e64ec92a5db673c0b9c91543d68"
+      "blob": "b6e1baa932dd92b840f8c41f6ed7e4a1b95fd690"
     },
     {
       "eip": 8282,
@@ -20809,7 +20815,7 @@
     },
     {
       "eip": 8131,
-      "blob": "8710275f91d09d700cd16746748f9a4baef7c3d2",
+      "blob": "05b974cbc0c00d340f17ee7cbf9d176cc5bb5647",
       "title": "Unified Transaction Content Floor",
       "status": "Draft",
       "type": "Standards Track",
@@ -21146,7 +21152,7 @@
     },
     {
       "eip": 8279,
-      "blob": "80417aec44b93e64ec92a5db673c0b9c91543d68",
+      "blob": "b6e1baa932dd92b840f8c41f6ed7e4a1b95fd690",
       "title": "Block Access List Byte Floor",
       "status": "Draft",
       "type": "Standards Track",
