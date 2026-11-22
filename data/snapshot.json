@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-11-21T19:24:09.809Z",
+  "generatedAt": "2026-11-22T19:47:26.366Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "b4b2ac745e77291d7b47d45665d4e016ab58d31e",
-    "treeSha": "64592782e3059a6acf68823e4fefe5a640b9e13e",
-    "committedAt": "2026-11-21T09:01:17Z"
+    "commitSha": "875fcf6d084c096195fec170310514444f537133",
+    "treeSha": "bd0542895ba5db6d0e16beb301222943f1d097c2",
+    "committedAt": "2026-11-22T14:16:25Z"
   },
   "eips": [
     {
@@ -9463,7 +9463,7 @@
       "abstract": "Currently, SWAP* and DUP* instructions are limited to a stack depth of 16. Introduce three new instructions, SWAPN, DUPN and EXCHANGE which lift this limitation and allow accessing the stack at higher depths.",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "b15042f65157134c398a8dd0f2d6759893f2f81e"
+      "blob": "1698ab06ca6bfc66fd99f25594083b5709ba0fb6"
     },
     {
       "eip": 8025,
@@ -20521,7 +20521,7 @@
     },
     {
       "eip": 8024,
-      "blob": "b15042f65157134c398a8dd0f2d6759893f2f81e",
+      "blob": "1698ab06ca6bfc66fd99f25594083b5709ba0fb6",
       "title": "Backward Compatible SWAPN, DUPN, EXCHANGE",
       "status": "Last Call",
       "type": "Standards Track",
