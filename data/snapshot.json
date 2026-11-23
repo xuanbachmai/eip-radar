@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-11-23T07:49:35.679Z",
+  "generatedAt": "2026-11-23T23:59:28.300Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "deb6de1d271afdb85f11f569492e98c0dab18e34",
-    "treeSha": "d6a42c926c35e83170d26ac7ebe482d923bc0a00",
-    "committedAt": "2026-11-23T06:00:59Z"
+    "commitSha": "81a90efc672bdd6130c813d8dae005e5b3a8ce5b",
+    "treeSha": "86f5b3b932ae82613dde236c9415780542b974c5",
+    "committedAt": "2026-11-23T18:05:15Z"
   },
   "eips": [
     {
@@ -12378,6 +12378,33 @@
       "blob": "f20dc8d91e476e3e924100caa6bd694b4f839a87"
     },
     {
+      "eip": 8430,
+      "title": "AA Transaction Type",
+      "description": "A transaction type with batched calls, gas sponsorship, 2D nonces, and in-band code delegation",
+      "authors": [
+        {
+          "name": "Chris Hunter",
+          "handle": "chunter-cb"
+        }
+      ],
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core",
+      "created": "2026-09-23",
+      "requires": [
+        1559,
+        2718,
+        2929,
+        7623,
+        7702
+      ],
+      "discussionsTo": "https://ethereum-magicians.org/t/eip-8430-aa-transaction-type-split-out-from-8130/29810",
+      "abstract": "This proposal introduces a new EIP-2718 transaction type (AA_TX_TYPE), split out of EIP-8130 as an independent transaction type with no Keystore dependency. It works for today's EOAs with native secp256k1 authentication, giving them call batching with phased atomicity, native value in calls, gas sponsorship with bound and open payers, two-dimensional nonces with a nonce-free mode, and in-band…",
+      "track": "splurge",
+      "trackSource": "rule",
+      "blob": "9b06472c4c3ad5cc080c0f34b68d27eff32df2cd"
+    },
+    {
       "eip": 8433,
       "title": "Retire 0x00 Validators",
       "description": "Exit remaining validators with 0x00 withdrawal credentials at a capped rate after a grace period, keeping the credential change path open",
@@ -12490,6 +12517,175 @@
       "track": "merge",
       "trackSource": "rule",
       "blob": "31a0ee508088d913cf1a3a87eea997fce3429fee"
+    },
+    {
+      "eip": 8452,
+      "title": "Jump and Call Tables for the EVM",
+      "description": "JUMPV and CALLSUBV, a multi-way jump and call through a table of destinations in the code",
+      "authors": [
+        {
+          "name": "Greg Colvin",
+          "handle": "gcolvin"
+        }
+      ],
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core",
+      "created": "2026-10-20",
+      "requires": [
+        7979,
+        8337
+      ],
+      "discussionsTo": "https://ethereum-magicians.org/t/eip-8452-jump-and-call-tables-for-the-evm/30044",
+      "abstract": "Two instructions. JUMPV jumps to one of a table of destinations, chosen by a case on the data stack; CALLSUBV calls one. The table is data in the code, and its position is on the stack, so the instructions take no immediate data and behave identically in ordinary and validated code. In ordinary code they are as dynamic and as checked as JUMP; in MAGIC code the PUSH before them makes the dispatch…",
+      "track": "splurge",
+      "trackSource": "rule",
+      "blob": "88c4e5f2d38edb38e7c94c37e6a1dfcf3195b88f"
+    },
+    {
+      "eip": 8455,
+      "title": "RESERVOIR Opcode",
+      "description": "Adds an EVM opcode that exposes the remaining state gas unavailable through GAS.",
+      "authors": [
+        {
+          "name": "Javad Rajabzadeh",
+          "handle": "ja7ad"
+        }
+      ],
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core",
+      "created": "2026-10-23",
+      "requires": [
+        2780,
+        7702,
+        8037,
+        8141
+      ],
+      "discussionsTo": "https://ethereum-magicians.org/t/eip-8455-reservoir-opcode/30116",
+      "abstract": "This EIP introduces a new opcode, RESERVOIR (0x4d), that pushes the state gas available to the executing frame which is not included in the value returned by GAS. For transactions that use the reservoir model of EIP-8037 this is the frame's state_gas_reservoir. Inside an EIP-8141 frame transaction it is the frame's state_gas_left. Together with GAS, the opcode lets contracts read their full…",
+      "track": "splurge",
+      "trackSource": "rule",
+      "blob": "78bd1c47ed09a2f97d5a4f3c29442ff1f583a5a1"
+    },
+    {
+      "eip": 8456,
+      "title": "CALLSTATUS instruction",
+      "description": "Instruction that returns whether the last call of the frame succeeded, reverted or halted, and whether a halt occurred below it",
+      "authors": [
+        {
+          "name": "Stavros Vlachakis",
+          "handle": "svlachakis"
+        }
+      ],
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core",
+      "created": "2026-10-25",
+      "requires": [],
+      "discussionsTo": "https://ethereum-magicians.org/t/eip-8456-callstatus-instruction/30085",
+      "abstract": "This EIP adds the CALLSTATUS instruction. It pushes the completion status of the most recent CALL, CALLCODE, DELEGATECALL, STATICCALL, CREATE or CREATE2 executed in the current frame, as three bits: whether the callee reverted, whether it halted exceptionally or failed consuming its gas, and whether such a failure occurred in a frame below the callee. The values are 0 (success), 1 (reverted or…",
+      "track": "splurge",
+      "trackSource": "rule",
+      "blob": "3d787f002143d281cd2a55f21161156882b0412d"
+    },
+    {
+      "eip": 8477,
+      "title": "Recent Block Bound Delegation Authorizations",
+      "description": "Require delegation authorizations to bind to one of the preceding 256 execution block hashes.",
+      "authors": [
+        {
+          "name": "Joseph Delong",
+          "handle": "dangerousfood"
+        }
+      ],
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core",
+      "created": "2026-10-30",
+      "requires": [
+        7702
+      ],
+      "discussionsTo": "https://ethereum-magicians.org/t/eip-8477-recent-block-bound-delegation-authorizations/30269",
+      "abstract": "Require every EIP-7702 authorization to sign an execution block number and its block header hash. An authorization may be applied only when the referenced block is one of the 256 immediate ancestors of the block including the transaction. Authorizations referencing older blocks, the current block, future blocks, or a different history are skipped. Legacy authorizations without a signed block…",
+      "track": "splurge",
+      "trackSource": "rule",
+      "blob": "4072bf3b07333f1669870167b60ec035741bca24"
+    },
+    {
+      "eip": 8491,
+      "title": "LUCID Key Publisher Priority Lists",
+      "description": "Extend EIP-8184 with validator-selected key publisher priority and authenticated key release",
+      "authors": [
+        {
+          "name": "Jannik Luhn",
+          "handle": "jannikluhn"
+        }
+      ],
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core",
+      "created": "2026-11-10",
+      "requires": [
+        7002,
+        7685,
+        7732,
+        8184,
+        8282
+      ],
+      "discussionsTo": "https://ethereum-magicians.org/t/eip-8491-lucid-key-publisher-priority-lists/30330",
+      "abstract": "This EIP extends EIP-8184 with a validator-managed priority list of key publishers. Sealed transactions using publishers on this list execute before other sealed transactions, mitigating the impact of key publishers' optionality over key release. Publishers are included on the list when supported by more than half of active validator effective balance.",
+      "track": "merge",
+      "trackSource": "rule",
+      "blob": "60f8a2289ceabceb2cc56664e1920e14c94820fe"
+    },
+    {
+      "eip": 8496,
+      "title": "Code Reads in Block-Level Access Lists",
+      "description": "Record in the block access list the code hash of every pre-block bytecode that a block loads",
+      "authors": [
+        {
+          "name": "Lukasz Rozmej",
+          "handle": "LukaszRozmej"
+        }
+      ],
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core",
+      "created": "2026-11-12",
+      "requires": [
+        2929,
+        7702,
+        7928
+      ],
+      "discussionsTo": "https://ethereum-magicians.org/t/eip-8496-code-reads-in-block-level-access-lists/30354",
+      "abstract": "This EIP adds a code_hash field to the AccountChanges entry of the EIP-7928 block access list (BAL). For every account whose pre-block bytecode is executed, copied, sized or checked for a delegation indicator during the block, the field holds the Keccak-256 hash of that bytecode. For every other account the field is empty. The BAL then names every piece of pre-block state that a block reads. When…",
+      "track": "verge",
+      "trackSource": "rule",
+      "blob": "5b414572c36bc38e740cab2cf28ba5bb2c2a9478"
+    },
+    {
+      "eip": 8502,
+      "title": "Dynamic individual consolidation incentive",
+      "description": "Encourage consolidation with a per-validator balance deduction that rises while the validator count is above a scheduled target.",
+      "authors": [
+        {
+          "name": "Anders Elowsson",
+          "handle": "anderselowsson"
+        }
+      ],
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core",
+      "created": "2026-11-18",
+      "requires": [
+        7251
+      ],
+      "discussionsTo": "https://ethereum-magicians.org/t/eip-0000-dynamic-individual-consolidation-incentive/30436",
+      "abstract": "This EIP encourages stakers to consolidate their stake into fewer validators to reduce the network load from carrying and aggregating votes. Each epoch, an individual consolidation incentive is subtracted from validator balances. It makes each additional validator carry a private cost, giving stakers a reason to reduce the public cost they impose on the network. The incentive is largest for…",
+      "track": "merge",
+      "trackSource": "rule",
+      "blob": "0f936215ba14d6107d473fe685b7e545d1df9711"
     }
   ],
   "upgrades": [
@@ -20664,7 +20860,7 @@
     },
     {
       "eip": 8070,
-      "blob": "b65cda59d5a99acb3d20aef088630c9c4f7220f1",
+      "blob": "e5307e687b602e10e6d93780d11038eeafd00382",
       "title": "eth/72 - Sparse Blobpool",
       "status": "Last Call",
       "type": "Standards Track",
@@ -21438,6 +21634,14 @@
       "category": "Core"
     },
     {
+      "eip": 8430,
+      "blob": "9b06472c4c3ad5cc080c0f34b68d27eff32df2cd",
+      "title": "AA Transaction Type",
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core"
+    },
+    {
       "eip": 8433,
       "blob": "568a546ba41ea288eb67e0f84bd3ef1d196657c8",
       "title": "Retire 0x00 Validators",
@@ -21452,6 +21656,14 @@
       "status": "Draft",
       "type": "Standards Track",
       "category": "Core"
+    },
+    {
+      "eip": 8437,
+      "blob": "623791fcaea689070756d0afdf3c7c9d918b0978",
+      "title": "eth/75 - Proof Wrapper Propagation",
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Networking"
     },
     {
       "eip": 8449,
@@ -21470,11 +21682,67 @@
       "category": "Core"
     },
     {
+      "eip": 8452,
+      "blob": "88c4e5f2d38edb38e7c94c37e6a1dfcf3195b88f",
+      "title": "Jump and Call Tables for the EVM",
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core"
+    },
+    {
+      "eip": 8455,
+      "blob": "78bd1c47ed09a2f97d5a4f3c29442ff1f583a5a1",
+      "title": "RESERVOIR Opcode",
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core"
+    },
+    {
+      "eip": 8456,
+      "blob": "3d787f002143d281cd2a55f21161156882b0412d",
+      "title": "CALLSTATUS instruction",
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core"
+    },
+    {
       "eip": 8457,
       "blob": "f0d41c8acb6bb15ed9ec0ba61733e41c4a46e852",
       "title": "Batched KZG Point Evaluation via EIP-2537",
       "status": "Draft",
       "type": "Informational"
+    },
+    {
+      "eip": 8477,
+      "blob": "4072bf3b07333f1669870167b60ec035741bca24",
+      "title": "Recent Block Bound Delegation Authorizations",
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core"
+    },
+    {
+      "eip": 8491,
+      "blob": "60f8a2289ceabceb2cc56664e1920e14c94820fe",
+      "title": "LUCID Key Publisher Priority Lists",
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core"
+    },
+    {
+      "eip": 8496,
+      "blob": "5b414572c36bc38e740cab2cf28ba5bb2c2a9478",
+      "title": "Code Reads in Block-Level Access Lists",
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core"
+    },
+    {
+      "eip": 8502,
+      "blob": "0f936215ba14d6107d473fe685b7e545d1df9711",
+      "title": "Dynamic individual consolidation incentive",
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core"
     },
     {
       "eip": 8512,

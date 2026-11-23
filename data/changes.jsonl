@@ -239,3 +239,11 @@
 {"at":"2026-11-04T06:37:13.808Z","commit":"46976b2a9bf99f727fb87dc8c809e3a3cdc6b445","type":"new_eip","eip":8449,"title":"Engine API Proposal Lookahead","track":"merge","status":"Draft"}
 {"at":"2026-11-18T20:38:53.811Z","commit":"b055feec322fbc37e9d77a393a50b3ff56b31c92","type":"fork_inclusion_change","eip":7495,"title":"SSZ ProgressiveContainer","track":"verge","upgrade":"glamsterdam","from":null,"to":"Scheduled"}
 {"at":"2026-11-18T20:38:53.811Z","commit":"b055feec322fbc37e9d77a393a50b3ff56b31c92","type":"fork_inclusion_change","eip":7916,"title":"SSZ ProgressiveList","track":"verge","upgrade":"glamsterdam","from":null,"to":"Scheduled"}
+{"at":"2026-11-23T23:59:28.300Z","commit":"81a90efc672bdd6130c813d8dae005e5b3a8ce5b","type":"new_eip","eip":8430,"title":"AA Transaction Type","track":"splurge","status":"Draft"}
+{"at":"2026-11-23T23:59:28.300Z","commit":"81a90efc672bdd6130c813d8dae005e5b3a8ce5b","type":"new_eip","eip":8452,"title":"Jump and Call Tables for the EVM","track":"splurge","status":"Draft"}
+{"at":"2026-11-23T23:59:28.300Z","commit":"81a90efc672bdd6130c813d8dae005e5b3a8ce5b","type":"new_eip","eip":8455,"title":"RESERVOIR Opcode","track":"splurge","status":"Draft"}
+{"at":"2026-11-23T23:59:28.300Z","commit":"81a90efc672bdd6130c813d8dae005e5b3a8ce5b","type":"new_eip","eip":8456,"title":"CALLSTATUS instruction","track":"splurge","status":"Draft"}
+{"at":"2026-11-23T23:59:28.300Z","commit":"81a90efc672bdd6130c813d8dae005e5b3a8ce5b","type":"new_eip","eip":8477,"title":"Recent Block Bound Delegation Authorizations","track":"splurge","status":"Draft"}
+{"at":"2026-11-23T23:59:28.300Z","commit":"81a90efc672bdd6130c813d8dae005e5b3a8ce5b","type":"new_eip","eip":8491,"title":"LUCID Key Publisher Priority Lists","track":"merge","status":"Draft"}
+{"at":"2026-11-23T23:59:28.300Z","commit":"81a90efc672bdd6130c813d8dae005e5b3a8ce5b","type":"new_eip","eip":8496,"title":"Code Reads in Block-Level Access Lists","track":"verge","status":"Draft"}
+{"at":"2026-11-23T23:59:28.300Z","commit":"81a90efc672bdd6130c813d8dae005e5b3a8ce5b","type":"new_eip","eip":8502,"title":"Dynamic individual consolidation incentive","track":"merge","status":"Draft"}
