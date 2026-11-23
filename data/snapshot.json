@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-11-22T19:47:26.366Z",
+  "generatedAt": "2026-11-23T07:49:35.679Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "875fcf6d084c096195fec170310514444f537133",
-    "treeSha": "bd0542895ba5db6d0e16beb301222943f1d097c2",
-    "committedAt": "2026-11-22T14:16:25Z"
+    "commitSha": "deb6de1d271afdb85f11f569492e98c0dab18e34",
+    "treeSha": "d6a42c926c35e83170d26ac7ebe482d923bc0a00",
+    "committedAt": "2026-11-23T06:00:59Z"
   },
   "eips": [
     {
@@ -21475,6 +21475,14 @@
       "title": "Batched KZG Point Evaluation via EIP-2537",
       "status": "Draft",
       "type": "Informational"
+    },
+    {
+      "eip": 8512,
+      "blob": "c18cb54024dda4fb4a85d2b03926c88cc9a41719",
+      "title": "eth/74 - Dependency Proof Exchange",
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Networking"
     }
   ]
 }
