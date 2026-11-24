@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-11-23T23:59:28.300Z",
+  "generatedAt": "2026-11-24T10:01:39.080Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "81a90efc672bdd6130c813d8dae005e5b3a8ce5b",
-    "treeSha": "86f5b3b932ae82613dde236c9415780542b974c5",
-    "committedAt": "2026-11-23T18:05:15Z"
+    "commitSha": "5b2eeafa5fff9d3b33f9a5403ceb50ca67ae1280",
+    "treeSha": "9eb7d22e49d14cdcc3e9d6159060d99f728ef12d",
+    "committedAt": "2026-11-24T05:12:28Z"
   },
   "eips": [
     {
@@ -12570,8 +12570,8 @@
     },
     {
       "eip": 8456,
-      "title": "CALLSTATUS instruction",
-      "description": "Instruction that returns whether the last call of the frame succeeded, reverted or halted, and whether a halt occurred below it",
+      "title": "CALLSTATUS Instruction",
+      "description": "Adds an instruction that returns whether the last call of the frame succeeded, reverted or halted, and whether a halt occurred below it",
       "authors": [
         {
           "name": "Stavros Vlachakis",
@@ -12587,7 +12587,7 @@
       "abstract": "This EIP adds the CALLSTATUS instruction. It pushes the completion status of the most recent CALL, CALLCODE, DELEGATECALL, STATICCALL, CREATE or CREATE2 executed in the current frame, as three bits: whether the callee reverted, whether it halted exceptionally or failed consuming its gas, and whether such a failure occurred in a frame below the callee. The values are 0 (success), 1 (reverted or…",
       "track": "splurge",
       "trackSource": "rule",
-      "blob": "3d787f002143d281cd2a55f21161156882b0412d"
+      "blob": "67f1f4e6a96ac4bf11744553ecbff5b7ebc6b3a6"
     },
     {
       "eip": 8477,
@@ -21699,8 +21699,8 @@
     },
     {
       "eip": 8456,
-      "blob": "3d787f002143d281cd2a55f21161156882b0412d",
-      "title": "CALLSTATUS instruction",
+      "blob": "67f1f4e6a96ac4bf11744553ecbff5b7ebc6b3a6",
+      "title": "CALLSTATUS Instruction",
       "status": "Draft",
       "type": "Standards Track",
       "category": "Core"
