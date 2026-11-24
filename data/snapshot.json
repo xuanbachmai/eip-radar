@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-11-24T10:01:39.080Z",
+  "generatedAt": "2026-11-24T22:33:10.635Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "5b2eeafa5fff9d3b33f9a5403ceb50ca67ae1280",
-    "treeSha": "9eb7d22e49d14cdcc3e9d6159060d99f728ef12d",
-    "committedAt": "2026-11-24T05:12:28Z"
+    "commitSha": "d27448e08f60513856bbe228ea7ce04f156209dc",
+    "treeSha": "ee8aa002bedc6aaffeca03c6a0d5509232dd6fd4",
+    "committedAt": "2026-11-24T13:52:43Z"
   },
   "eips": [
     {
@@ -11507,7 +11507,7 @@
       "abstract": "This EIP extends EIP-8141 with a new frame mode that enables EVM-level aggregation of cryptographic signatures and STARK (Scalable Transparent ARguments of Knowledge) proofs. The scheme allows transactions to carry lightweight dependencies — (scheme, data_hash, verification_key_hash) triples — which are aggregated off-chain into a single recursive STARK. Block validity requires this recursive…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "e08840524cc6b4c3bcb0e83e2ec9e3eefdd40281"
+      "blob": "af597a56d3ffe250f8cb64a313fda0159ffc327c"
     },
     {
       "eip": 8289,
@@ -21364,7 +21364,7 @@
     },
     {
       "eip": 8288,
-      "blob": "e08840524cc6b4c3bcb0e83e2ec9e3eefdd40281",
+      "blob": "af597a56d3ffe250f8cb64a313fda0159ffc327c",
       "title": "In-mempool signature and proof aggregation",
       "status": "Draft",
       "type": "Standards Track",
