@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-11-24T22:33:10.635Z",
+  "generatedAt": "2026-11-25T08:45:24.001Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "d27448e08f60513856bbe228ea7ce04f156209dc",
-    "treeSha": "ee8aa002bedc6aaffeca03c6a0d5509232dd6fd4",
-    "committedAt": "2026-11-24T13:52:43Z"
+    "commitSha": "ade9e9cab7e148bba4cd293f916a4a189cd7a8aa",
+    "treeSha": "bb24292eba500f5a7d0553d8431505de868b2a76",
+    "committedAt": "2026-11-25T04:48:40Z"
   },
   "eips": [
     {
@@ -7405,7 +7405,7 @@
       "abstract": "This EIP modifies the block gas accounting mechanism to prevent the circumvention of block gas limits. It proposes that gas refunds, particularly those from SSTORE operations setting storage slots to zero, should not reduce the gas counted toward the block gas limit, while still being applied to transaction gas costs for users.",
       "track": "verge",
       "trackSource": "override",
-      "blob": "f84b208173a52b419164465f4ae304726878fd75"
+      "blob": "d05acd4bd201625fc3030130f2f97c0a462b6f41"
     },
     {
       "eip": 7782,
@@ -19996,7 +19996,7 @@
     },
     {
       "eip": 7778,
-      "blob": "f84b208173a52b419164465f4ae304726878fd75",
+      "blob": "d05acd4bd201625fc3030130f2f97c0a462b6f41",
       "title": "Block Gas Accounting without Refunds",
       "status": "Last Call",
       "type": "Standards Track",
