@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-11-25T08:45:24.001Z",
+  "generatedAt": "2026-11-26T21:40:26.323Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "ade9e9cab7e148bba4cd293f916a4a189cd7a8aa",
-    "treeSha": "bb24292eba500f5a7d0553d8431505de868b2a76",
-    "committedAt": "2026-11-25T04:48:40Z"
+    "commitSha": "c7cc5197513cd062a0fa0dc81cb66e5760228ac6",
+    "treeSha": "28993e0e781335c1840f04fc0cc89726142714f8",
+    "committedAt": "2026-11-26T15:48:00Z"
   },
   "eips": [
     {
@@ -2439,7 +2439,7 @@
       "abstract": "This EIP decomposes the flat 21,000 intrinsic transaction cost into explicit primitives, each priced to match the resources a transaction actually consumes. A plain ETH transfer to an existing account remains at 21,000 execution gas, and contract-creation transactions cost the same whether or not they carry value. Transactions that create new accounts or interact with EIP-7702 pay the additional…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "c41fa1eeced3c08914c6d2333102b04b69e80e68"
+      "blob": "5810f375698717ec92251f37505fba2d815bc684"
     },
     {
       "eip": 2803,
@@ -9643,7 +9643,7 @@
       "abstract": "This proposal increases the cost of state creation operations, thus avoiding excessive state growth under increased block gas limits. It introduces a new variable, CPSB (cost per state byte), and sets this unit of gas costs per new state byte by targeting an average state growth of 120 GiB per year at a reference block gas limit of 150M gas units. It also introduces an independent metering for…",
       "track": "purge",
       "trackSource": "override",
-      "blob": "c8bc85b0bf866089f84d0745769fd848733c2958"
+      "blob": "43cb2b4fb8c72a66d42a06e21a75b70f0539ccbc"
     },
     {
       "eip": 8038,
@@ -9675,7 +9675,7 @@
       "abstract": "This EIP updates the gas cost of state-access operations to reflect Ethereum's larger state and the consequent slowdown of these operations. It dissects the cost of state-touching operations into three components — access, write, and state creation: the cold account access cost (COLD_ACCOUNT_ACCESS) is raised, explicit write surcharges (ACCOUNT_WRITE, STORAGE_WRITE) are introduced, state-creation…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "a1c73c4f5bffc6b4ed69556c497fec6c3d24e287"
+      "blob": "2953df7781f6dd4ccbd03cc8eaea23a77fd17ba5"
     },
     {
       "eip": 8045,
@@ -10572,7 +10572,7 @@
       "abstract": "This EIP proposes an optional mechanism to set custom balance thresholds for sweep withdrawals for compounding withdrawal credentials (0x02) validators. This mechanism allows validators to specify above which balance they want their rewards to be swept to their withdrawal address, providing greater flexibility and control over their staking rewards.",
       "track": "merge",
       "trackSource": "override",
-      "blob": "7bb307319ad39e51e2377a2c3b932c2979e9da1d"
+      "blob": "16bfdf13a938f53675977d36c3ebbda195fbafca"
     },
     {
       "eip": 8149,
@@ -11507,7 +11507,7 @@
       "abstract": "This EIP extends EIP-8141 with a new frame mode that enables EVM-level aggregation of cryptographic signatures and STARK (Scalable Transparent ARguments of Knowledge) proofs. The scheme allows transactions to carry lightweight dependencies — (scheme, data_hash, verification_key_hash) triples — which are aggregated off-chain into a single recursive STARK. Block validity requires this recursive…",
       "track": "splurge",
       "trackSource": "override",
-      "blob": "af597a56d3ffe250f8cb64a313fda0159ffc327c"
+      "blob": "611f58a8668bbffb798c3b3b073cfaa275265f34"
     },
     {
       "eip": 8289,
@@ -16302,7 +16302,7 @@
     },
     {
       "eip": 2780,
-      "blob": "c41fa1eeced3c08914c6d2333102b04b69e80e68",
+      "blob": "5810f375698717ec92251f37505fba2d815bc684",
       "title": "Resource-Based Intrinsic Transaction Gas",
       "status": "Last Call",
       "type": "Standards Track",
@@ -20749,7 +20749,7 @@
     },
     {
       "eip": 8037,
-      "blob": "c8bc85b0bf866089f84d0745769fd848733c2958",
+      "blob": "43cb2b4fb8c72a66d42a06e21a75b70f0539ccbc",
       "title": "State Creation Gas Cost Increase",
       "status": "Last Call",
       "type": "Standards Track",
@@ -20757,7 +20757,7 @@
     },
     {
       "eip": 8038,
-      "blob": "a1c73c4f5bffc6b4ed69556c497fec6c3d24e287",
+      "blob": "2953df7781f6dd4ccbd03cc8eaea23a77fd17ba5",
       "title": "State-Access Gas Cost Update",
       "status": "Last Call",
       "type": "Standards Track",
@@ -21079,7 +21079,7 @@
     },
     {
       "eip": 8148,
-      "blob": "7bb307319ad39e51e2377a2c3b932c2979e9da1d",
+      "blob": "16bfdf13a938f53675977d36c3ebbda195fbafca",
       "title": "Custom sweep threshold for validators",
       "status": "Draft",
       "type": "Standards Track",
@@ -21364,7 +21364,7 @@
     },
     {
       "eip": 8288,
-      "blob": "af597a56d3ffe250f8cb64a313fda0159ffc327c",
+      "blob": "611f58a8668bbffb798c3b3b073cfaa275265f34",
       "title": "In-mempool signature and proof aggregation",
       "status": "Draft",
       "type": "Standards Track",
