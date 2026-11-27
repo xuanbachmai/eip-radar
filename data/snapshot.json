@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-11-27T08:44:35.499Z",
+  "generatedAt": "2026-11-27T21:25:59.928Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "68db81b0a75edb0e16d8f181241f994875eba52d",
-    "treeSha": "bb1e6796e1cbfbf3337522e0c6ae2ac8bf583f80",
-    "committedAt": "2026-11-27T02:26:35Z"
+    "commitSha": "d2be3735b2f894e1e35f54de408159b5c7e14a94",
+    "treeSha": "5fdfd4764abd86b8450db45482b5e7b5812e0475",
+    "committedAt": "2026-11-27T21:24:13Z"
   },
   "eips": [
     {
@@ -7652,7 +7652,7 @@
     {
       "eip": 7805,
       "title": "Fork-choice enforced Inclusion Lists (FOCIL)",
-      "description": "Allow a committee of validators to force-include a set of transactions in every block",
+      "description": "Allow a committee of validators to force-include a set of transactions in every execution payload",
       "authors": [
         {
           "name": "Thomas Thiery",
@@ -7671,22 +7671,26 @@
           "name": "Terence Tsao"
         },
         {
-          "name": "Jacob Kaufmann"
+          "name": "Jihoon Song"
         },
         {
-          "name": "Jihoon Song"
+          "name": "Jacob Kaufmann"
         }
       ],
       "status": "Draft",
       "type": "Standards Track",
       "category": "Core",
       "created": "2024-11-01",
-      "requires": [],
+      "requires": [
+        2718,
+        7732,
+        8037
+      ],
       "discussionsTo": "https://ethereum-magicians.org/t/eip-7805-committee-based-fork-choice-enforced-inclusion-lists-focil/21578",
-      "abstract": "FOCIL implements a robust mechanism to preserve Ethereum’s censorship resistance properties by guaranteeing timely transaction inclusion. FOCIL (Fork-choice enforced Inclusion Lists) is built in a few simple steps: - In each slot, a set of validators is selected as inclusion list (IL) committee members. Each member builds and gossips one IL according to their subjective view of the mempool. - The…",
+      "abstract": "FOCIL implements a robust mechanism to preserve Ethereum's censorship resistance properties by guaranteeing timely transaction inclusion. FOCIL (Fork-choice enforced Inclusion Lists) is built in a few simple steps: - In each slot, a set of validators is selected as inclusion list (IL) committee members. Each member builds and gossips one IL according to their subjective view of the mempool. - The…",
       "track": "scourge",
       "trackSource": "override",
-      "blob": "0a3955d9e8772b7666f560402b2d81ae032a3d06"
+      "blob": "de1d4c69ea5dc83561434d3a8c27e6a1b16b6bbf"
     },
     {
       "eip": 7807,
@@ -12380,7 +12384,7 @@
     {
       "eip": 8425,
       "title": "Quantum Freeze and Account Recovery",
-      "description": "Disables legacy ECDSA authorization and provides account recovery paths.",
+      "description": "Freezes protocol-validated secp256k1 signatures and recovers unmigrated accounts by seed proof.",
       "authors": [
         {
           "name": "Liyi Guo",
@@ -12393,13 +12397,15 @@
       "created": "2026-09-27",
       "requires": [
         2929,
-        7702
+        7702,
+        8141,
+        8298
       ],
       "discussionsTo": "https://ethereum-magicians.org/t/preparing-for-q-day-should-ethereum-standardize-account-freezing-and-recovery/29770",
-      "abstract": "This EIP defines a freeze of legacy ECDSA authorization and two account recovery paths: a recovery commitment registered before a trusted cutoff, or stronger ownership evidence such as a proof of knowledge of the original seed. Recovery installs successor authorization without restoring the legacy ECDSA path. Recovery algorithms are TBD.",
-      "track": "splurge",
+      "abstract": "Before the freeze, owners can migrate to quantum-resistant wallet code at the same address through EIP-8298. The freeze rejects transactions carrying protocol-validated secp256k1 signatures and removes the ecRecover precompile. An owner who missed migration can install successor code at the same address with a hash-based zero-knowledge proof of the wallet seed.",
+      "track": "verge",
       "trackSource": "rule",
-      "blob": "f20dc8d91e476e3e924100caa6bd694b4f839a87"
+      "blob": "ee9be5c928fad2def67fa3d22c79ddf9ef57f958"
     },
     {
       "eip": 8430,
@@ -20203,7 +20209,7 @@
     },
     {
       "eip": 7805,
-      "blob": "0a3955d9e8772b7666f560402b2d81ae032a3d06",
+      "blob": "de1d4c69ea5dc83561434d3a8c27e6a1b16b6bbf",
       "title": "Fork-choice enforced Inclusion Lists (FOCIL)",
       "status": "Draft",
       "type": "Standards Track",
@@ -21740,7 +21746,7 @@
     },
     {
       "eip": 8425,
-      "blob": "f20dc8d91e476e3e924100caa6bd694b4f839a87",
+      "blob": "ee9be5c928fad2def67fa3d22c79ddf9ef57f958",
       "title": "Quantum Freeze and Account Recovery",
       "status": "Draft",
       "type": "Standards Track",
