@@ -247,3 +247,7 @@
 {"at":"2026-11-23T23:59:28.300Z","commit":"81a90efc672bdd6130c813d8dae005e5b3a8ce5b","type":"new_eip","eip":8491,"title":"LUCID Key Publisher Priority Lists","track":"merge","status":"Draft"}
 {"at":"2026-11-23T23:59:28.300Z","commit":"81a90efc672bdd6130c813d8dae005e5b3a8ce5b","type":"new_eip","eip":8496,"title":"Code Reads in Block-Level Access Lists","track":"verge","status":"Draft"}
 {"at":"2026-11-23T23:59:28.300Z","commit":"81a90efc672bdd6130c813d8dae005e5b3a8ce5b","type":"new_eip","eip":8502,"title":"Dynamic individual consolidation incentive","track":"merge","status":"Draft"}
+{"at":"2026-11-27T08:44:35.499Z","commit":"68db81b0a75edb0e16d8f181241f994875eba52d","type":"new_eip","eip":8367,"title":"Balance sunset for retired BLS validators","track":"merge","status":"Draft"}
+{"at":"2026-11-27T08:44:35.499Z","commit":"68db81b0a75edb0e16d8f181241f994875eba52d","type":"new_eip","eip":8442,"title":"64-bit Opcodes for the EVM","track":"splurge","status":"Draft"}
+{"at":"2026-11-27T08:44:35.499Z","commit":"68db81b0a75edb0e16d8f181241f994875eba52d","type":"new_eip","eip":8476,"title":"Permanent EOA Delegation Opt-Out","track":"splurge","status":"Draft"}
+{"at":"2026-11-27T08:44:35.499Z","commit":"68db81b0a75edb0e16d8f181241f994875eba52d","type":"new_eip","eip":8488,"title":"Versioned Opcodes for Gas Repricing","track":"splurge","status":"Draft"}

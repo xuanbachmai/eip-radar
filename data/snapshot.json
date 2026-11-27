@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-11-26T21:40:26.323Z",
+  "generatedAt": "2026-11-27T08:44:35.499Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "c7cc5197513cd062a0fa0dc81cb66e5760228ac6",
-    "treeSha": "28993e0e781335c1840f04fc0cc89726142714f8",
-    "committedAt": "2026-11-26T15:48:00Z"
+    "commitSha": "68db81b0a75edb0e16d8f181241f994875eba52d",
+    "treeSha": "bb1e6796e1cbfbf3337522e0c6ae2ac8bf583f80",
+    "committedAt": "2026-11-27T02:26:35Z"
   },
   "eips": [
     {
@@ -12205,6 +12205,30 @@
       "blob": "6a1c1149dcd912aca3f53e25a29f38a2aa553270"
     },
     {
+      "eip": 8367,
+      "title": "Balance sunset for retired BLS validators",
+      "description": "Gradually reduce balances of retired 0x00 validators to zero on a published schedule ahead of the post-quantum transition",
+      "authors": [
+        {
+          "name": "NC",
+          "handle": "ensi321"
+        }
+      ],
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core",
+      "created": "2026-07-18",
+      "requires": [
+        8365,
+        8433
+      ],
+      "discussionsTo": "https://ethereum-magicians.org/t/eip-8367-balance-sunset-for-retired-bls-validators/29299",
+      "abstract": "This EIP introduces a published, epoch-keyed schedule under which the balances of retired 0x00-credentialed validators (EIP-8433), whose withdrawals are controlled by a Boneh-Lynn-Shacham (BLS) key rather than an execution address, are gradually reduced to zero. Each epoch, every 0x00 balance is clamped to a ceiling that declines linearly from a starting value to zero across the sunset window…",
+      "track": "merge",
+      "trackSource": "rule",
+      "blob": "bba99b875c3ad7cae2e76e9a5f0073bdcac43e24"
+    },
+    {
       "eip": 8368,
       "title": "CPSB Recalibration for New Gas Limit",
       "description": "Re-derives the cost per state byte (CPSB) parameter introduced in EIP-8037 for a new reference block gas limit",
@@ -12458,6 +12482,31 @@
       "blob": "d2d977673b030ffcc126762e193b9a19d219e88e"
     },
     {
+      "eip": 8442,
+      "title": "64-bit Opcodes for the EVM",
+      "description": "Single-byte opcodes for 64-bit arithmetic, comparison, bitwise, and memory operations",
+      "authors": [
+        {
+          "name": "Greg Colvin",
+          "handle": "gcolvin"
+        },
+        {
+          "name": "Wei Tang",
+          "handle": "sorpaas"
+        }
+      ],
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core",
+      "created": "2026-10-14",
+      "requires": [],
+      "discussionsTo": "https://ethereum-magicians.org/t/eip-8442-64-bit-opcodes-for-the-evm/29982",
+      "abstract": "Not every computation needs 256 bits. Counters, offsets, lengths, and the inner loops of hashes and big-number arithmetic fit in 64, and the EVM makes them pay for 256 at every step. This proposal adds twenty-eight instructions that compute on the low 64 bits of their operands: each is the twin of an existing arithmetic, comparison, bitwise, or memory instruction — the same operation at the same…",
+      "track": "splurge",
+      "trackSource": "rule",
+      "blob": "31e526d5223bbdd8739fbea225c8127a5b05a0df"
+    },
+    {
       "eip": 8449,
       "title": "Engine API Proposal Lookahead",
       "description": "The consensus layer tells the execution layer, ahead of time, at which slots it will ask for a payload",
@@ -12590,6 +12639,38 @@
       "blob": "67f1f4e6a96ac4bf11744553ecbff5b7ebc6b3a6"
     },
     {
+      "eip": 8476,
+      "title": "Permanent EOA Delegation Opt-Out",
+      "description": "Allow EOAs to permanently disable delegation while retaining ordinary transaction origination.",
+      "authors": [
+        {
+          "name": "nicolashw",
+          "handle": "nicolashw"
+        }
+      ],
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core",
+      "created": "2026-10-30",
+      "requires": [
+        161,
+        684,
+        1559,
+        2681,
+        2780,
+        3541,
+        3607,
+        7702,
+        8037,
+        8038
+      ],
+      "discussionsTo": "https://ethereum-magicians.org/t/eip-8476-permanent-eoa-delegation-opt-out/30134",
+      "abstract": "Allow an externally owned account (EOA) to permanently disable EIP-7702 delegation by installing an account-code marker that consensus rules recognize but the EVM observes as empty code. A narrowly defined, previously invalid form of a set-code transaction performs the opt-out. The account keeps its address and continues to behave as an ordinary EOA at the EVM level, but no subsequent delegation…",
+      "track": "splurge",
+      "trackSource": "rule",
+      "blob": "1308109c9ee7398352dd7c557f7c28910ed21f48"
+    },
+    {
       "eip": 8477,
       "title": "Recent Block Bound Delegation Authorizations",
       "description": "Require delegation authorizations to bind to one of the preceding 256 execution block hashes.",
@@ -12611,6 +12692,30 @@
       "track": "splurge",
       "trackSource": "rule",
       "blob": "4072bf3b07333f1669870167b60ec035741bca24"
+    },
+    {
+      "eip": 8488,
+      "title": "Versioned Opcodes for Gas Repricing",
+      "description": "V2 opcodes for EIP-8037/EIP-8038 schedule; new contracts only; versioned DELEGATECALL.",
+      "authors": [
+        {
+          "name": "Leo Glisic",
+          "handle": "lglisic60"
+        }
+      ],
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core",
+      "created": "2026-11-08",
+      "requires": [
+        8037,
+        8038
+      ],
+      "discussionsTo": "https://ethereum-magicians.org/t/eip-8488-versioned-opcodes-for-gas-repricing/30332",
+      "abstract": "This EIP introduces a parallel V2 opcode set whose gas costs follow EIP-8037 and EIP-8038. Contracts deployed after activation may contain only V2 opcodes; a code_version bit is set on acceptance. A new DELEGATECALL_V2 opcode enforces that its target also has code_version >= 2. Legacy contracts continue to execute under the pre-Glamsterdam gas schedule indefinitely.",
+      "track": "splurge",
+      "trackSource": "rule",
+      "blob": "5e270678830bc119339477812584c55aac0f4343"
     },
     {
       "eip": 8491,
@@ -21539,6 +21644,14 @@
       "category": "Core"
     },
     {
+      "eip": 8367,
+      "blob": "bba99b875c3ad7cae2e76e9a5f0073bdcac43e24",
+      "title": "Balance sunset for retired BLS validators",
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core"
+    },
+    {
       "eip": 8368,
       "blob": "7be62939881cce209a1a3948511ed9c65b433a37",
       "title": "CPSB Recalibration for New Gas Limit",
@@ -21666,6 +21779,14 @@
       "category": "Networking"
     },
     {
+      "eip": 8442,
+      "blob": "31e526d5223bbdd8739fbea225c8127a5b05a0df",
+      "title": "64-bit Opcodes for the EVM",
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core"
+    },
+    {
       "eip": 8449,
       "blob": "a9b08fd71b46780f836fdcb3909c7eb230459679",
       "title": "Engine API Proposal Lookahead",
@@ -21713,9 +21834,25 @@
       "type": "Informational"
     },
     {
+      "eip": 8476,
+      "blob": "1308109c9ee7398352dd7c557f7c28910ed21f48",
+      "title": "Permanent EOA Delegation Opt-Out",
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core"
+    },
+    {
       "eip": 8477,
       "blob": "4072bf3b07333f1669870167b60ec035741bca24",
       "title": "Recent Block Bound Delegation Authorizations",
+      "status": "Draft",
+      "type": "Standards Track",
+      "category": "Core"
+    },
+    {
+      "eip": 8488,
+      "blob": "5e270678830bc119339477812584c55aac0f4343",
+      "title": "Versioned Opcodes for Gas Repricing",
       "status": "Draft",
       "type": "Standards Track",
       "category": "Core"
