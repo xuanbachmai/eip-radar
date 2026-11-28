@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "parserVersion": 2,
-  "generatedAt": "2026-11-27T21:25:59.928Z",
+  "generatedAt": "2026-11-28T07:58:12.651Z",
   "source": {
     "repo": "ethereum/EIPs",
     "branch": "master",
-    "commitSha": "d2be3735b2f894e1e35f54de408159b5c7e14a94",
-    "treeSha": "5fdfd4764abd86b8450db45482b5e7b5812e0475",
-    "committedAt": "2026-11-27T21:24:13Z"
+    "commitSha": "1626e1f5e34407b955b546080d19732ad1f46d9a",
+    "treeSha": "059c30b445b49cd8244e9828c842a0e26d4b7b6f",
+    "committedAt": "2026-11-28T07:25:03Z"
   },
   "eips": [
     {
@@ -12401,11 +12401,11 @@
         8141,
         8298
       ],
-      "discussionsTo": "https://ethereum-magicians.org/t/preparing-for-q-day-should-ethereum-standardize-account-freezing-and-recovery/29770",
+      "discussionsTo": "https://ethereum-magicians.org/t/eip-8425-quantum-freeze-and-account-recovery/29770",
       "abstract": "Before the freeze, owners can migrate to quantum-resistant wallet code at the same address through EIP-8298. The freeze rejects transactions carrying protocol-validated secp256k1 signatures and removes the ecRecover precompile. An owner who missed migration can install successor code at the same address with a hash-based zero-knowledge proof of the wallet seed.",
       "track": "verge",
       "trackSource": "rule",
-      "blob": "ee9be5c928fad2def67fa3d22c79ddf9ef57f958"
+      "blob": "e801244b809c7ac351b9794f41c60a1a3f6f74f5"
     },
     {
       "eip": 8430,
@@ -21397,7 +21397,7 @@
     },
     {
       "eip": 8252,
-      "blob": "49c4cc2fa20a7173521f224f20223246fcebb989",
+      "blob": "db35f703501c6ca40dd04dc366ed0c719de47149",
       "title": "Execution-Layer Reorg State Retention Window",
       "status": "Draft",
       "type": "Informational"
@@ -21746,7 +21746,7 @@
     },
     {
       "eip": 8425,
-      "blob": "ee9be5c928fad2def67fa3d22c79ddf9ef57f958",
+      "blob": "e801244b809c7ac351b9794f41c60a1a3f6f74f5",
       "title": "Quantum Freeze and Account Recovery",
       "status": "Draft",
       "type": "Standards Track",
